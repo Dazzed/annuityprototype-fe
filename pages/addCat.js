@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Router from "next/router";
+import styles from "../styles/Home.module.css";
 
 export default function AddCat() {
   let [name, setName] = useState("");
@@ -25,6 +26,7 @@ export default function AddCat() {
             name="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            className={styles.forminput}
           />
         </td>
         <td>
@@ -33,6 +35,7 @@ export default function AddCat() {
             name="age"
             value={age}
             onChange={(e) => setAge(e.target.value)}
+            className={styles.forminput}
           />
         </td>
         <td>
@@ -41,10 +44,11 @@ export default function AddCat() {
             name="breed"
             value={breed}
             onChange={(e) => setBreed(e.target.value)}
+            className={styles.forminput}
           />
         </td>
         <td>
-          <button onClick={onSubmit}>Create</button>
+          <button onClick={onSubmit} className={styles.tablebutton}>Create</button>
         </td>
       </tr>
     </>
