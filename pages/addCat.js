@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Router from "next/router";
 
 export default function AddCat() {
   let [name, setName] = useState("");
@@ -9,6 +10,7 @@ export default function AddCat() {
   const onSubmit = async () => {
     try {
       await axios.post(`http://localhost:3000/cats`, { name, age, breed });
+      Router.reload(window.location.pathname);
     } catch (err) {
       console.error(err);
     }

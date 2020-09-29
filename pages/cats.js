@@ -6,16 +6,26 @@ export default function cats() {
     { id: 1, name: "Kitty", breed: "something" },
   ]);
 
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const res = await axios.get(`http://localhost:3000/cats`);
-        setCatList(res.data);
-      } catch (error) {
-        console.error(error);
-      }
+  const fetchCats = async () => {
+    try {
+      const res = await axios.get(`http://localhost:3000/cats`);
+      setCatList(res.data);
+    } catch (error) {
+      console.error(error);
     }
-    fetchData();
+  };
+
+  const deleteCat = async (id) => {
+    try {
+      await axios.delete(`http://localhost:3000/cats/${id}`);
+      await fetchCats();
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  useEffect(() => {
+    fetchCats();
   }, []);
 
   return (
@@ -26,7 +36,7 @@ export default function cats() {
           <td>{cat.age}</td>
           <td>{cat.breed}</td>
           <td>
-            <button>Delete</button>
+            <button onClick={() => deleteCat(cat.id)}>Delete</button>
           </td>
         </tr>
       ))}
