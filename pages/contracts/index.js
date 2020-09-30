@@ -23,7 +23,7 @@ export default function Contracts() {
     <div className="container-fluids-kl">
       <div className="row-kl">
         <div className="col-kl-12">
-          {/* <Criteria /> */}
+          <Criteria />
           <div id="main">
             {/* <span style={{ fontSize: "30px", cursor: "pointer" }}>&#9776;</span> */}
             <div className="row-kl">

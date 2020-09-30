@@ -34,6 +34,10 @@ export default function Criteria() {
       <li>
         <a href="#">Contract Value</a>
       </li>
+      <div className="apply-section">
+        <button>Apply</button>
+        <button>Reset</button>
+      </div>
     </div>
   );
 }

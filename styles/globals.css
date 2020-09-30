@@ -89,6 +89,7 @@ body {
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 0;
+  border-right: 1px solid #ccc;
 }
 
 .sidenav li {
@@ -135,6 +136,27 @@ body {
 #main {
   transition: margin-left 0.5s;
   /* margin-left: 250px; */
+}
+/* fliter section */
+.apply-section {
+  text-align: center;
+  background-color: #ccc;
+  height: 60px;
+  line-height: 60px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.apply-section button {
+  /* background-color: #19739f; */
+  background-image: linear-gradient(180deg, #2480ad, #19739f) !important;
+  height: 38px;
+  padding: 10px 15px;
+  margin-left: 5px;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
 }
 
 @media screen and (max-height: 450px) {
