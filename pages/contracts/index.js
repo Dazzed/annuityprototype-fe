@@ -25,7 +25,7 @@ export default function Contracts() {
         <div className="col-kl-12">
           {/* <Criteria /> */}
           <div id="main">
-            <span style={{ fontSize: "30px", cursor: "pointer" }}>&#9776;</span>
+            {/* <span style={{ fontSize: "30px", cursor: "pointer" }}>&#9776;</span> */}
             <div className="row-kl">
               <div className="col-kl-12">
                 <DataTable
@@ -40,7 +40,9 @@ export default function Contracts() {
                   persistTableHead
                   pagination
                   paginationPerPage={100}
-                  paginationRowsPerPageOptions={[10, 50, 100]}
+                  paginationRowsPerPageOptions={[10, 50, 100, 200]}
+                  overflowY
+                  noHeader
                 />
               </div>
             </div>
