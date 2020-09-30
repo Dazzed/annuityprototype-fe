@@ -4,36 +4,43 @@ export const CONTRACT_COLUMNS = [
     selector: "id",
     sortable: false,
     omit: true,
+    minWidth: "250px",
   },
   {
     name: "Contract",
     selector: "contract",
     sortable: true,
+    minWidth: "250px",
   },
   {
     name: "Owner Name",
     selector: "ownerName",
     sortable: true,
+    minWidth: "250px",
   },
   {
     name: "Age(0)",
     selector: "ageO",
     sortable: true,
+    minWidth: "250px",
   },
   {
     name: "Annuitant Name",
     selector: "annuitantName",
     sortable: true,
+    minWidth: "250px",
   },
   {
     name: "Age(A)",
     selector: "ageA",
     sortable: true,
+    minWidth: "250px",
   },
   {
     name: "Issued",
     selector: "issued",
     sortable: true,
+    minWidth: "250px",
   },
   {
     name: "Product",

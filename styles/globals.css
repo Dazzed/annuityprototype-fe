@@ -10,7 +10,7 @@ body {
 }
 /* header section */
 .header-section {
-  background-color: #0B1941;
+  background-color: #0b1941;
   height: 90px;
   width: 100%;
   max-width: 100%;
@@ -122,6 +122,11 @@ body {
 
 .sidenav a:hover {
   color: #8e9294;
+}
+
+.rdt_TableHeadRow div {
+  font-weight: bold;
+  font-size: 14px;
 }
 
 .sidenav .closebtn {
