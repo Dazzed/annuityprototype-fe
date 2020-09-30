@@ -1,33 +1,12 @@
-import Head from "next/head";
-import Cats from "./cats";
-import AddCat from "./addCat";
-import styles from "../styles/Home.module.css";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
 
-export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+export default function Page() {
+  const router = useRouter();
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>List of cat breeds</h1>
-        <table className={styles.table}>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>age</th>
-              <th>Breed</th>
-              <th>Edit</th>
-            </tr>
-          </thead>
-          <tbody>
-            <AddCat />
-            <Cats />
-          </tbody>
-        </table>
-      </main>
-    </div>
-  );
+  useEffect(() => {
+    router.push("/contracts");
+  }, []);
+
+  return <p>Redirecting...</p>;
 }
