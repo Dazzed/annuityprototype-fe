@@ -8,7 +8,13 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-
+/* header section */
+.header-section {
+  background-color: #0B1941;
+  height: 90px;
+  width: 100%;
+  max-width: 1400px;
+}
 .row-kl {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -24,8 +30,6 @@ body {
   -ms-flex: 0 0 100%;
   flex: 0 0 100%;
   max-width: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
   position: relative;
 }
 
@@ -34,8 +38,6 @@ body {
   -ms-flex: 0 0 25%;
   flex: 0 0 25%;
   max-width: 25%;
-  padding-left: 15px;
-  padding-right: 15px;
   position: relative;
 }
 
@@ -44,8 +46,6 @@ body {
   -ms-flex: 0 0 75%;
   flex: 0 0 75%;
   max-width: 75%;
-  padding-left: 15px;
-  padding-right: 15px;
   position: relative;
 }
 .table-kl {

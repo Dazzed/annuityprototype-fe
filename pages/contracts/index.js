@@ -23,10 +23,14 @@ export default function Contracts() {
     <div className="container-fluids-kl">
       <div className="row-kl">
         <div className="col-kl-12">
+          <div className="header-section">
+
+          </div>
+        </div>
+        <div className="col-kl-12">
           {/* <Criteria /> */}
-          <div id="main">
+          {/* <div id="main"> */}
             {/* <span style={{ fontSize: "30px", cursor: "pointer" }}>&#9776;</span> */}
-            <div className="row-kl">
               <div className="col-kl-12">
                 <DataTable
                   title="Contracts"
@@ -46,8 +50,7 @@ export default function Contracts() {
                 />
               </div>
             </div>
-          </div>
-        </div>
+        {/* </div> */}
       </div>
     </div>
   );
