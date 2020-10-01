@@ -3,9 +3,9 @@ import { useState } from "react";
 export default function Criteria(props) {
   let [contractNumberFilterOp, setContractNumberFilterOp] = useState("eq");
   let [contractNumberFilterVal, setContractNumberFilterval] = useState("");
-  let [ownerFilterOp, setOwnerFilterOp] = useState("eq");
+  let [ownerFilterOp, setOwnerFilterOp] = useState("like");
   let [ownerFilterVal, setOwnerFilterVal] = useState("");
-  let [productNameFilterOp, setProductNameFilterOp] = useState("eq");
+  let [productNameFilterOp, setProductNameFilterOp] = useState("like");
   let [productNameFilterVal, setProductNameFilterVal] = useState("");
 
   const applyFilter = () => {
@@ -19,13 +19,13 @@ export default function Criteria(props) {
     }
 
     if (ownerFilterVal) {
-      filters.owner = JSON.stringify([ownerFilterOp, ownerFilterVal]);
+      filters.owner = JSON.stringify([ownerFilterOp, `%${ownerFilterVal}%`]);
     }
 
     if (productNameFilterVal) {
       filters.product_name = JSON.stringify([
         productNameFilterOp,
-        productNameFilterVal,
+        `%${productNameFilterVal}%`,
       ]);
     }
 
