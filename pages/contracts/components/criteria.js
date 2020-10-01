@@ -1,4 +1,43 @@
-export default function Criteria() {
+import { useState } from "react";
+
+export default function Criteria(props) {
+  let [contractNumberFilterOp, setContractNumberFilterOp] = useState("eq");
+  let [contractNumberFilterVal, setContractNumberFilterval] = useState("");
+  let [ownerFilterOp, setOwnerFilterOp] = useState("eq");
+  let [ownerFilterVal, setOwnerFilterVal] = useState("");
+  let [productNameFilterOp, setProductNameFilterOp] = useState("eq");
+  let [productNameFilterVal, setProductNameFilterVal] = useState("");
+
+  const applyFilter = () => {
+    const filters = {};
+
+    if (contractNumberFilterVal) {
+      filters.contract_number = JSON.stringify([
+        contractNumberFilterOp,
+        contractNumberFilterVal,
+      ]);
+    }
+
+    if (ownerFilterVal) {
+      filters.owner = JSON.stringify([ownerFilterOp, ownerFilterVal]);
+    }
+
+    if (productNameFilterVal) {
+      filters.product_name = JSON.stringify([
+        productNameFilterOp,
+        productNameFilterVal,
+      ]);
+    }
+
+    props.applyFilter(filters);
+  };
+
+  const resetFilter = () => {
+    setContractNumberFilterval("");
+    setOwnerFilterVal("");
+    setProductNameFilterVal("");
+  };
+
   return (
     <div id="mySidenav" className="sidenav">
       <li className="bg-colorli">
@@ -8,47 +47,42 @@ export default function Criteria() {
         </a>
       </li>
       <li>
-        <a href="#">Contract List View</a>
-        <input type="text" placeholder=""className="form-field"  />
+        <a href="#">Contract Number</a>
+        <input
+          type="text"
+          name="contractNumberFilterVal"
+          placeholder=""
+          className="form-field"
+          value={contractNumberFilterVal}
+          onChange={(e) => setContractNumberFilterval(e.target.value)}
+        />
       </li>
       <li>
-        <a href="#">Contract#/Name</a>
-        <input type="text" placeholder=""className="form-field"  />
+        <a href="#">Owner</a>
+        <input
+          type="text"
+          name="ownerFilterVal"
+          placeholder=""
+          className="form-field"
+          value={ownerFilterVal}
+          onChange={(e) => setOwnerFilterVal(e.target.value)}
+        />
       </li>
       <li>
-        <a href="#">Client Age</a>
-        <label>Min</label>
-        <input type="text" placeholder=""className="form-field"  />
-        <label>Max</label>
-        <input type="text" placeholder=""className="form-field"  />
+        <a href="#">Product</a>
+        <input
+          type="text"
+          name="productNameFilterVal"
+          placeholder=""
+          className="form-field"
+          value={productNameFilterVal}
+          onChange={(e) => setProductNameFilterVal(e.target.value)}
+        />
       </li>
-      <li>
-        <a href="#">Investment Option</a>
-        <input type="text" placeholder=""className="form-field"  />
-      </li>
-      <li>
-        <a href="#">Rider Settings</a>
-        <input type="text" placeholder=""className="form-field"  />
-      </li>
-      <li>
-        <a href="#">Product Settings</a>
-        <input type="text" placeholder=""className="form-field"  />
-      </li>
-      <li>
-        <a href="#">Program Settings</a>
-        <input type="text" placeholder=""className="form-field"  />
-      </li>
-      <li>
-        <a href="#">Anniversary Date</a>
-        <input type="text" placeholder=""className="form-field"  />
-      </li>
-      <li>
-        <a href="#">Contract Value</a>
-        <input type="text" placeholder=""className="form-field"  />
-      </li>
+
       <div className="apply-section">
-        <button>Apply</button>
-        <button>Reset</button>
+        <button onClick={applyFilter}>Apply</button>
+        <button onClick={resetFilter}>Reset</button>
       </div>
     </div>
   );

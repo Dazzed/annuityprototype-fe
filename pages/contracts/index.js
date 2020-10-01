@@ -1,29 +1,36 @@
 import { useEffect, useState } from "react";
 import DataTable from "react-data-table-component";
 import axios from "axios";
-
 import Criteria from "./components/criteria";
 import { CONTRACT_COLUMNS } from "../../config/constants";
 
 export default function Contracts() {
   let [contracts, setContracts] = useState([]);
 
+  const loadRecords = async (params) => {
+    try {
+      const result = await axios.get(`http://localhost:3000/contracts`, {
+        params,
+      });
+      setContracts(result.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   useEffect(() => {
-    (async () => {
-      try {
-        const result = await axios.get(`http://localhost:3000/contracts`);
-        setContracts(result.data);
-      } catch (error) {
-        console.error(error);
-      }
-    })();
+    loadRecords();
   }, []);
+
+  const applyFilter = (filters) => {
+    loadRecords(filters);
+  };
 
   return (
     <div className="container-fluids-kl">
       <div className="row-kl">
         <div className="col-kl-12">
-          <Criteria />
+          <Criteria applyFilter={applyFilter} />
           <div id="main">
             {/* <span style={{ fontSize: "30px", cursor: "pointer" }}>&#9776;</span> */}
             <div className="row-kl">
