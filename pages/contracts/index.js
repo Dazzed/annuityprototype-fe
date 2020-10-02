@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import DataTable from "react-data-table-component";
 import axios from "axios";
+import Table from './components/table';
 
 import Criteria from "./components/criteria";
 import { CONTRACT_COLUMNS } from "../../config/constants";
@@ -31,24 +32,11 @@ export default function Contracts() {
           {/* <Criteria /> */}
           {/* <div id="main"> */}
             {/* <span style={{ fontSize: "30px", cursor: "pointer" }}>&#9776;</span> */}
-              <div className="col-kl-12">
-                <DataTable
-                  title="Contracts"
-                  columns={CONTRACT_COLUMNS}
-                  data={contracts}
-                  striped
-                  highlightOnHover
-                  pointerOnHover
-                  responsive
-                  fixedHeader
-                  persistTableHead
-                  pagination
-                  paginationPerPage={100}
-                  paginationRowsPerPageOptions={[10, 50, 100, 200]}
-                  overflowY
-                  noHeader
-                />
-              </div>
+              {contracts.length > 0 ?
+                <Table contracts={contracts} />
+                :
+                null
+              }
             </div>
         {/* </div> */}
       </div>
