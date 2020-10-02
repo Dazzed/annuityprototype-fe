@@ -67,6 +67,15 @@ export default function Criteria(props) {
                 onChange={(e) => setContractNumberFilterval(e.target.value)}
               />
             </div>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle dropdown-toggle-menu" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <a class="dropdown-item" href="#">section 1</a>
+                <a class="dropdown-item" href="#">section 2</a>
+                <a class="dropdown-item" href="#">section 3</a>
+              </div>
+            </div>
           </div>
         </div>
         <div class="card">
@@ -88,6 +97,15 @@ export default function Criteria(props) {
                 value={ownerFilterVal}
                 onChange={(e) => setOwnerFilterVal(e.target.value)}
               />
+            </div>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle dropdown-toggle-menu" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                <a class="dropdown-item" href="#">section 1</a>
+                <a class="dropdown-item" href="#">section 2</a>
+                <a class="dropdown-item" href="#">section 3</a>
+              </div>
             </div>
           </div>
         </div>
@@ -111,6 +129,15 @@ export default function Criteria(props) {
                 onChange={(e) => setProductNameFilterVal(e.target.value)}
               />
             </div>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle dropdown-toggle-menu" type="button" id="dropdownMenuButton3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
+                <a class="dropdown-item" href="#">section 1</a>
+                <a class="dropdown-item" href="#">section 2</a>
+                <a class="dropdown-item" href="#">section 3</a>
+              </div>
+            </div>  
           </div>
         </div>
       </div>
@@ -141,6 +168,6 @@ export default function Criteria(props) {
         <button onClick={applyFilter}>Apply</button>
         <button onClick={resetFilter}>Reset</button>
       </div>
-    </div>
+    </div >
   );
 }
