@@ -4,6 +4,25 @@ import axios from "axios";
 import Criteria from "./components/criteria";
 import { CONTRACT_COLUMNS } from "../../config/constants";
 
+const ExpandedRowComponent = ({ data }) => (
+  <div className="expandedRowComponent">
+    {console.log(data)}
+    <table>
+      <tbody>
+        {Object.keys(data).map((key) => (
+          <tr>
+            <td>{key.toUpperCase()}:</td>
+            <td>
+              {"  "}
+              {data[key]}
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+);
+
 export default function Contracts() {
   let [contracts, setContracts] = useState([]);
   let [showCriteria, setShowCriteria] = useState(true);
@@ -70,8 +89,12 @@ export default function Contracts() {
                 pagination
                 paginationPerPage={100}
                 paginationRowsPerPageOptions={[10, 50, 100, 200]}
-                overflowY
+                // overflowY
                 noHeader
+                grow
+                responsive
+                expandableRows
+                expandableRowsComponent={<ExpandedRowComponent />}
               />
             </div>
           </div>

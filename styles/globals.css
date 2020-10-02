@@ -221,3 +221,10 @@ label {
     font-size: 18px;
   }
 }
+
+.expandedRowComponent {
+  padding: 16px;
+  display: block;
+  width: 100%;
+  font-size: smaller;
+}
