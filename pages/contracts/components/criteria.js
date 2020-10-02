@@ -1,19 +1,19 @@
 import { useState } from "react";
 
 export default function Criteria(props) {
-  let [contractNumberFilterOp, setContractNumberFilterOp] = useState("");
+  let [contractNumberFilterOp, setContractNumberFilterOp] = useState("eq");
   let [contractNumberFilterVal, setContractNumberFilterVal] = useState("");
 
-  let [ownerFilterOp, setOwnerFilterOp] = useState("");
+  let [ownerFilterOp, setOwnerFilterOp] = useState("eq");
   let [ownerFilterVal, setOwnerFilterVal] = useState("");
 
-  let [annuitantFilterOp, setAnnuitantFilterOp] = useState("");
+  let [annuitantFilterOp, setAnnuitantFilterOp] = useState("eq");
   let [annuitantFilterVal, setAnnuitantFilterVal] = useState("");
 
-  let [productNameFilterOp, setProductNameFilterOp] = useState("");
+  let [productNameFilterOp, setProductNameFilterOp] = useState("eq");
   let [productNameFilterVal, setProductNameFilterVal] = useState("");
 
-  let [contractValueFilterOp, setContractValueFilterOp] = useState("");
+  let [contractValueFilterOp, setContractValueFilterOp] = useState("eq");
   let [contractValueFilterVal, setContractValueFilterVal] = useState("");
 
   let [ownerAgeMin, setOwnerAgeMin] = useState();
@@ -73,19 +73,19 @@ export default function Criteria(props) {
 
   const resetFilter = () => {
     setContractNumberFilterVal("");
-    setContractNumberFilterOp("");
+    setContractNumberFilterOp("eq");
 
     setOwnerFilterVal("");
-    setOwnerFilterOp("");
+    setOwnerFilterOp("eq");
 
     setProductNameFilterVal("");
-    setProductNameFilterOp("");
+    setProductNameFilterOp("eq");
 
     setAnnuitantFilterVal("");
-    setAnnuitantFilterOp("");
+    setAnnuitantFilterOp("eq");
 
     setContractValueFilterVal("");
-    setContractValueFilterOp("");
+    setContractValueFilterOp("eq");
 
     setOwnerAgeMin(0);
     setOwnerAgeMax(0);
