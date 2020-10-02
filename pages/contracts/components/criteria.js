@@ -46,18 +46,75 @@ export default function Criteria(props) {
           &times;
         </a>
       </li>
-      <li>
-        <a href="#">Contract Number</a>
-        <input
-          type="text"
-          name="contractNumberFilterVal"
-          placeholder=""
-          className="form-field"
-          value={contractNumberFilterVal}
-          onChange={(e) => setContractNumberFilterval(e.target.value)}
-        />
-      </li>
-      <li>
+      <div id="accordion">
+        <div class="card">
+          <div class="card-header cardcustomheader p-1" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Contract Number
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body px-2 py-1">
+              <input
+                type="text"
+                name="contractNumberFilterVal"
+                placeholder=""
+                className="form-field"
+                value={contractNumberFilterVal}
+                onChange={(e) => setContractNumberFilterval(e.target.value)}
+              />
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header cardcustomheader p-1" id="headingTwo">
+            <h5 class="mb-0">
+              <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+                Owner
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body px-2 py-1">
+              <input
+                type="text"
+                name="ownerFilterVal"
+                placeholder=""
+                className="form-field"
+                value={ownerFilterVal}
+                onChange={(e) => setOwnerFilterVal(e.target.value)}
+              />
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header cardcustomheader p-1" id="headingThree">
+            <h5 class="mb-0">
+              <button class="btn btn-link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
+                Product
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapseThree" class="collapse" aria-labelledby="headingTne" data-parent="#accordion">
+            <div class="card-body px-2 py-1">
+              <input
+                type="text"
+                name="productNameFilterVal"
+                placeholder=""
+                className="form-field"
+                value={productNameFilterVal}
+                onChange={(e) => setProductNameFilterVal(e.target.value)}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* <li>
         <a href="#">Owner</a>
         <input
           type="text"
@@ -67,8 +124,8 @@ export default function Criteria(props) {
           value={ownerFilterVal}
           onChange={(e) => setOwnerFilterVal(e.target.value)}
         />
-      </li>
-      <li>
+      </li> */}
+      {/* <li>
         <a href="#">Product</a>
         <input
           type="text"
@@ -78,7 +135,7 @@ export default function Criteria(props) {
           value={productNameFilterVal}
           onChange={(e) => setProductNameFilterVal(e.target.value)}
         />
-      </li>
+      </li> */}
 
       <div className="apply-section">
         <button onClick={applyFilter}>Apply</button>

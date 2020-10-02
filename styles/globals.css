@@ -2,52 +2,6 @@ body {
   margin: 0;
   padding: 0;
 }
-.container-fluids-kl {
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.row-kl {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
-}
-
-.col-kl-12 {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 100%;
-  flex: 0 0 100%;
-  max-width: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
-  position: relative;
-}
-
-.col-kl-3 {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 25%;
-  flex: 0 0 25%;
-  max-width: 25%;
-  padding-left: 15px;
-  padding-right: 15px;
-  position: relative;
-}
-
-.col-kl-9 {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 75%;
-  flex: 0 0 75%;
-  max-width: 75%;
-  padding-left: 15px;
-  padding-right: 15px;
-  position: relative;
-}
 .table-kl {
   border-collapse: collapse;
   table-layout: auto;
@@ -102,7 +56,18 @@ body {
   margin-left: 15px;
   margin-right: 15px;
 }
-
+.cardcustomheader {
+  background-image: linear-gradient(180deg, #fff, #d2e1ea);
+}
+.cardcustomheader button:hover {
+  text-decoration: none;
+  color: #8e9294;
+}
+.cardcustomheader h5 button {
+  color: #8e9294;
+  font-size: 14px;
+  line-height: 16px;
+}
 .bg-colorli {
   background-image: linear-gradient(180deg, #fff, #80ade5) !important;
   position: relative;
@@ -111,7 +76,7 @@ body {
   margin-right: 0 !important;
 }
 .form-field {
-  padding: 10px 0;
+  padding: 5px 0;
   width: 100%;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -151,7 +116,7 @@ body {
   background-color: #ccc;
   height: 60px;
   line-height: 60px;
-  /* position: absolute; */
+  position: absolute;
   bottom: 0;
   right: 0;
   left: 0;
@@ -160,6 +125,7 @@ body {
   /* background-color: #19739f; */
   background-image: linear-gradient(180deg, #2480ad, #19739f) !important;
   height: 38px;
+  line-height: 10px;
   padding: 10px 15px;
   margin-left: 5px;
   border: none;

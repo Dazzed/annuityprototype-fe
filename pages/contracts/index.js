@@ -27,14 +27,14 @@ export default function Contracts() {
   };
 
   return (
-    <div className="container-fluids-kl">
-      <div className="row-kl">
-        <div className="col-kl-12">
+    <div className="container-fluid">
+      <div className="row">
+        <div className="col-lg-12">
           <Criteria applyFilter={applyFilter} />
           <div id="main">
             {/* <span style={{ fontSize: "30px", cursor: "pointer" }}>&#9776;</span> */}
-            <div className="row-kl">
-              <div className="col-kl-12">
+            <div className="row">
+              <div className="col-lg-12">
                 <DataTable
                   title="Contracts"
                   columns={CONTRACT_COLUMNS}
