@@ -13,6 +13,12 @@ export default function Criteria(props) {
   let [productNameFilterOp, setProductNameFilterOp] = useState("");
   let [productNameFilterVal, setProductNameFilterVal] = useState("");
 
+  let [contractValueFilterOp, setContractValueFilterOp] = useState("");
+  let [contractValueFilterVal, setContractValueFilterVal] = useState("");
+
+  let [ownerAgeMin, setOwnerAgeMin] = useState();
+  let [ownerAgeMax, setOwnerAgeMax] = useState();
+
   const applyFilter = () => {
     const filters = {};
 
@@ -33,7 +39,7 @@ export default function Criteria(props) {
     if (annuitantFilterVal && annuitantFilterOp) {
       filters.annuitant = JSON.stringify([
         annuitantFilterOp,
-        ownerFilterOp === "like"
+        annuitantFilterOp === "like"
           ? `%${annuitantFilterVal}%`
           : annuitantFilterVal,
       ]);
@@ -45,6 +51,20 @@ export default function Criteria(props) {
         productNameFilterOp === "like"
           ? `%${productNameFilterVal}%`
           : productNameFilterVal,
+      ]);
+    }
+
+    if (contractValueFilterVal && contractValueFilterOp) {
+      filters.contract_value = JSON.stringify([
+        contractValueFilterOp,
+        contractValueFilterVal,
+      ]);
+    }
+
+    if (ownerAgeMin || ownerAgeMax) {
+      filters.owner_age = JSON.stringify([
+        "or",
+        { min: ownerAgeMin, max: ownerAgeMax },
       ]);
     }
 
@@ -63,6 +83,14 @@ export default function Criteria(props) {
 
     setAnnuitantFilterVal("");
     setAnnuitantFilterOp("");
+
+    setContractValueFilterVal("");
+    setContractValueFilterOp("");
+
+    setOwnerAgeMin(0);
+    setOwnerAgeMax(0);
+
+    props.applyFilter();
   };
 
   return (
@@ -247,6 +275,52 @@ export default function Criteria(props) {
         </div>
 
         <div className="card">
+          <div className="card-header cardcustomheader p-1" id="headingThree">
+            <h5 className="mb-0">
+              <button
+                className="btn btn-link"
+                data-toggle="collapse"
+                data-target="#contract_value"
+                aria-expanded="true"
+                aria-controls="contract_value"
+              >
+                Contract Value
+              </button>
+            </h5>
+          </div>
+          <div
+            id="contract_value"
+            className="collapse position-relative"
+            aria-labelledby="headingTne"
+            data-parent="#accordion"
+          >
+            <div className="card-body px-2 py-1">
+              <input
+                type="text"
+                name="contractValueFilterVal"
+                placeholder=""
+                className="form-field"
+                value={contractValueFilterVal}
+                onChange={(e) => setContractValueFilterVal(e.target.value)}
+              />
+            </div>
+            <select
+              className="dropdown-toggle-menu"
+              value={contractValueFilterOp}
+              onChange={(e) => setContractValueFilterOp(e.target.value)}
+            >
+              <option value=""></option>
+              <option value="eq">Equals</option>
+              <option value="ne">Not Equals</option>
+              <option value="lt">Less than</option>
+              <option value="lte">Less than equal</option>
+              <option value="gt">Greater than</option>
+              <option value="gte">Greater than equal</option>
+            </select>
+          </div>
+        </div>
+
+        <div className="card">
           <div className="card-header cardcustomheader p-1" id="headingFour">
             <h5 className="mb-0">
               <button
@@ -271,19 +345,23 @@ export default function Criteria(props) {
                 <div className="col-lg-6">
                   <label>Min</label>
                   <input
-                    type="text"
-                    name="ownerFilterVal"
+                    type="number"
+                    name="ownerAgeMin"
                     placeholder=""
                     className="form-field w-100"
+                    value={ownerAgeMin}
+                    onChange={(e) => setOwnerAgeMin(e.target.value)}
                   />
                 </div>
                 <div className="col-lg-6">
                   <label>Max</label>
                   <input
-                    type="text"
-                    name="ownerFilterVal"
+                    type="number"
+                    name="ownerAgeMax"
                     placeholder=""
                     className="form-field w-100"
+                    value={ownerAgeMax}
+                    onChange={(e) => setOwnerAgeMax(e.target.value)}
                   />
                 </div>
               </div>
