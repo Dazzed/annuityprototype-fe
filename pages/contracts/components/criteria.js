@@ -94,10 +94,18 @@ export default function Criteria(props) {
   };
 
   return (
-    <div id="mySidenav" className="sidenav">
+    <div
+      id="mySidenav"
+      className="sidenav"
+      style={props.showCriteria ? { width: "300px" } : { width: "0px" }}
+    >
       <li className="bg-colorli">
         Set Criteria
-        <a href="#0" className="closebtn">
+        <a
+          href="#0"
+          className="closebtn"
+          onClick={() => props.toggleShowCriteria()}
+        >
           &times;
         </a>
       </li>

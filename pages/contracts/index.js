@@ -6,6 +6,7 @@ import { CONTRACT_COLUMNS } from "../../config/constants";
 
 export default function Contracts() {
   let [contracts, setContracts] = useState([]);
+  let [showCriteria, setShowCriteria] = useState(true);
 
   const loadRecords = async (params) => {
     try {
@@ -26,13 +27,34 @@ export default function Contracts() {
     loadRecords(filters);
   };
 
+  const toggleShowCriteria = () => {
+    setShowCriteria(!showCriteria);
+  };
+
   return (
     <div className="container-fluid">
       <div className="row">
         <div className="col-lg-12">
-          <Criteria applyFilter={applyFilter} />
-          <div id="main">
-            {/* <span style={{ fontSize: "30px", cursor: "pointer" }}>&#9776;</span> */}
+          <Criteria
+            applyFilter={applyFilter}
+            showCriteria={showCriteria}
+            toggleShowCriteria={toggleShowCriteria}
+          />
+          <div
+            id="main"
+            style={
+              showCriteria ? { marginLeft: "280px" } : { marginLeft: "0px" }
+            }
+          >
+            {!showCriteria ? (
+              <span
+                style={{ fontSize: "30px", cursor: "pointer" }}
+                onClick={() => toggleShowCriteria()}
+              >
+                &#9776;
+              </span>
+            ) : null}
+
             <div className="row">
               <div className="col-lg-12">
                 <DataTable
