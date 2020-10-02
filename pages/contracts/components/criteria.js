@@ -56,7 +56,7 @@ export default function Criteria(props) {
             </h5>
           </div>
 
-          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+          <div id="collapseOne" class="collapse position-relative" aria-labelledby="headingOne" data-parent="#accordion">
             <div class="card-body px-2 py-1">
               <input
                 type="text"
@@ -67,15 +67,11 @@ export default function Criteria(props) {
                 onChange={(e) => setContractNumberFilterval(e.target.value)}
               />
             </div>
-            <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle dropdown-toggle-menu" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <a class="dropdown-item" href="#">section 1</a>
-                <a class="dropdown-item" href="#">section 2</a>
-                <a class="dropdown-item" href="#">section 3</a>
-              </div>
-            </div>
+            <select className="dropdown-toggle-menu">
+              <option>section 1</option>
+              <option>section 2</option>
+              <option>section 3</option>
+            </select>
           </div>
         </div>
         <div class="card">
@@ -87,7 +83,7 @@ export default function Criteria(props) {
             </h5>
           </div>
 
-          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+          <div id="collapseTwo" class="collapse position-relative" aria-labelledby="headingTwo" data-parent="#accordion">
             <div class="card-body px-2 py-1">
               <input
                 type="text"
@@ -98,15 +94,11 @@ export default function Criteria(props) {
                 onChange={(e) => setOwnerFilterVal(e.target.value)}
               />
             </div>
-            <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle dropdown-toggle-menu" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                <a class="dropdown-item" href="#">section 1</a>
-                <a class="dropdown-item" href="#">section 2</a>
-                <a class="dropdown-item" href="#">section 3</a>
-              </div>
-            </div>
+            <select className="dropdown-toggle-menu">
+              <option>section 1</option>
+              <option>section 2</option>
+              <option>section 3</option>
+            </select>
           </div>
         </div>
         <div class="card">
@@ -118,7 +110,7 @@ export default function Criteria(props) {
             </h5>
           </div>
 
-          <div id="collapseThree" class="collapse" aria-labelledby="headingTne" data-parent="#accordion">
+          <div id="collapseThree" class="collapse position-relative" aria-labelledby="headingTne" data-parent="#accordion">
             <div class="card-body px-2 py-1">
               <input
                 type="text"
@@ -129,15 +121,49 @@ export default function Criteria(props) {
                 onChange={(e) => setProductNameFilterVal(e.target.value)}
               />
             </div>
-            <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle dropdown-toggle-menu" type="button" id="dropdownMenuButton3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <select className="dropdown-toggle-menu">
+              <option>section 1</option>
+              <option>section 2</option>
+              <option>section 3</option>
+            </select>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header cardcustomheader p-1" id="headingFour">
+            <h5 class="mb-0">
+              <button class="btn btn-link" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseOne">
+                Client Age
               </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
-                <a class="dropdown-item" href="#">section 1</a>
-                <a class="dropdown-item" href="#">section 2</a>
-                <a class="dropdown-item" href="#">section 3</a>
+            </h5>
+          </div>
+
+          <div id="collapseFour" class="collapse position-relative" aria-labelledby="headingFour" data-parent="#accordion">
+            <div class="card-body px-2 py-1">
+              <div class="row">
+                <div className="col-lg-6">
+                  <label>Min</label>
+                  <input
+                    type="text"
+                    name="ownerFilterVal"
+                    placeholder=""
+                    className="form-field w-100"
+                    value={ownerFilterVal}
+
+                  />
+                </div>
+                <div className="col-lg-6">
+                  <label>Max</label>
+                  <input
+                    type="text"
+                    name="ownerFilterVal"
+                    placeholder=""
+                    className="form-field w-100"
+                    value={ownerFilterVal}
+
+                  />
+                </div>
               </div>
-            </div>  
+            </div>
           </div>
         </div>
       </div>

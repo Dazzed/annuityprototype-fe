@@ -78,22 +78,25 @@ body {
 }
 .dropdown-toggle-menu {
   position: absolute;
-  top: -44px;
+  top: 10px;
+  left: 5px;
   color: #000 !important;
   background-color: transparent !important;
-  border: none !important;
+  height: 35px;
+  border-radius: 2px;
+  border: 1px solid #8e9294;
 }
 .dropdown-toggle-menu:focus, .dropdown-toggle-menu:hover {
   color: #000 !important;
   background-color: transparent !important;
-  border: none !important;
   outline: none;
   box-shadow: none !important;
 }
 .form-field {
   padding: 5px 0;
   margin-left: 25px;
-  width: 89%;
+  width: 66%;
+  float: right;
   margin-top: 5px;
   margin-bottom: 5px;
   border-radius: 2px;
@@ -149,7 +152,7 @@ body {
   color: #fff;
 }
 label {
-  margin-top: 10px;
+  margin-top: 0;
   color: #8e9294;
 }
 .dropbtn {
