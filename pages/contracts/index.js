@@ -32,48 +32,47 @@ export default function Contracts() {
   };
 
   return (
-    <div className="container-fluid">
-      <div className="row">
-        <div className="col-lg-12">
-          <Criteria
-            applyFilter={applyFilter}
-            showCriteria={showCriteria}
-            toggleShowCriteria={toggleShowCriteria}
-          />
-          <div
-            id="main"
-            style={
-              showCriteria ? { marginLeft: "280px" } : { marginLeft: "0px" }
-            }
-          >
-            {!showCriteria ? (
-              <span
-                style={{ fontSize: "30px", cursor: "pointer" }}
-                onClick={() => toggleShowCriteria()}
-              >
-                &#9776;
-              </span>
-            ) : null}
+    <div className="container-fluids-kl">
+      <div className="row-kl">
+        <div className="col-kl-12">
+          {/* <div className="header-section" /> */}
+        </div>
+        <Criteria
+          applyFilter={applyFilter}
+          showCriteria={showCriteria}
+          toggleShowCriteria={toggleShowCriteria}
+        />
+        <div
+          id="main"
+          style={showCriteria ? { marginLeft: "300px" } : { marginLeft: "0px" }}
+        >
+          {!showCriteria ? (
+            <span
+              style={{ fontSize: "30px", cursor: "pointer" }}
+              onClick={() => toggleShowCriteria()}
+            >
+              &#9776;
+            </span>
+          ) : null}
 
-            <div className="row">
-              <div className="col-lg-12">
-                <DataTable
-                  title="Contracts"
-                  columns={CONTRACT_COLUMNS}
-                  data={contracts}
-                  striped
-                  highlightOnHover
-                  pointerOnHover
-                  responsive
-                  fixedHeader
-                  persistTableHead
-                  pagination
-                  paginationPerPage={100}
-                  paginationRowsPerPageOptions={[10, 50, 100, 200]}
-                  overflowY
-                  noHeader
-                />
-              </div>
+          <div className="row">
+            <div className="col-lg-12">
+              <DataTable
+                title="Contracts"
+                columns={CONTRACT_COLUMNS}
+                data={contracts}
+                striped
+                highlightOnHover
+                pointerOnHover
+                responsive
+                fixedHeader
+                persistTableHead
+                pagination
+                paginationPerPage={100}
+                paginationRowsPerPageOptions={[10, 50, 100, 200]}
+                overflowY
+                noHeader
+              />
             </div>
           </div>
         </div>

@@ -2,6 +2,52 @@ body {
   margin: 0;
   padding: 0;
 }
+.container-fluids-kl {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* header section */
+.header-section {
+  background-color: #0b1941;
+  height: 90px;
+  width: 100%;
+  max-width: 100%;
+}
+.row-kl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col-kl-12 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+  position: relative;
+}
+
+.col-kl-3 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
+  position: relative;
+}
+
+.col-kl-9 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 75%;
+  flex: 0 0 75%;
+  max-width: 75%;
+  position: relative;
+}
 .table-kl {
   border-collapse: collapse;
   table-layout: auto;
@@ -117,6 +163,11 @@ body {
 
 .sidenav a:hover {
   color: #8e9294;
+}
+
+.rdt_TableHeadRow div {
+  font-weight: bold;
+  font-size: 14px;
 }
 
 .sidenav .closebtn {
