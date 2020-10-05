@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import _ from "lodash";
 
 export default function Criteria(props) {
   let [contractNumberFilterOp, setContractNumberFilterOp] = useState("eq");
@@ -18,6 +20,21 @@ export default function Criteria(props) {
 
   let [ownerAgeMin, setOwnerAgeMin] = useState();
   let [ownerAgeMax, setOwnerAgeMax] = useState();
+
+  const saveSearchCriteria = async (filters) => {
+    try {
+      const params = _.mapKeys(filters, (value, key) => {
+        return _.camelCase(key);
+      });
+
+      await axios.post(
+        `http://localhost:3000/users/set-contract-search-criteria`,
+        params
+      );
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   const applyFilter = () => {
     const filters = {};
@@ -69,6 +86,62 @@ export default function Criteria(props) {
     }
 
     props.applyFilter(filters);
+    saveSearchCriteria(filters);
+  };
+
+  const getSearchCriteria = async () => {
+    try {
+      const { data } = await axios.get(
+        `http://localhost:3000/users/get-contract-search-criteria`
+      );
+      const keys = Object.keys(data);
+
+      keys.forEach((key) => {
+        const [op, value] = JSON.parse(data[key]);
+        switch (key) {
+          case "contractNumber":
+            setContractNumberFilterVal(value);
+            setContractNumberFilterOp(op);
+            break;
+
+          case "owner":
+            setOwnerFilterVal(value);
+            setOwnerFilterOp(op);
+            break;
+
+          case "ownerAge":
+            setOwnerAgeMin(value.min);
+            setOwnerAgeMax(value.max);
+            break;
+
+          case "annuitant":
+            setAnnuitantFilterVal(value);
+            setAnnuitantFilterOp(op);
+            break;
+
+          case "annuitantAge":
+            break;
+          case "issueDate":
+            break;
+
+          case "productName":
+            setProductNameFilterVal(value);
+            setProductNameFilterOp(op);
+            break;
+
+          case "contractValue":
+            setContractValueFilterVal(value);
+            setContractValueFilterOp(op);
+            break;
+        }
+      });
+
+      // if (keys.length > 0) {
+      //   applyFilter();
+      // }
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   const resetFilter = () => {
@@ -92,6 +165,10 @@ export default function Criteria(props) {
 
     props.applyFilter();
   };
+
+  useEffect(() => {
+    getSearchCriteria();
+  }, []);
 
   return (
     <div
