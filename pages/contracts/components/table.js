@@ -2,9 +2,26 @@ import React, {Component} from 'react';
 
 import { CONTRACT_COLUMNS } from "../../../config/constants";
 
-const $ = require('jquery');
-$.DataTable = require('datatables.net');
 
+require( 'jszip' );
+require( 'pdfmake' );
+require( 'datatables.net-dt' );
+require( 'datatables.net-autofill-dt' );
+require( 'datatables.net-buttons-dt' );
+require( 'datatables.net-buttons/js/buttons.colVis.js' );
+require( 'datatables.net-colreorder-dt' );
+require( 'datatables.net-fixedcolumns-dt' );
+require( 'datatables.net-fixedheader-dt' );
+require( 'datatables.net-keytable-dt' );
+require( 'datatables.net-responsive-dt' );
+require( 'datatables.net-rowgroup-dt' );
+require( 'datatables.net-rowreorder-dt' );
+require( 'datatables.net-scroller-dt' );
+require( 'datatables.net-searchpanes-dt' );
+require( 'datatables.net-select-dt' );
+
+const $  = require( 'jquery' );
+$.DataTable = require( 'datatables.net' );
 
 class Table extends Component {
     componentDidMount() {
@@ -14,7 +31,10 @@ class Table extends Component {
             dom: '<"data-table-wrapper"t>',
             data: this.props.contracts,
             columns: CONTRACT_COLUMNS,
-            ordering: false
+            ordering: true,
+            buttons: [
+                'colvis'
+            ]
         });
     }
 
@@ -25,7 +45,7 @@ class Table extends Component {
     render() {
         return (
             <div>
-                <table ref="main" />
+                <table ref="main"  className="display responsive nowrap"  />
             </div>);
     }
 }

@@ -8,37 +8,31 @@ export const CONTRACT_COLUMNS = [
     title: "Contract",
     data: "contract",
     sortable: true,
-    minWidth: "250px",
   },
   {
     title: "Owner Name",
     data: "ownerName",
     sortable: true,
-    minWidth: "250px",
   },
   {
     title: "Age(0)",
     data: "ageO",
     sortable: true,
-    minWidth: "250px",
   },
   {
     title: "Annuitant Name",
     data: "annuitantName",
     sortable: true,
-    minWidth: "250px",
   },
   {
     title: "Age(A)",
     data: "ageA",
     sortable: true,
-    minWidth: "250px",
   },
   {
     title: "Issued",
     data: "issued",
     sortable: true,
-    minWidth: "250px",
   },
   {
     title: "Product",
