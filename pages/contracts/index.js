@@ -1,27 +1,7 @@
 import { useEffect, useState } from "react";
-import DataTable from "react-data-table-component";
 import axios from "axios";
+import Table from "./components/table";
 import Criteria from "./components/criteria";
-import { CONTRACT_COLUMNS } from "../../config/constants";
-
-const ExpandedRowComponent = ({ data }) => (
-  <div className="expandedRowComponent">
-    {console.log(data)}
-    <table>
-      <tbody>
-        {Object.keys(data).map((key) => (
-          <tr>
-            <td>{key.toUpperCase()}:</td>
-            <td>
-              {"  "}
-              {data[key]}
-            </td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  </div>
-);
 
 export default function Contracts() {
   let [contracts, setContracts] = useState([]);
@@ -74,30 +54,7 @@ export default function Contracts() {
             </span>
           ) : null}
 
-          <div className="row">
-            <div className="col-lg-12">
-              <DataTable
-                title="Contracts"
-                columns={CONTRACT_COLUMNS}
-                data={contracts}
-                striped
-                highlightOnHover
-                pointerOnHover
-                responsive
-                fixedHeader
-                persistTableHead
-                pagination
-                paginationPerPage={100}
-                paginationRowsPerPageOptions={[10, 50, 100, 200]}
-                // overflowY
-                noHeader
-                grow
-                responsive
-                expandableRows
-                expandableRowsComponent={<ExpandedRowComponent />}
-              />
-            </div>
-          </div>
+          {contracts.length > 0 ? <Table contracts={contracts} /> : null}
         </div>
       </div>
     </div>
