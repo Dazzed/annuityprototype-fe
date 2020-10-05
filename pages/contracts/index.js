@@ -2,10 +2,12 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Table from "./components/table";
 import Criteria from "./components/criteria";
+import Head from 'next/head'
+
 
 export default function Contracts() {
   let [contracts, setContracts] = useState([]);
-  let [showCriteria, setShowCriteria] = useState(true);
+  let [showCriteria, setShowCriteria] = useState(false);
 
   const loadRecords = async (params) => {
     try {
@@ -31,9 +33,13 @@ export default function Contracts() {
   };
 
   return (
-    <div className="container-fluids-kl">
-      <div className="row-kl">
-        <div className="col-kl-12">
+    <div className="container-fluid">
+      <Head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+      </Head>
+      <div className="row">
+        <div className="col-md-12">
           {/* <div className="header-section" /> */}
         </div>
         <Criteria

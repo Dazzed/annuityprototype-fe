@@ -29,8 +29,8 @@ class Table extends Component {
       dom: "Bfrtip",
       data: this.props.contracts,
       columns: CONTRACT_COLUMNS,
-      ordering: true,
       buttons: ["colvis"],
+      responsive: true
     });
   }
 
