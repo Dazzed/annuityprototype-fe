@@ -27,7 +27,9 @@ export default function Criteria(props) {
     if (contractNumberFilterVal && contractNumberFilterOp) {
       filters.contract_number = JSON.stringify([
         contractNumberFilterOp,
-        contractNumberFilterOp === "like" ? `%${contractNumberFilterVal}%` : contractNumberFilterVal,
+        contractNumberFilterOp === "like"
+          ? `%${contractNumberFilterVal}%`
+          : contractNumberFilterVal,
       ]);
     }
 
@@ -124,6 +126,13 @@ export default function Criteria(props) {
             setContractValueFilterOp(op);
             break;
         }
+
+        const params = _.mapKeys(data, (value, key) => {
+          return _.snakeCase(key);
+        });
+
+        // search again with saved criteria
+        setTimeout(() => props.applyFilter(params), 500);
       });
     } catch (error) {
       console.error(error);
@@ -388,7 +397,7 @@ export default function Criteria(props) {
                 className="form-field"
                 value={contractValueFilterVal}
                 onChange={(e) => setContractValueFilterVal(e.target.value)}
-                style={{ width: '110px'}}
+                style={{ width: "110px" }}
               />
             </div>
             <select
