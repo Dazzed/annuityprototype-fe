@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import _ from "lodash";
 
 import { CONTRACT_COLUMNS } from "../../../config/constants";
 
@@ -35,6 +36,19 @@ class Table extends Component {
 
   componentWillUnmount() {
     $(".data-table-wrapper").find("table").DataTable().destroy(true);
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (
+      this.props.contracts &&
+      !_.isEqual(this.props.contracts, prevProps.contracts)
+    ) {
+      console.log("update table", this.props.contracts.length);
+      const table = $(this.refs.main).DataTable();
+      table.clear();
+      table.rows.add(this.props.contracts);
+      table.draw();
+    }
   }
 
   render() {
