@@ -28,7 +28,7 @@ class Table extends Component {
       console.log(this.props.contracts)
       console.log(CONTRACT_COLUMNS)
         $(this.refs.main).DataTable({
-            dom: '<"data-table-wrapper"t>',
+            dom: 'Bfrtip',
             data: this.props.contracts,
             columns: CONTRACT_COLUMNS,
             ordering: true,
@@ -45,7 +45,7 @@ class Table extends Component {
     render() {
         return (
             <div>
-                <table ref="main"  className="display responsive nowrap"  />
+                <table ref="main"  className="display responsive nowrap" style={{ width: "100%"}}  />
             </div>);
     }
 }
