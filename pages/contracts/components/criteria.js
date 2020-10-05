@@ -21,22 +21,7 @@ export default function Criteria(props) {
   let [ownerAgeMin, setOwnerAgeMin] = useState();
   let [ownerAgeMax, setOwnerAgeMax] = useState();
 
-  const saveSearchCriteria = async (filters) => {
-    try {
-      const params = _.mapKeys(filters, (value, key) => {
-        return _.camelCase(key);
-      });
-
-      await axios.post(
-        `http://localhost:3000/users/set-contract-search-criteria`,
-        params
-      );
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
-  const applyFilter = () => {
+  const generateFilters = () => {
     const filters = {};
 
     if (contractNumberFilterVal && contractNumberFilterOp) {
@@ -85,6 +70,11 @@ export default function Criteria(props) {
       ]);
     }
 
+    return filters;
+  };
+
+  const applyFilter = () => {
+    const filters = generateFilters();
     props.applyFilter(filters);
     saveSearchCriteria(filters);
   };
@@ -135,16 +125,27 @@ export default function Criteria(props) {
             break;
         }
       });
-
-      // if (keys.length > 0) {
-      //   applyFilter();
-      // }
     } catch (error) {
       console.error(error);
     }
   };
 
-  const resetFilter = () => {
+  const saveSearchCriteria = async (filters) => {
+    try {
+      const params = _.mapKeys(filters, (value, key) => {
+        return _.camelCase(key);
+      });
+
+      await axios.post(
+        `http://localhost:3000/users/set-contract-search-criteria`,
+        params
+      );
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const resetCriteria = () => {
     setContractNumberFilterVal("");
     setContractNumberFilterOp("eq");
 
@@ -457,7 +458,7 @@ export default function Criteria(props) {
 
       <div className="apply-section">
         <button onClick={applyFilter}>Apply</button>
-        <button onClick={resetFilter}>Reset</button>
+        <button onClick={resetCriteria}>Reset</button>
       </div>
     </div>
   );
