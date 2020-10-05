@@ -27,7 +27,7 @@ export default function Criteria(props) {
     if (contractNumberFilterVal && contractNumberFilterOp) {
       filters.contract_number = JSON.stringify([
         contractNumberFilterOp,
-        contractNumberFilterVal,
+        contractNumberFilterOp === "like" ? `%${contractNumberFilterVal}%` : contractNumberFilterVal,
       ]);
     }
 
@@ -388,6 +388,7 @@ export default function Criteria(props) {
                 className="form-field"
                 value={contractValueFilterVal}
                 onChange={(e) => setContractValueFilterVal(e.target.value)}
+                style={{ width: '110px'}}
               />
             </div>
             <select
