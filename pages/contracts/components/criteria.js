@@ -188,7 +188,7 @@ export default function Criteria(props) {
       <div className="nav-list">
         <ul>
           <li><a href="#"><img src="/imgs/svg-imgs/dashboard-icon.svg" />Dashboard</a></li>
-          <li><a href="#"><img src="/imgs/svg-imgs/contract-icon.svg" />Contract <span>Management</span></a></li>
+          <li className="active-nav-item"><a href="#"><img src="/imgs/svg-imgs/contract-icon.svg" />Contract <span>Management</span></a></li>
         </ul>
       </div>
     </div>

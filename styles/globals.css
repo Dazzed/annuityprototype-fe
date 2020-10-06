@@ -324,7 +324,14 @@ button:hover {
 .nav-list li a:hover {
   color: #8DC6F7;
 }
-
+.nav-list .active-nav-item a {
+  color: #8DC6F7;
+}
+.active-nav-item {
+  color: #8DC6F7;
+  border-left: 5px solid #8DC6F7;
+  height: 63px;
+}
 .contract-title-name h2 {
   font-family: Montserrat-Bold;
   font-style: normal;
