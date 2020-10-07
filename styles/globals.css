@@ -474,12 +474,12 @@ button:hover {
   margin-right: 12px;
 }
 
-.table {
+table {
   border-collapse: separate;
   border-spacing: 0 18px;
 }
 
-.table tr th {
+table tr th {
   font-family: Montserrat-Bold;
   font-style: normal;
   font-weight: bold;
@@ -493,8 +493,8 @@ button:hover {
   vertical-align: middle;
 }
 
-.table th, .table td {
-  border: none;
+table th, table td {
+  border: none !important;
 }
 
 .box-none {
@@ -503,17 +503,21 @@ button:hover {
   border: none !important;
 }
 
-.table tr {
+table tr {
   background: #FBFBFB;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
 }
-
-.table thead th {
+table tr:first-child {
+  background: transparent;
+  box-shadow: none;
+  border-radius: none;
+}
+table thead th {
   border-bottom: none;
 }
 
-.table tr td {
+table tr td {
   font-family: OpenSans-Regular;
   font-style: normal;
   font-weight: normal;
@@ -533,7 +537,28 @@ button:hover {
   position: absolute;
   right: 15px;
 }
-
+/* datatable jquery custom css */
+table.dataTable.stripe tbody tr.odd, tr.even, table.dataTable.display tbody tr.odd {
+  background-color:  #FBFBFB;
+}
+table.dataTable tbody th, table.dataTable tbody td {
+  padding: 13px 10px;
+}
+table.dataTable.display tbody tr.odd>.sorting_1, table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
+  background-color:  #fbfbfb;
+}
+table.dataTable {
+  border-spacing: 0 18px;
+}
+table.dataTable thead .sorting_asc {
+  background-image: url('/imgs/svg-imgs/dropdown-blue.svg');
+}
+table.dataTable thead .sorting_desc {
+  background-image: url('/imgs/svg-imgs/dropdown-blue.svg');
+}
+table.dataTable thead .sorting {
+  background-image: url('/imgs/svg-imgs/dropdown-blue.svg');
+}
 /* checkbox */
 
 .checkbox {

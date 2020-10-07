@@ -33,7 +33,7 @@ export default function Contracts() {
   };
 
   return (
-    <div className="container-fluid h-100 pl-0">
+    <div className="container-fluid h-100 pl-3 pl-lg-0">
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -42,14 +42,14 @@ export default function Contracts() {
         {/* <div className="col-md-12">
           <div className="header-section" />
         </div> */}
-        <div className="col-lg-2 pr-0">
+        <div className="col-lg-2 col-md-12 pr-0">
           <Criteria
             applyFilter={applyFilter}
             showCriteria={showCriteria}
           // toggleShowCriteria={toggleShowCriteria}
           />
         </div>
-        <div className="col-lg-10 col-md-10 col-sm-12 col-12 common-mr-pd">
+        <div className="col-lg-10 col-md-12 col-sm-12 col-12 common-mr-pd">
           <div className="row">
             <div className="col-lg-9 col-md-9 col-sm-8 col-8">
               <div className="contract-title-name">
