@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev -p 4000",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "figmagic": "figmagic"
   },
   "dependencies": {
     "@svgr/webpack": "^5.4.0",
@@ -39,5 +40,8 @@
     "react-device-detect": "^1.14.0",
     "react-dom": "16.13.1",
     "styled-components": "^5.2.0"
+  },
+  "devDependencies": {
+    "figmagic": "^3.0.24"
   }
 }
