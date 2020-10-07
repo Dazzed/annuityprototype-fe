@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev -p 4000",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "figmagic": "node --experimental-modules ./node_modules/figmagic/index.mjs"
   },
   "dependencies": {
     "axios": "^0.20.0",
@@ -35,5 +36,8 @@
     "react-data-table-component": "^6.11.5",
     "react-dom": "16.13.1",
     "styled-components": "^5.2.0"
+  },
+  "devDependencies": {
+    "figmagic": "^4.0.0-alpha.0"
   }
 }
