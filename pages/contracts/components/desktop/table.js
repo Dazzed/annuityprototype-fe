@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import numeral from "numeral";
+
 import DetailedContractModal from "../detailedModal";
 
 class Table extends Component {
@@ -107,7 +109,7 @@ class Table extends Component {
                 <td>{contract.ownerName}</td>
                 <td>{contract.ageO}</td>
                 <td>{contract.product}</td>
-                <td>{contract.value}</td>
+                <td>{numeral(contract.value).format("$0,0.00")}</td>
               </tr>
             ))}
           </tbody>
