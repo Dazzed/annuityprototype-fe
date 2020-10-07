@@ -37,7 +37,7 @@ class Table extends Component {
 
     return (
       <>
-        <table className="table table-responsive-md">
+        <table className="table table-responsive-md desktop-block">
           <thead>
             <tr className="box-none">
               <th scope="col">
@@ -173,6 +173,225 @@ class Table extends Component {
           contractDetails={currentSelectedContract}
           handleClose={this.toggleDetailedModal}
         />
+        <div className="container responsive-block">
+          <div className="row background-color-res">
+            <div className="col-lg-6 col-md-6 col-sm-6 col-6">
+                <div className="row">
+                <div className="col-lg-3 col-md-3 col-sm-3 col-3">
+                  <label className="checkbox">
+                    <input className="checkbox__input" type="checkbox" />
+                    <svg className="checkbox__check" width="20" height="20">
+                      <polyline points="15 6 10 14 5 11"></polyline>
+                    </svg>
+                  </label> 
+                </div>
+                <div className="col-lg-9 col-md-9 col-sm-9 col-9 pl-0">
+                    <div className="owner-section">
+                      <h3>Doe, John C</h3>
+                      <h5>VA123456789</h5>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div className="col-lg-6 col-md-6 col-sm-6 col-6 text-right">
+              <div className="arrow-dwonsection">
+              <img
+                  src="/imgs/svg-imgs/dropdown-blue.svg"
+                  alt="dropdown Icon"
+                />
+              </div>
+              <div className="value-section">
+                <h4>$52,000</h4>
+              </div>
+            </div>
+          </div>
+          <div className="row background-color-res">
+            <div className="col-lg-6 col-md-6 col-sm-6 col-6">
+                <div className="row">
+                <div className="col-lg-3 col-md-3 col-sm-3 col-3">
+                  <label className="checkbox">
+                    <input className="checkbox__input" type="checkbox" />
+                    <svg className="checkbox__check" width="20" height="20">
+                      <polyline points="15 6 10 14 5 11"></polyline>
+                    </svg>
+                  </label> 
+                </div>
+                <div className="col-lg-9 col-md-9 col-sm-9 col-9 pl-0">
+                    <div className="owner-section">
+                      <h3>Doe, John C</h3>
+                      <h5>VA123456789</h5>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div className="col-lg-6 col-md-6 col-sm-6 col-6 text-right">
+              <div className="arrow-dwonsection">
+              <img
+                  src="/imgs/svg-imgs/dropdown-blue.svg"
+                  alt="dropdown Icon"
+                />
+              </div>
+              <div className="value-section">
+                <h4>$52,000</h4>
+              </div>
+            </div>
+          </div>
+          <div className="row background-color-res">
+            <div className="col-lg-6 col-md-6 col-sm-6 col-6">
+                <div className="row">
+                <div className="col-lg-3 col-md-3 col-sm-3 col-3">
+                  <label className="checkbox">
+                    <input className="checkbox__input" type="checkbox" />
+                    <svg className="checkbox__check" width="20" height="20">
+                      <polyline points="15 6 10 14 5 11"></polyline>
+                    </svg>
+                  </label> 
+                </div>
+                <div className="col-lg-9 col-md-9 col-sm-9 col-9 pl-0">
+                    <div className="owner-section">
+                      <h3>Doe, John C</h3>
+                      <h5>VA123456789</h5>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div className="col-lg-6 col-md-6 col-sm-6 col-6 text-right">
+              <div className="arrow-dwonsection">
+              <img
+                  src="/imgs/svg-imgs/dropdown-blue.svg"
+                  alt="dropdown Icon"
+                />
+              </div>
+              <div className="value-section">
+                <h4>$52,000</h4>
+              </div>
+            </div>
+          </div>
+          <div className="row background-color-res">
+            <div className="col-lg-6 col-md-6 col-sm-6 col-6">
+                <div className="row">
+                <div className="col-lg-3 col-md-3 col-sm-3 col-3">
+                  <label className="checkbox">
+                    <input className="checkbox__input" type="checkbox" />
+                    <svg className="checkbox__check" width="20" height="20">
+                      <polyline points="15 6 10 14 5 11"></polyline>
+                    </svg>
+                  </label> 
+                </div>
+                <div className="col-lg-9 col-md-9 col-sm-9 col-9 pl-0">
+                    <div className="owner-section">
+                      <h3>Doe, John C</h3>
+                      <h5>VA123456789</h5>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div className="col-lg-6 col-md-6 col-sm-6 col-6 text-right">
+              <div className="arrow-dwonsection">
+              <img
+                  src="/imgs/svg-imgs/dropdown-blue.svg"
+                  alt="dropdown Icon"
+                />
+              </div>
+              <div className="value-section">
+                <h4>$52,000</h4>
+              </div>
+            </div>
+          </div>
+          <div className="row background-color-res">
+            <div className="col-lg-6 col-md-6 col-sm-6 col-6">
+                <div className="row">
+                <div className="col-lg-3 col-md-3 col-sm-3 col-3">
+                  <label className="checkbox">
+                    <input className="checkbox__input" type="checkbox" />
+                    <svg className="checkbox__check" width="20" height="20">
+                      <polyline points="15 6 10 14 5 11"></polyline>
+                    </svg>
+                  </label> 
+                </div>
+                <div className="col-lg-9 col-md-9 col-sm-9 col-9 pl-0">
+                    <div className="owner-section">
+                      <h3>Doe, John C</h3>
+                      <h5>VA123456789</h5>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div className="col-lg-6 col-md-6 col-sm-6 col-6 text-right">
+              <div className="arrow-dwonsection">
+              <img
+                  src="/imgs/svg-imgs/dropdown-blue.svg"
+                  alt="dropdown Icon"
+                />
+              </div>
+              <div className="value-section">
+                <h4>$52,000</h4>
+              </div>
+            </div>
+          </div>
+          <div className="row background-color-res">
+            <div className="col-lg-6 col-md-6 col-sm-6 col-6">
+                <div className="row">
+                <div className="col-lg-3 col-md-3 col-sm-3 col-3">
+                  <label className="checkbox">
+                    <input className="checkbox__input" type="checkbox" />
+                    <svg className="checkbox__check" width="20" height="20">
+                      <polyline points="15 6 10 14 5 11"></polyline>
+                    </svg>
+                  </label> 
+                </div>
+                <div className="col-lg-9 col-md-9 col-sm-9 col-9 pl-0">
+                    <div className="owner-section">
+                      <h3>Doe, John C</h3>
+                      <h5>VA123456789</h5>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div className="col-lg-6 col-md-6 col-sm-6 col-6 text-right">
+              <div className="arrow-dwonsection">
+              <img
+                  src="/imgs/svg-imgs/dropdown-blue.svg"
+                  alt="dropdown Icon"
+                />
+              </div>
+              <div className="value-section">
+                <h4>$52,000</h4>
+              </div>
+            </div>
+          </div>
+          <div className="row background-color-res">
+            <div className="col-lg-6 col-md-6 col-sm-6 col-6">
+                <div className="row">
+                <div className="col-lg-3 col-md-3 col-sm-3 col-3">
+                  <label className="checkbox">
+                    <input className="checkbox__input" type="checkbox" />
+                    <svg className="checkbox__check" width="20" height="20">
+                      <polyline points="15 6 10 14 5 11"></polyline>
+                    </svg>
+                  </label> 
+                </div>
+                <div className="col-lg-9 col-md-9 col-sm-9 col-9 pl-0">
+                    <div className="owner-section">
+                      <h3>Doe, John C</h3>
+                      <h5>VA123456789</h5>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div className="col-lg-6 col-md-6 col-sm-6 col-6 text-right">
+              <div className="arrow-dwonsection">
+              <img
+                  src="/imgs/svg-imgs/dropdown-blue.svg"
+                  alt="dropdown Icon"
+                />
+              </div>
+              <div className="value-section">
+                <h4>$52,000</h4>
+              </div>
+            </div>
+          </div>
+        </div>
       </>
     );
   }

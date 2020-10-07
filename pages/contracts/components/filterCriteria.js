@@ -13,8 +13,8 @@ class FilterCriteria extends React.Component {
             </div>
           </div>
           <div className="col-lg-3 col-md-3 co-sm-4 col-4">
-            <div className="btn-setting ">
-              <button className="btn-color-common">Settings</button>
+            <div className="btn-setting">
+              <button className="btn-color-common"><img src="/imgs/svg-imgs/carbon_settings.svg" className="setting-icon" /><span>Settings</span> </button>
             </div>
           </div>
         </div>
