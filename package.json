@@ -6,7 +6,7 @@
     "dev": "next dev -p 4000",
     "build": "next build",
     "start": "next start",
-    "figmagic": "node --experimental-modules ./node_modules/figmagic/index.mjs"
+    "figmagic": "figmagic"
   },
   "dependencies": {
     "axios": "^0.20.0",
@@ -38,6 +38,6 @@
     "styled-components": "^5.2.0"
   },
   "devDependencies": {
-    "figmagic": "^4.0.0-alpha.0"
+    "figmagic": "^3.0.24"
   }
 }
