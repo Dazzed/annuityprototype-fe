@@ -19,20 +19,20 @@ export default function DetailedModal(props) {
         style={{ border: "none", paddingBottom: "0" }}
       ></Modal.Header>
       <Modal.Body className="profile_viewcontentmodal">
-        <div className="row">
-          <div className="col-lg-4 col-md-4 col-sm-6 col-12">
+        <div className="row pt-3">
+          <div className="col-lg-4 col-md-6 col-sm-6 col-12">
             <div className="contract-common-title">
               <h4>Contract Owner</h4>
               <h2>{contractDetails.ownerName}</h2>
             </div>
           </div>
-          <div className="col-lg-4 col-md-4 col-sm-6 col-12">
+          <div className="col-lg-4 col-md-6 col-sm-6 col-12">
             <div className="contract-common-title">
               <h4>Contract Number</h4>
               <h2>{contractDetails.contract}</h2>
             </div>
           </div>
-          <div className="col-lg-4 col-md-4 col-sm-6 col-12">
+          <div className="col-lg-4 col-md-6 col-sm-6 col-12">
             <div className="contract-common-title">
               <h4>Value as of 10/1/2020</h4>
               <h2>{contractDetails.value}</h2>
@@ -41,7 +41,7 @@ export default function DetailedModal(props) {
         </div>
         <div className="row mt-pils">
           <div className="col-lg-12 col-md-12 col-sm-12 col-12">
-            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <ul class="nav nav-pills nav-custom-pills mb-3" id="pills-tab" role="tablist">
               <li class="nav-item">
                 <a class="nav-link-custom" id="pills-information-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Information</a>
               </li>
