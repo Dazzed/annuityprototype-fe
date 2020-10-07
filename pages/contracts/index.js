@@ -42,7 +42,7 @@ export default function Contracts() {
         {/* <div className="col-md-12">
           <div className="header-section" />
         </div> */}
-        <div className="col-lg-2 col-md-12 pr-0">
+        <div className="col-lg-2 col-md-12 pr-0 order-second">
           <Criteria
             applyFilter={applyFilter}
             showCriteria={showCriteria}
@@ -84,7 +84,110 @@ export default function Contracts() {
           </div>
           <div className="row common-pd">
             <div className="col-md-12">
-              {contracts.length > 0 ? <Table contracts={contracts} /> : null}
+              {/* {contracts.length > 0 ? <Table contracts={contracts} /> : null} */}
+              <table class="table table-responsive-md">
+                <thead>
+                  <tr class="box-none">
+                    <th scope="col">
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox" />
+                        <svg class="checkbox__check" width="20" height="20">
+                          <polyline points="15 6 10 14 5 11"></polyline>
+                        </svg>
+                      </label>
+                      <img src="/imgs/svg-imgs/dropdown-grey.svg" class="dropdwon-grey"
+                        alt="dropdown Icon" />
+                    </th>
+                    <th scope="col">Contract<img src="/imgs/svg-imgs/dropdown-blue.svg"
+                      alt="dropdown Icon" /></th>
+                    <th scope="col">Owner Name<img src="/imgs/svg-imgs/dropdown-blue.svg"
+                      alt="dropdown Icon" /></th>
+                    <th scope="col">Age<img src="/imgs/svg-imgs/dropdown-blue.svg"
+                      alt="dropdown Icon" /></th>
+                    <th scope="col">Product<img src="/imgs/svg-imgs/dropdown-blue.svg"
+                      alt="dropdown Icon" /></th>
+                    <th scope="col">Value<img src="/imgs/svg-imgs/dropdown-blue.svg"
+                      alt="dropdown Icon" /> <button class="add-btn">+</button></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td scope="row">
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox" />
+                        <svg class="checkbox__check" width="20" height="20">
+                          <polyline points="15 6 10 14 5 11"></polyline>
+                        </svg>
+                      </label>
+                    </td>
+                    <td>VA123456789</td>
+                    <td>Doe, John C</td>
+                    <td>90</td>
+                    <td>Pacific Select</td>
+                    <td>$52,000.00</td>
+                  </tr>
+                  <tr>
+                    <td scope="row">
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox" />
+                        <svg class="checkbox__check" width="20" height="20">
+                          <polyline points="15 6 10 14 5 11"></polyline>
+                        </svg>
+                      </label>
+                    </td>
+                    <td>VA123456789</td>
+                    <td>Doe, John C</td>
+                    <td>90</td>
+                    <td>Pacific Select</td>
+                    <td>$52,000.00</td>
+                  </tr>
+                  <tr>
+                    <td scope="row">
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox" />
+                        <svg class="checkbox__check" widd="20" height="20">
+                          <polyline points="15 6 10 14 5 11"></polyline>
+                        </svg>
+                      </label>
+                    </td>
+                    <td>VA123456789</td>
+                    <td>Doe, John C</td>
+                    <td>90</td>
+                    <td>Pacific Select</td>
+                    <td>$52,000.00</td>
+                  </tr>
+                  <tr>
+                    <td scope="row">
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox" />
+                        <svg class="checkbox__check" width="20" height="20">d <polyline
+                          points="15 6 10 14 5 11"></polyline>
+                        </svg>
+                      </label>
+                    </td>
+                    <td>VA123456789</td>
+                    <td>Doe, John C</td>
+                    <td>90</td>
+                    <td>Pacific Select</td>
+                    <td>$52,000.00</td>
+                  </tr>
+                  <tr>
+                    <td scope="row">
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox" />
+                        <svg class="checkbox__check" width="20" height="20">d <polyline
+                          points="15 6 10 14 5 11"></polyline>
+                        </svg>
+                      </label>
+                    </td>
+                    <td>VA123456789</td>
+                    <td>Doe, John C</td>
+                    <td>90</td>
+                    <td>Pacific Select</td>
+                    <td>$52,000.00</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
