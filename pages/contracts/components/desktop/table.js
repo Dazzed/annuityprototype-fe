@@ -67,7 +67,7 @@ class Table extends Component {
                   alt="dropdown Icon"
                 />
               </th>
-              <th scope="col">
+              <th scope="col" className="text-center">
                 Age
                 <img
                   src="/imgs/svg-imgs/dropdown-blue.svg"
@@ -96,8 +96,9 @@ class Table extends Component {
               <tr
                 key={contract.id}
                 onClick={() => this.selectContract(contract)}
+                className="btn-hover"
               >
-                <td scope="row">
+                <td scope="row" className="w-6">
                   <label className="checkbox">
                     <input className="checkbox__input" type="checkbox" />
                     <svg className="checkbox__check" width="20" height="20">
@@ -105,11 +106,11 @@ class Table extends Component {
                     </svg>
                   </label>
                 </td>
-                <td>{contract.contract}</td>
-                <td>{contract.ownerName}</td>
-                <td>{contract.ageO}</td>
-                <td>{contract.product}</td>
-                <td>{numeral(contract.value).format("$0,0.00")}</td>
+                <td className="w-20">{contract.contract}</td>
+                <td className="w-22">{contract.ownerName}</td>
+                <td className="w-22 text-center">{contract.ageO}</td>
+                <td className="w-15">{contract.product}</td>
+                <td className="w-15">{numeral(contract.value).format("$0,0.00")}</td>
               </tr>
             ))}
           </tbody>

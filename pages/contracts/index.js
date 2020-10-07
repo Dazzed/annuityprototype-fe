@@ -39,7 +39,7 @@ class ContractsPage extends React.Component {
 
     // Mobile view
     return (
-      <div className="container-fluid h-100 pl-3 pl-lg-0">
+      <div className="container-fluid h-100 px-3 pl-lg-0 pr-lg-3">
         <Head>
           <meta charSet="utf-8" />
           <meta
@@ -48,7 +48,7 @@ class ContractsPage extends React.Component {
           />
         </Head>
         <div className="row h-100">
-          <div className="col-lg-2 col-md-12 pr-0 order-second">
+          <div className="col-lg-2 col-md-12 px-0 pr-lg-0 pl-lg-3 order-second">
             <SideNav />
           </div>
           <div className="col-lg-10 col-md-12 col-sm-12 col-12 common-mr-pd">

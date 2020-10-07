@@ -190,13 +190,13 @@ export default function Criteria(props) {
           <li>
             <a href="#">
               <img src="/imgs/svg-imgs/dashboard-icon.svg" />
-              Dashboard
+              <span className="p-0 d-none-view">Dashboard</span>
             </a>
           </li>
           <li className="active-nav-item">
             <a href="#">
               <img src="/imgs/svg-imgs/contract-icon.svg" />
-              Contract <span>Management</span>
+              <span className="p-0 d-none-view">Contract <span>Management</span></span>
             </a>
           </li>
         </ul>
