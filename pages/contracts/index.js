@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Head from "next/head";
 import axios from "axios";
 import { isMobile } from "react-device-detect";
@@ -37,7 +37,6 @@ class ContractsPage extends React.Component {
   render() {
     const { contracts } = this.state;
 
-    // Mobile view
     return (
       <div className="container-fluid h-100 px-3 pl-lg-0 pr-lg-3">
         <Head>

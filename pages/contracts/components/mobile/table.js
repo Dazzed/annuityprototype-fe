@@ -45,43 +45,31 @@ class Table extends Component {
                   </svg>
                 </label>
                 <img
-                  src="/imgs/svg-imgs/dropdown-grey.svg"
+                  src="/imgs/svgs/dropdown-grey.svg"
                   className="dropdwon-grey"
                   alt="dropdown Icon"
                 />
               </th>
               <th scope="col">
                 Contract
-                <img
-                  src="/imgs/svg-imgs/dropdown-blue.svg"
-                  alt="dropdown Icon"
-                />
+                <img src="/imgs/svgs/dropdown-blue.svg" alt="dropdown Icon" />
               </th>
               <th scope="col">
                 Owner Name
-                <img
-                  src="/imgs/svg-imgs/dropdown-blue.svg"
-                  alt="dropdown Icon"
-                />
+                <img src="/imgs/svgs/dropdown-blue.svg" alt="dropdown Icon" />
               </th>
               <th scope="col">
                 Age
-                <img
-                  src="/imgs/svg-imgs/dropdown-blue.svg"
-                  alt="dropdown Icon"
-                />
+                <img src="/imgs/svgs/dropdown-blue.svg" alt="dropdown Icon" />
               </th>
               <th scope="col">
                 Product
-                <img
-                  src="/imgs/svg-imgs/dropdown-blue.svg"
-                  alt="dropdown Icon"
-                />
+                <img src="/imgs/svgs/dropdown-blue.svg" alt="dropdown Icon" />
               </th>
               <th scope="col">
                 Value
                 <img
-                  src="/imgs/svg-imgs/dropdown-blue.svg"
+                  src="/imgs/svgs/dropdown-blue.svg"
                   alt="dropdown Icon"
                 />{" "}
                 <button className="add-btn">+</button>

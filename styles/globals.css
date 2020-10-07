@@ -8,22 +8,22 @@ html, body {
 
 @font-face {
   font-family: Montserrat-Regular;
-  src: url(/imgs/fonts/Montserrat-Bold.ttf);
+  src: url(/fonts/Montserrat-Bold.ttf);
 }
 
 @font-face {
   font-family: Montserrat-Bold;
-  src: url(/imgs/fonts/Montserrat-Bold.ttf);
+  src: url(/fonts/Montserrat-Bold.ttf);
 }
 
 @font-face {
   font-family: OpenSans-Bold;
-  src: url(/imgs/fonts/OpenSans-Bold.ttf);
+  src: url(/fonts/OpenSans-Bold.ttf);
 }
 
 @font-face {
   font-family: OpenSans-Regular;
-  src: url(/imgs/fonts/OpenSans-Regular.ttf);
+  src: url(/fonts/OpenSans-Regular.ttf);
 }
 
 /* header section */

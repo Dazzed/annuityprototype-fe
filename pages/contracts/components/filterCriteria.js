@@ -14,7 +14,13 @@ class FilterCriteria extends React.Component {
           </div>
           <div className="col-lg-3 col-md-3 co-sm-4 col-4">
             <div className="btn-setting">
-              <button className="btn-color-common"><img src="/imgs/svg-imgs/carbon_settings.svg" className="setting-icon" /><span>Settings</span> </button>
+              <button className="btn-color-common">
+                <img
+                  src="/imgs/svgs/carbon_settings.svg"
+                  className="setting-icon"
+                />
+                <span>Settings</span>{" "}
+              </button>
             </div>
           </div>
         </div>
@@ -23,7 +29,7 @@ class FilterCriteria extends React.Component {
             <div className="search-box">
               <input type="text" placeholder="Search" />
               <img
-                src="/imgs/svg-imgs/search-icon.svg"
+                src="/imgs/svgs/search-icon.svg"
                 id="icon"
                 className="search"
               />
@@ -33,20 +39,20 @@ class FilterCriteria extends React.Component {
             <div className="fliter-issue">
               <button>
                 <img
-                  src="/imgs/svg-imgs/filter-icon.svg"
+                  src="/imgs/svgs/filter-icon.svg"
                   className="fliter-icon-1"
                   alt="Fliter Icon"
                 />
                 <span className="filter-component">Present</span>
                 Filters
                 <img
-                  src="/imgs/svg-imgs/fliter-icon-2.svg"
+                  src="/imgs/svgs/fliter-icon-2.svg"
                   alt="Fliter Icon"
                   className="fliter-icon-2"
                 />
               </button>
               <button>
-                <img src="/imgs/svg-imgs/sort-icon.svg" alt="Sort Icon" />
+                <img src="/imgs/svgs/sort-icon.svg" alt="Sort Icon" />
                 Sort by: <span>Issue Date</span>
               </button>
             </div>

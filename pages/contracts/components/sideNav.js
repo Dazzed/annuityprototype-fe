@@ -183,20 +183,22 @@ export default function Criteria(props) {
   return (
     <div className="sidebar">
       <div className="logo-section text-center">
-        <img src="/imgs/svg-imgs/logo-white.svg" alt="Logo" />
+        <img src="/imgs/svgs/logo-white.svg" alt="Logo" />
       </div>
       <div className="nav-list">
         <ul>
           <li>
             <a href="#">
-              <img src="/imgs/svg-imgs/dashboard-icon.svg" />
+              <img src="/imgs/svgs/dashboard-icon.svg" />
               <span className="p-0 d-none-view">Dashboard</span>
             </a>
           </li>
           <li className="active-nav-item">
             <a href="#">
-              <img src="/imgs/svg-imgs/contract-icon.svg" />
-              <span className="p-0 d-none-view">Contract <span>Management</span></span>
+              <img src="/imgs/svgs/contract-icon.svg" />
+              <span className="p-0 d-none-view">
+                Contract <span>Management</span>
+              </span>
             </a>
           </li>
         </ul>
