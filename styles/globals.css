@@ -111,7 +111,9 @@ button:focus {
 }
 
 /* slider animation */
-
+.bg-default {
+  background-color: #053661;
+}
 .sidenav {
   height: 100%;
   width: 214px;
@@ -817,6 +819,22 @@ a:hover {
   .search-box input {
     width: 100%;
   }
+  .nav-list li a {
+    padding-left: 20px;
+  }
+  .nav-list li a span {
+    padding-left: 30px;
+  }
+  .fliter-issue button {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .common-mr-pd {
+    padding: 15px;
+  }
+  .table thead th {
+    width: 10%;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -924,8 +942,12 @@ a:hover {
   .desktop-block {
     display: none !important;
   }
-  .common-mr-pd {
-    padding: 15px;
+  .fliter-issue {
+    margin-bottom: 20px;
+  }
+  .fliter-issue button {
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 
@@ -937,6 +959,7 @@ a:hover {
   .fliter-issue {
     margin-top: 20px;
     text-align: left;
+    margin-bottom: 10px;
   }
   .fliter-issue button {
     font-size: 16px;

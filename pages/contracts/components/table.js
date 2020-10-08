@@ -106,7 +106,7 @@ class Table extends Component {
         <div className="container responsive-block">
           {contracts.map((contract) => (
             <div className="row background-color-res" key={contract.id}>
-              <div className="col-lg-6 col-md-6 col-sm-6 col-6">
+              <div className="col-lg-6 col-md-6 col-sm-6 col-7 pr-0">
                 <div className="row">
                   <div className="col-lg-3 col-md-3 col-sm-3 col-3">
                     <label className="checkbox">
@@ -124,7 +124,7 @@ class Table extends Component {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-6 col-md-6 col-sm-6 col-6 text-right">
+              <div className="col-lg-6 col-md-6 col-sm-6 col-5 text-right">
                 <div className="arrow-dwonsection">
                   <img src="/imgs/svgs/dropdown-blue.svg" alt="dropdown Icon" />
                 </div>
