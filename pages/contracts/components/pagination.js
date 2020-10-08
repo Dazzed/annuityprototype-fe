@@ -23,11 +23,11 @@ class Pagination extends Component {
 
   render() {
     return (
-      <nav aria-label="pagination">
+      <nav aria-label="pagination" className="d-inline-block">
         <ul className="pagination">
           <li className="page-item">
             <a
-              className="page-link"
+              className="page-link page-link-custom"
               href="#0"
               aria-label="Previous"
               onClick={this.handleMoveLeft}
@@ -38,7 +38,7 @@ class Pagination extends Component {
           </li>
           <li className="page-item">
             <a
-              className="page-link"
+              className="page-link page-link-custom"
               href="#0"
               aria-label="Next"
               onClick={this.handleMoveRight}

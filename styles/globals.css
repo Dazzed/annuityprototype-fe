@@ -25,13 +25,17 @@ html, body {
   font-family: OpenSans-Regular;
   src: url(/fonts/OpenSans-Regular.ttf);
 }
+
 button:focus {
   outline: none;
 }
+
 /* header section */
+
 #__next {
   height: 100%;
 }
+
 .header-section {
   background-color: #0b1941;
   height: 90px;
@@ -766,11 +770,35 @@ a:hover {
 .setting-icon {
   display: none;
 }
+
 .responsive-block {
   display: none !important;
 }
+
 .desktop-block {
   display: block !important;
+}
+
+.page-item:first-child {
+  padding-right: 10px;
+}
+
+.range-section {
+  font-family: OpenSans-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #8F8F8F;
+  margin-left: 10px;
+}
+
+.page-link-custom {
+  border: none;
+  color: #053661;
+  background: #FBFBFB;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -895,6 +923,9 @@ a:hover {
   }
   .desktop-block {
     display: none !important;
+  }
+  .common-mr-pd {
+    padding: 15px;
   }
 }
 

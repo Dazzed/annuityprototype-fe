@@ -89,15 +89,15 @@ class ContractsPage extends React.Component {
             <div className="row common-pd">
               <div className="col-md-12">
                 <Table contracts={contracts} />
-                <div className="row">
-                  <div className="col">
+                <div className="row mb-5 mb-lg-2">
+                  <div className="col-lg-12 text-right">
                     <Pagination
                       totalPages={totalPages}
                       currentPage={currentPage}
                       loadRecords={this.loadRecords}
                     />
+                    <span className="range-section">{range}</span>
                   </div>
-                  <div className="col">{range}</div>
                 </div>
               </div>
             </div>
