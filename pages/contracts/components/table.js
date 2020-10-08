@@ -70,7 +70,7 @@ class Table extends Component {
                 Product
                 <ColumnFilterDrop />
               </th>
-              <th scope="col">
+              <th scope="col" className="text-center">
                 Value
                 <ColumnFilterDrop /> <button className="add-btn">+</button>
               </th>
@@ -95,7 +95,7 @@ class Table extends Component {
                 <td className="w-22">{contract.ownerName}</td>
                 <td className="w-22 text-center">{contract.ageO}</td>
                 <td className="w-15">{contract.product}</td>
-                <td className="w-15">
+                <td className="w-15 text-right">
                   {numeral(contract.value).format("$0,0.00")}
                 </td>
               </tr>
