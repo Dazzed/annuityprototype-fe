@@ -5,6 +5,17 @@ import axios from "axios";
 import Table from "./components/table";
 import SideNav from "./components/sideNav";
 import FilterCriteria from "./components/filterCriteria";
+import Pagination from "./components/pagination";
+
+const getPageRange = ({ currentPage, pageSize, totalCount }) => {
+  const startRecord = currentPage === 1 ? 1 : (currentPage - 1) * pageSize;
+  const endRecord =
+    startRecord + pageSize <= totalCount ? startRecord + pageSize : totalCount;
+
+  return currentPage === 1
+    ? `1-${pageSize} of ${totalCount}`
+    : `${startRecord}-${endRecord} of ${totalCount}`;
+};
 
 class ContractsPage extends React.Component {
   constructor(props) {
@@ -12,7 +23,13 @@ class ContractsPage extends React.Component {
 
     this.state = {
       contracts: [],
+      currentPage: 1,
+      totalPages: 0,
+      totalCount: 0,
+      pageSize: 10,
     };
+
+    this.loadRecords = this.loadRecords.bind(this);
   }
 
   componentDidMount() {
@@ -22,10 +39,18 @@ class ContractsPage extends React.Component {
   async loadRecords(params) {
     try {
       const result = await axios.get(`http://localhost:3000/contracts`, {
-        params,
+        params: {
+          ...params,
+          pageSize: this.state.pageSize,
+        },
       });
+
       this.setState({
-        contracts: result.data,
+        contracts: result.data.rows,
+        currentPage: parseInt(result.data.currentPage),
+        totalPages: parseInt(result.data.totalPages),
+        totalCount: parseInt(result.data.totalCount),
+        pageSize: parseInt(result.data.pageSize),
       });
     } catch (error) {
       console.error(error);
@@ -33,7 +58,18 @@ class ContractsPage extends React.Component {
   }
 
   render() {
-    const { contracts } = this.state;
+    const {
+      contracts,
+      currentPage,
+      totalPages,
+      totalCount,
+      pageSize,
+    } = this.state;
+    const range = getPageRange({
+      currentPage,
+      pageSize,
+      totalCount,
+    });
 
     return (
       <div className="container-fluid h-100 px-3 pl-lg-0 pr-lg-3">
@@ -53,6 +89,16 @@ class ContractsPage extends React.Component {
             <div className="row common-pd">
               <div className="col-md-12">
                 <Table contracts={contracts} />
+                <div className="row">
+                  <div className="col">
+                    <Pagination
+                      totalPages={totalPages}
+                      currentPage={currentPage}
+                      loadRecords={this.loadRecords}
+                    />
+                  </div>
+                  <div className="col">{range}</div>
+                </div>
               </div>
             </div>
           </div>
