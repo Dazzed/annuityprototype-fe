@@ -1,4 +1,8 @@
 import React, { Component } from "react";
+import numeral from "numeral";
+
+import DetailedContractModal from "./detailedModal";
+import ColumnFilterDrop from "./columnFilterDrop";
 
 class Table extends Component {
   constructor(props) {
@@ -34,7 +38,7 @@ class Table extends Component {
 
     return (
       <>
-        <table className="table table-responsive-md">
+        <table className="table table-responsive-md desktop-block">
           <thead>
             <tr className="box-none">
               <th scope="col">
@@ -52,27 +56,23 @@ class Table extends Component {
               </th>
               <th scope="col">
                 Contract
-                <img src="/imgs/svgs/dropdown-blue.svg" alt="dropdown Icon" />
+                <ColumnFilterDrop />
               </th>
               <th scope="col">
                 Owner Name
-                <img src="/imgs/svgs/dropdown-blue.svg" alt="dropdown Icon" />
+                <ColumnFilterDrop />
               </th>
-              <th scope="col">
+              <th scope="col" className="text-center">
                 Age
-                <img src="/imgs/svgs/dropdown-blue.svg" alt="dropdown Icon" />
+                <ColumnFilterDrop />
               </th>
               <th scope="col">
                 Product
-                <img src="/imgs/svgs/dropdown-blue.svg" alt="dropdown Icon" />
+                <ColumnFilterDrop />
               </th>
               <th scope="col">
                 Value
-                <img
-                  src="/imgs/svgs/dropdown-blue.svg"
-                  alt="dropdown Icon"
-                />{" "}
-                <button className="add-btn">+</button>
+                <ColumnFilterDrop /> <button className="add-btn">+</button>
               </th>
             </tr>
           </thead>
@@ -83,7 +83,7 @@ class Table extends Component {
                 onClick={() => this.selectContract(contract)}
                 className="btn-hover"
               >
-                <td scope="row">
+                <td scope="row" className="w-6">
                   <label className="checkbox">
                     <input className="checkbox__input" type="checkbox" />
                     <svg className="checkbox__check" width="20" height="20">
@@ -91,15 +91,50 @@ class Table extends Component {
                     </svg>
                   </label>
                 </td>
-                <td>{contract.contract}</td>
-                <td>{contract.ownerName}</td>
-                <td>{contract.ageO}</td>
-                <td>{contract.product}</td>
-                <td>{contract.value}</td>
+                <td className="w-22">{contract.contract}</td>
+                <td className="w-22">{contract.ownerName}</td>
+                <td className="w-22 text-center">{contract.ageO}</td>
+                <td className="w-15">{contract.product}</td>
+                <td className="w-15">
+                  {numeral(contract.value).format("$0,0.00")}
+                </td>
               </tr>
             ))}
           </tbody>
         </table>
+
+        <div className="container responsive-block">
+          {contracts.map((contract) => (
+            <div className="row background-color-res" key={contract.id}>
+              <div className="col-lg-6 col-md-6 col-sm-6 col-6">
+                <div className="row">
+                  <div className="col-lg-3 col-md-3 col-sm-3 col-3">
+                    <label className="checkbox">
+                      <input className="checkbox__input" type="checkbox" />
+                      <svg className="checkbox__check" width="20" height="20">
+                        <polyline points="15 6 10 14 5 11"></polyline>
+                      </svg>
+                    </label>
+                  </div>
+                  <div className="col-lg-9 col-md-9 col-sm-9 col-9 pl-0">
+                    <div className="owner-section">
+                      <h3>{contract.ownerName}</h3>
+                      <h5>{contract.contract}</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-6 col-md-6 col-sm-6 col-6 text-right">
+                <div className="arrow-dwonsection">
+                  <img src="/imgs/svgs/dropdown-blue.svg" alt="dropdown Icon" />
+                </div>
+                <div className="value-section">
+                  <h4>{numeral(contract.value).format("$0,0.00")}</h4>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
         <DetailedContractModal
           show={showDetailedContractModal}
           contractDetails={currentSelectedContract}

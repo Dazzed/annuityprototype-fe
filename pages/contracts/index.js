@@ -1,10 +1,8 @@
 import React from "react";
 import Head from "next/head";
 import axios from "axios";
-import { isMobile } from "react-device-detect";
 
-import TableDesktop from "./components/desktop/table";
-import TableMobile from "./components/mobile/table";
+import Table from "./components/table";
 import SideNav from "./components/sideNav";
 import FilterCriteria from "./components/filterCriteria";
 
@@ -54,11 +52,7 @@ class ContractsPage extends React.Component {
             <FilterCriteria />
             <div className="row common-pd">
               <div className="col-md-12">
-                {isMobile ? (
-                  <TableMobile contracts={contracts} />
-                ) : (
-                  <TableDesktop contracts={contracts} />
-                )}
+                <Table contracts={contracts} />
               </div>
             </div>
           </div>
