@@ -181,7 +181,7 @@ class Table extends Component {
                     </svg>
                   </label>
                 </td>
-                <td className="w-22">{contract.contract}</td>
+                <td className="w-22 text-left">{contract.contract}</td>
                 <td className="w-22">{contract.ownerName}</td>
                 <td className="w-22 text-center">{contract.ageO}</td>
                 <td className="w-15">{contract.product}</td>

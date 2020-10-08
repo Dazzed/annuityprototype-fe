@@ -25,9 +25,13 @@ html, body {
   font-family: OpenSans-Regular;
   src: url(/fonts/OpenSans-Regular.ttf);
 }
-
+button:focus {
+  outline: none;
+}
 /* header section */
-
+#__next {
+  height: 100%;
+}
 .header-section {
   background-color: #0b1941;
   height: 90px;
