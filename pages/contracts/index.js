@@ -8,6 +8,8 @@ import FilterCriteria from "./components/filterCriteria";
 import Pagination from "./components/pagination";
 
 const getPageRange = ({ currentPage, pageSize, totalCount }) => {
+  if (totalCount === 0) return "None";
+
   const startRecord = currentPage === 1 ? 1 : (currentPage - 1) * pageSize;
   const endRecord =
     startRecord + pageSize <= totalCount ? startRecord + pageSize : totalCount;
@@ -23,6 +25,7 @@ class ContractsPage extends React.Component {
 
     this.state = {
       contracts: [],
+      params: {},
       currentPage: 1,
       totalPages: 0,
       totalCount: 0,
@@ -38,11 +41,14 @@ class ContractsPage extends React.Component {
 
   async loadRecords(params) {
     try {
+      const queryParams = {
+        ...this.state.params,
+        ...params,
+        pageSize: this.state.pageSize,
+      };
+
       const result = await axios.get(`http://localhost:3000/contracts`, {
-        params: {
-          ...params,
-          pageSize: this.state.pageSize,
-        },
+        params: queryParams,
       });
 
       this.setState({
@@ -51,6 +57,7 @@ class ContractsPage extends React.Component {
         totalPages: parseInt(result.data.totalPages),
         totalCount: parseInt(result.data.totalCount),
         pageSize: parseInt(result.data.pageSize),
+        params: queryParams,
       });
     } catch (error) {
       console.error(error);
@@ -85,7 +92,7 @@ class ContractsPage extends React.Component {
             <SideNav />
           </div>
           <div className="col-lg-10 col-md-12 col-sm-12 col-12 common-mr-pd">
-            <FilterCriteria />
+            <FilterCriteria loadRecords={this.loadRecords} />
             <div className="row common-pd">
               <div className="col-md-12">
                 <Table contracts={contracts} />

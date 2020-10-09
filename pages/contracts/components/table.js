@@ -135,6 +135,11 @@ class Table extends Component {
             </div>
           ))}
         </div>
+        {!contracts || contracts.length === 0 ? (
+          <div className="text-center mt-30">
+            <p>No results found</p>
+          </div>
+        ) : null}
         <DetailedContractModal
           show={showDetailedContractModal}
           contractDetails={currentSelectedContract}

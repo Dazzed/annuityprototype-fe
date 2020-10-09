@@ -1,7 +1,38 @@
 import React from "react";
+import debounce from "lodash/debounce";
 
 class FilterCriteria extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      searchQuery: "",
+    };
+
+    this.handleSearchQuery = this.handleSearchQuery.bind(this);
+    this.callApi = this.callApi.bind(this);
+  }
+
+  handleSearchQuery(e) {
+    e.preventDefault();
+
+    this.setState(
+      {
+        searchQuery: e.target.value,
+      },
+      () => this.callApi()
+    );
+  }
+
+  callApi = debounce(() => {
+    this.props.loadRecords({
+      searchQuery: this.state.searchQuery,
+    });
+  }, 300);
+
   render() {
+    const { searchQuery } = this.state;
+
     return (
       <>
         <div className="row">
@@ -27,7 +58,12 @@ class FilterCriteria extends React.Component {
         <div className="row common-pd">
           <div className="col-lg-6 col-md-4 col-sm-12 col-12">
             <div className="search-box">
-              <input type="text" placeholder="Search" />
+              <input
+                type="text"
+                placeholder="Search"
+                value={searchQuery}
+                onChange={this.handleSearchQuery}
+              />
               <img
                 src="/imgs/svgs/search-icon.svg"
                 id="icon"
