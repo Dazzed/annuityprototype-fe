@@ -1,6 +1,7 @@
 import React from "react";
-import $ from 'jquery';
+import $ from "jquery";
 import debounce from "lodash/debounce";
+import { CONTRACT_COLUMNS } from "../../../config/constants";
 
 class FilterCriteria extends React.Component {
   constructor(props) {
@@ -8,9 +9,11 @@ class FilterCriteria extends React.Component {
 
     this.state = {
       searchQuery: "",
+      sort: ["id", "ASC"],
     };
 
     this.handleSearchQuery = this.handleSearchQuery.bind(this);
+    this.handleSorting = this.handleSorting.bind(this);
     this.callApi = this.callApi.bind(this);
   }
 
@@ -25,18 +28,40 @@ class FilterCriteria extends React.Component {
     );
   }
 
+  handleSorting(e) {
+    e.preventDefault();
+
+    const sort = this.state.sort;
+
+    if (e.target.name === "sort_column") {
+      sort[0] = e.target.value;
+    } else if (e.target.name === "sort_direction") {
+      sort[1] = e.target.value;
+    }
+
+    this.setState(
+      {
+        sort,
+      },
+      () => this.callApi()
+    );
+  }
+
   callApi = debounce(() => {
     this.props.loadRecords({
       searchQuery: this.state.searchQuery,
+      sortBy: JSON.stringify(this.state.sort),
     });
   }, 300);
-componentDidMount() {
-  $('.dropdown-menu').click(function(e) {
-    e.stopPropagation();
-});
-}
+
+  componentDidMount() {
+    $(".dropdown-menu").click(function (e) {
+      e.stopPropagation();
+    });
+  }
+
   render() {
-    const { searchQuery } = this.state;
+    const { searchQuery, sort } = this.state;
 
     return (
       <>
@@ -92,17 +117,45 @@ componentDidMount() {
                   className="fliter-icon-2"
                 />
               </button>
-              <div class="dropdown d-inline-block">
-                <button class="" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <div className="dropdown d-inline-block">
+                <button
+                  className=""
+                  type="button"
+                  id="dropdownMenuButton2"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
                   <img src="/imgs/svgs/sort-icon.svg" alt="Sort Icon" />
-                Sort by: <span>Issue Date</span>
+                  Sort by:{" "}
+                  <span>
+                    {CONTRACT_COLUMNS.find((e) => e.data === sort[0]).title}
+                  </span>
                 </button>
-                <div class="dropdown-menu custom-sorting" aria-labelledby="dropdownMenuButton2">
-                  <select className="form-control">
-                    <option>Option 1</option>
-                    <option>Option 2</option>
-                    <option>Option 3</option>
-                    <option>Option 4</option>
+                <div
+                  className="dropdown-menu custom-sorting"
+                  aria-labelledby="dropdownMenuButton2"
+                >
+                  <select
+                    className="form-control"
+                    name="sort_column"
+                    value={sort[0]}
+                    onChange={this.handleSorting}
+                  >
+                    {CONTRACT_COLUMNS.map((col) => (
+                      <option key={col.data} value={col.data}>
+                        {col.title}
+                      </option>
+                    ))}
+                  </select>
+                  <select
+                    className="form-control"
+                    name="sort_direction"
+                    value={sort[1]}
+                    onChange={this.handleSorting}
+                  >
+                    <option value="ASC">ASC</option>
+                    <option value="DESC">DESC</option>
                   </select>
                 </div>
               </div>
