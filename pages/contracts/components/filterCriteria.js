@@ -87,10 +87,20 @@ class FilterCriteria extends React.Component {
                   className="fliter-icon-2"
                 />
               </button>
-              <button>
-                <img src="/imgs/svgs/sort-icon.svg" alt="Sort Icon" />
+              <div class="dropdown d-inline-block">
+                <button class="" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <img src="/imgs/svgs/sort-icon.svg" alt="Sort Icon" />
                 Sort by: <span>Issue Date</span>
-              </button>
+                </button>
+                <div class="dropdown-menu custom-sorting" aria-labelledby="dropdownMenuButton2">
+                  <select className="form-control">
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                    <option>Option 4</option>
+                  </select>
+                </div>
+              </div>
             </div>
           </div>
         </div>

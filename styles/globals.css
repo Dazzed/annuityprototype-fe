@@ -802,6 +802,13 @@ a:hover {
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
 }
+.custom-sorting {
+  background: #FBFBFB;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  width: 225px;
+  padding: 20px 15px;
+}
 
 @media screen and (max-width: 1200px) {
   .col-30 {
