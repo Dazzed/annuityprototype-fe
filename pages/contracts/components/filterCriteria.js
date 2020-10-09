@@ -1,4 +1,5 @@
 import React from "react";
+import $ from 'jquery';
 import debounce from "lodash/debounce";
 
 class FilterCriteria extends React.Component {
@@ -29,7 +30,11 @@ class FilterCriteria extends React.Component {
       searchQuery: this.state.searchQuery,
     });
   }, 300);
-
+componentDidMount() {
+  $('.dropdown-menu').click(function(e) {
+    e.stopPropagation();
+});
+}
   render() {
     const { searchQuery } = this.state;
 
