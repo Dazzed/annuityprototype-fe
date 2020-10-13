@@ -114,8 +114,8 @@ export default function DetailedModal(props) {
               >
                 <h2>Contract Values</h2>
                 <div className="row">
-                  <div className="col">
-                    <table>
+                  <div className="col-lg-6 col-md-6 co-sm-12 col-12">
+                    <table className="table no-boxshadow">
                       <tbody>
                         <tr>
                           <td>Annuitant:</td>
@@ -136,8 +136,8 @@ export default function DetailedModal(props) {
                       </tbody>
                     </table>
                   </div>
-                  <div className="col">
-                    <table>
+                  <div className="col-lg-6 col-md-6 co-sm-12 col-12">
+                    <table className="table no-boxshadow">
                       <tbody>
                         <tr>
                           <td>Surrender Value:</td>
@@ -180,8 +180,8 @@ export default function DetailedModal(props) {
                   </div>
                   <div className="col"></div>
                 </div>
-                <div className="column-width-pills">
-                  <table>
+                <div className="column-width-pills table-contractvalue table-responsive-md">
+                  <table className="table table-striped">
                     <thead>
                       <tr>
                         <th>Investment Options</th>

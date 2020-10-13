@@ -752,14 +752,14 @@ a:hover {
 .column-width-pills {
   width: 100%;
   height: 310px;
-  margin-top: 181px;
+  margin-top: 90px;
   background: #FBFBFB;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
 }
 
 .tab-custom-content {
-  margin-top: 181px;
+  margin-top: 90px;
   margin-bottom: 124px;
 }
 
@@ -809,7 +809,17 @@ a:hover {
   width: 225px;
   padding: 20px 15px;
 }
-
+.no-boxshadow {
+  border-spacing: 0 9px;
+}
+.no-boxshadow tr{
+  box-shadow: none;
+  background-color: none;
+  background-color: transparent;
+}
+.table-contractvalue .table th, .table-contractvalue .table td {
+  padding: 0 10px;
+}
 @media screen and (max-width: 1200px) {
   .col-30 {
     max-width: 200px !important;
@@ -1004,6 +1014,9 @@ a:hover {
   .fliter-issue button span {
     font-family: OpenSans-Regular;
     font-weight: normal;
+  }
+  .column-width-pills {
+    margin-top: 18px;
   }
 }
 
