@@ -111,9 +111,11 @@ button:focus {
 }
 
 /* slider animation */
+
 .bg-default {
   background-color: #053661;
 }
+
 .sidenav {
   height: 100%;
   width: 214px;
@@ -805,23 +807,122 @@ a:hover {
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
 }
+
 .custom-sorting {
   background: #FBFBFB;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   padding: 20px 15px;
 }
+
 .no-boxshadow {
   border-spacing: 0 9px;
 }
-.no-boxshadow tr{
+
+.no-boxshadow tr {
   box-shadow: none;
   background-color: none;
   background-color: transparent;
 }
+
 .table-contractvalue .table th, .table-contractvalue .table td {
-  padding:0 10px;
+  padding: 0 10px;
 }
+
+/* Notfication css */
+
+.support-searchbox {
+  border: 2px solid #DEDEDE;
+  border-radius: 4px;
+}
+
+.search-box img.searchicon-support {
+  position: absolute;
+  right: 5%;
+  left: auto;
+  top: 13px;
+  border: none;
+}
+
+.support-searchbox input {
+  padding-left: 15px;
+}
+
+.nav-pills-support .nav-link-custom.active {
+  color: #000 !important;
+  font-family: OpenSans-Bold;
+  font-weight: bold;
+}
+
+.nav-pills-support .nav-link-custom {
+  color: #ADADAD !important;
+  font-family: OpenSans-Bold;
+  font-weight: bold;
+}
+
+.tab-custom-supportsection {
+  margin-top: 44px;
+}
+
+.col-width-suportsection {
+  min-height: 113px;
+  margin-top: 0;
+  padding: 15px;
+}
+
+.row-height-supportsection {
+  min-height: 113px;
+  margin-bottom: 16px;
+  background: #FFFFFF;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
+}
+
+.userPicSection {
+  text-align: center;
+}
+
+.userPicSection img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.date-section {
+  margin-bottom: 6px;
+}
+
+.date-section h6 {
+  font-family: OpenSans-Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10.24px;
+  line-height: 125%;
+  color: #ADADAD;
+  margin-bottom: 0;
+}
+
+.msg-contentsection p {
+  font-family: OpenSans-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 125%;
+  color: #363636;
+}
+
+.seemore-section h6 {
+  font-family: OpenSans-Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 125%;
+  color: #ADADAD;
+}
+
+.seemore-section h6 img {
+  margin-left: 9.5px;
+}
+
 @media screen and (max-width: 1200px) {
   .col-30 {
     max-width: 200px !important;
@@ -1019,6 +1120,21 @@ a:hover {
   }
   .column-width-pills {
     margin-top: 18px;
+  }
+}
+
+/* navigation css */
+
+.row-height-supportsection {
+  padding: 15px;
+}
+
+@media screen and (max-width: 575px) {
+  .userPicSection {
+    text-align: left;
+  }
+  .date-section {
+    margin-top: 10px;
   }
 }
 
