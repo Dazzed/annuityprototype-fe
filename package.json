@@ -12,6 +12,7 @@
     "@svgr/webpack": "^5.4.0",
     "axios": "^0.20.0",
     "bootstrap": "^4.5.2",
+    "date-fns": "^2.16.1",
     "jquery": "^3.5.1",
     "lodash": "^4.17.20",
     "next": "9.5.3",

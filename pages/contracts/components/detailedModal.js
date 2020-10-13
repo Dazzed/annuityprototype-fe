@@ -1,5 +1,7 @@
 import { Modal } from "react-bootstrap";
 import numeral from "numeral";
+import format from "date-fns/format";
+import { CONTRACT_DUMMY_DATA } from "../../../config/constants";
 
 export default function DetailedModal(props) {
   const { show, handleClose, contractDetails = {} } = props;
@@ -35,7 +37,7 @@ export default function DetailedModal(props) {
           </div>
           <div className="col-lg-4 col-md-6 col-sm-6 col-12">
             <div className="contract-common-title">
-              <h4>Value as of 10/1/2020</h4>
+              <h4>Value as of {format(new Date(), "dd/MM/yyyy")}</h4>
               <h2>{numeral(contractDetails.value).format("$0,0.00")}</h2>
             </div>
           </div>
@@ -49,7 +51,7 @@ export default function DetailedModal(props) {
             >
               <li className="nav-item">
                 <a
-                  className="nav-link-custom"
+                  className="nav-link-custom active"
                   id="pills-information-tab"
                   data-toggle="pill"
                   href="#pills-home"
@@ -62,7 +64,7 @@ export default function DetailedModal(props) {
               </li>
               <li className="nav-item">
                 <a
-                  className="nav-link-custom active"
+                  className="nav-link-custom"
                   id="pills-financial-tab"
                   data-toggle="pill"
                   href="#pills-profile"
@@ -105,11 +107,118 @@ export default function DetailedModal(props) {
               id="pills-tabContent"
             >
               <div
-                className="tab-pane fade show active column-width-pills"
+                className="tab-pane fade show active "
                 id="pills-home"
                 role="tabpanel"
                 aria-labelledby="pills-information-tab"
-              ></div>
+              >
+                <h2>Contract Values</h2>
+                <div className="row">
+                  <div className="col">
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td>Annuitant:</td>
+                          <td>{contractDetails.annuitantName}</td>
+                        </tr>
+                        <tr>
+                          <td>Rep of Record:</td>
+                          <td>{CONTRACT_DUMMY_DATA.rep_of_record}</td>
+                        </tr>
+                        <tr>
+                          <td>Issue Date:</td>
+                          <td>{contractDetails.annuitantName}</td>
+                        </tr>
+                        <tr>
+                          <td>Plan Type:</td>
+                          <td>{CONTRACT_DUMMY_DATA.plan_type}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div className="col">
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td>Surrender Value:</td>
+                          <td>
+                            {numeral(
+                              CONTRACT_DUMMY_DATA.surrender_value
+                            ).format("$0,0.00")}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Total Premiums Paid:</td>
+                          <td>
+                            {numeral(
+                              CONTRACT_DUMMY_DATA.total_premiums_paid
+                            ).format("$0,0.00")}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Total Withdrawls(YTD):</td>
+                          <td>
+                            {numeral(
+                              CONTRACT_DUMMY_DATA.withdrawal_totals.ytd
+                            ).format("$0,0.00")}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Withdrawls Since Issue:</td>
+                          <td>
+                            {numeral(
+                              CONTRACT_DUMMY_DATA.withdrawal_totals.since_issue
+                            ).format("$0,0.00")}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>YTD Number of Trades:</td>
+                          <td>{CONTRACT_DUMMY_DATA.trades.ytd}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div className="col"></div>
+                </div>
+                <div className="column-width-pills">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Investment Options</th>
+                        <th>Manager</th>
+                        <th>Future %</th>
+                        <th>Current %</th>
+                        <th>Units</th>
+                        <th>Unit Values</th>
+                        <th>Balance</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {CONTRACT_DUMMY_DATA.contract_value.investment_options.map(
+                        (value, i) => (
+                          <tr key={i}>
+                            <td>{value.investment_option_name}</td>
+                            <td>{value.investment_option_manager}</td>
+                            <td>{value.allocation.future}%</td>
+                            <td>{value.allocation.current}%</td>
+                            <td>
+                              {numeral(value.value.units).format("$0,0.00")}
+                            </td>
+                            <td>
+                              {numeral(value.value.unit_value).format(
+                                "$0,0.00"
+                              )}
+                            </td>
+                            <td>
+                              {numeral(value.value.balance).format("$0,0.00")}
+                            </td>
+                          </tr>
+                        )
+                      )}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
               <div
                 className="tab-pane fade column-width-pills"
                 id="pills-profile"
