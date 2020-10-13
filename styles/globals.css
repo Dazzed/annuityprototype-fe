@@ -543,11 +543,13 @@ button:hover {
   background: #FBFBFB;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
+  padding: 10px;
 }
 
 .table thead th {
   border-bottom: none;
   width: 300px;
+  padding: 10px 12px;
 }
 
 .table tr td {
@@ -557,6 +559,7 @@ button:hover {
   font-size: 16px;
   line-height: 24px;
   color: #091A29;
+  padding: 10px;
 }
 
 .add-btn {
@@ -751,7 +754,7 @@ a:hover {
 
 .column-width-pills {
   width: 100%;
-  height: 310px;
+  min-height: 310px;
   margin-top: 90px;
   background: #FBFBFB;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
@@ -817,7 +820,7 @@ a:hover {
   background-color: transparent;
 }
 .table-contractvalue .table th, .table-contractvalue .table td {
-  padding: 0 10px;
+  padding:0 10px;
 }
 @media screen and (max-width: 1200px) {
   .col-30 {
