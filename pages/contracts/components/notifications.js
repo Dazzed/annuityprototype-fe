@@ -7,9 +7,9 @@ render() {
         <div className="row">
             <div className="col-lg-12">
                 <div className="search-box support-searchbox">
-                    <input type="text" placeholder="Search">
-                    <!-- <i id="icon" className="search"></i> -->
-                    <img src="./css/imgs/svg_imgs/support-searchicon.svg" id="icon" className="search searchicon-support">
+                    <input type="text" placeholder="Search" />
+                    {/* <!-- <i id="icon" className="search"></i> --> */}
+                    <img src="./css/imgs/svgs/support-searchicon.svg" id="icon" className="search searchicon-support" />
                 </div>
             </div>
         </div>
@@ -56,7 +56,7 @@ render() {
                             </div>
                             <div className="col-lg-2 col-md-2 col-sm-3 col-12 align-self-center">
                                 <div className="seemore-section">
-                                    <h6>See More <img src="./css/imgs/svg_imgs/rightarrow-icon.svg" alt="Rightarrow Icon " /> </h6>
+                                    <h6>See More <img src="./css/imgs/svgs/rightarrow-icon.svg" alt="Rightarrow Icon " /> </h6>
                                 </div>
                             </div>
                         </div>
@@ -77,7 +77,7 @@ render() {
                             </div>
                             <div className="col-lg-2 col-md-2 col-sm-3 col-12 align-self-center">
                                 <div className="seemore-section">
-                                    <h6>See More <img src="./css/imgs/svg_imgs/rightarrow-icon.svg" alt="Rightarrow Icon " /> </h6>
+                                    <h6>See More <img src="./css/imgs/svgs/rightarrow-icon.svg" alt="Rightarrow Icon " /> </h6>
                                 </div>
                             </div>
                         </div>
@@ -98,7 +98,7 @@ render() {
                             </div>
                             <div className="col-lg-2 col-md-2 col-sm-3 col-12 align-self-center">
                                 <div className="seemore-section">
-                                    <h6>See More <img src="./css/imgs/svg_imgs/rightarrow-icon.svg" alt="Rightarrow Icon " /> </h6>
+                                    <h6>See More <img src="./css/imgs/svgs/rightarrow-icon.svg" alt="Rightarrow Icon " /> </h6>
                                 </div>
                             </div>
                         </div>
@@ -119,7 +119,7 @@ render() {
                             </div>
                             <div className="col-lg-2 col-md-2 col-sm-3 col-12 align-self-center">
                                 <div className="seemore-section">
-                                    <h6>See More <img src="./css/imgs/svg_imgs/rightarrow-icon.svg" alt="Rightarrow Icon " /> </h6>
+                                    <h6>See More <img src="./css/imgs/svgs/rightarrow-icon.svg" alt="Rightarrow Icon " /> </h6>
                                 </div>
                             </div>
                         </div>
@@ -140,7 +140,7 @@ render() {
                             </div>
                             <div className="col-lg-2 col-md-2 col-sm-3 col-12 align-self-center">
                                 <div className="seemore-section">
-                                    <h6>See More <img src="./css/imgs/svg_imgs/rightarrow-icon.svg" alt="Rightarrow Icon " /> </h6>
+                                    <h6>See More <img src="./css/imgs/svgs/rightarrow-icon.svg" alt="Rightarrow Icon " /> </h6>
                                 </div>
                             </div>
                         </div>
@@ -161,7 +161,7 @@ render() {
                             </div>
                             <div className="col-lg-2 col-md-2 col-sm-3 col-12 align-self-center">
                                 <div className="seemore-section">
-                                    <h6>See More <img src="./css/imgs/svg_imgs/rightarrow-icon.svg" alt="Rightarrow Icon " /> </h6>
+                                    <h6>See More <img src="./css/imgs/svgs/rightarrow-icon.svg" alt="Rightarrow Icon " /> </h6>
                                 </div>
                             </div>
                         </div>
@@ -182,7 +182,7 @@ render() {
                             </div>
                             <div className="col-lg-2 col-md-2 col-sm-3 col-12 align-self-center">
                                 <div className="seemore-section">
-                                    <h6>See More <img src="./css/imgs/svg_imgs/rightarrow-icon.svg" alt="Rightarrow Icon " /> </h6>
+                                    <h6>See More <img src="./css/imgs/svgs/rightarrow-icon.svg" alt="Rightarrow Icon " /> </h6>
                                 </div>
                             </div>
                         </div>
