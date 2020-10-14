@@ -8,7 +8,11 @@ export default function Criteria() {
       </div>
       <div className="nav-list">
         <ul>
-          <li>
+          <li
+            className={
+              window.location.pathname === "/" ? "active-nav-item" : ""
+            }
+          >
             <Link href="/">
               <a href="#">
                 <img src="/imgs/svgs/dashboard-icon.svg" />
@@ -16,17 +20,25 @@ export default function Criteria() {
               </a>
             </Link>
           </li>
-          <li className="active-nav-item">
+          <li
+            className={
+              window.location.pathname === "/contracts" ? "active-nav-item" : ""
+            }
+          >
             <Link href="/contracts">
               <a href="#">
                 <img src="/imgs/svgs/contract-icon.svg" />
-                <span className="p-0 d-none-view">
-                  Contract <span>Management</span>
-                </span>
+                <span className="p-0 d-none-view">Contracts</span>
               </a>
             </Link>
           </li>
-          <li>
+          <li
+            className={
+              window.location.pathname === "/notifications"
+                ? "active-nav-item"
+                : ""
+            }
+          >
             <Link href="/notifications">
               <a href="#">
                 <img src="/imgs/svgs/dashboard-icon.svg" />

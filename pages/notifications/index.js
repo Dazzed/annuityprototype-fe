@@ -74,7 +74,7 @@ class Notifications extends React.Component {
                       aria-selected="true"
                     >
                       Notifications
-                </a>
+                    </a>
                   </li>
                   <li className="nav-item">
                     <a
@@ -87,7 +87,7 @@ class Notifications extends React.Component {
                       aria-selected="false"
                     >
                       Tutorials
-                </a>
+                    </a>
                   </li>
                   <li className="nav-item">
                     <a
@@ -100,7 +100,7 @@ class Notifications extends React.Component {
                       aria-selected="false"
                     >
                       Help
-                </a>
+                    </a>
                   </li>
                 </ul>
                 <div
@@ -120,7 +120,10 @@ class Notifications extends React.Component {
                       >
                         <div className="col-lg-2 col-md-2 col-sm-2 col-12 align-self-center">
                           <div className="userPicSection">
-                            <img src="/imgs/profile-pic.png" alt="user picture" />
+                            <img
+                              src="/imgs/profile-pic.png"
+                              alt="user picture"
+                            />
                           </div>
                         </div>
                         <div className="col-lg-8 col-md-8 col-sm-7 col-12 align-self-center">
@@ -167,7 +170,7 @@ class Notifications extends React.Component {
             </div>
           </div>
         </div>
-      </div >
+      </div>
     );
   }
 }
