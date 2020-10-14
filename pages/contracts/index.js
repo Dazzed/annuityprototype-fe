@@ -3,7 +3,7 @@ import Head from "next/head";
 import axios from "axios";
 
 import Table from "./components/table";
-import SideNav from "./components/sideNav";
+import SideNav from "../../components/sideNav";
 import FilterCriteria from "./components/filterCriteria";
 import Pagination from "./components/pagination";
 

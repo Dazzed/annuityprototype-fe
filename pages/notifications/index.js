@@ -1,6 +1,8 @@
 import React from "react";
+import Head from "next/head";
 import axios from "axios";
 import format from "date-fns/format";
+import SideNav from "../../components/sideNav";
 
 class Notifications extends React.Component {
   constructor(props) {
@@ -32,7 +34,17 @@ class Notifications extends React.Component {
 
     return (
       <div className="container-fluid">
+        <Head>
+          <meta charSet="utf-8" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+          />
+        </Head>
         <div className="row">
+          <div className="col-lg-2 col-md-12 px-0 pr-lg-0 pl-lg-3 order-second bg-default">
+            <SideNav />
+          </div>
           <div className="col-lg-12">
             <div className="search-box support-searchbox">
               <input type="text" placeholder="Search" />
