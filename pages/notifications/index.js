@@ -33,7 +33,7 @@ class Notifications extends React.Component {
     const { notifications } = this.state;
 
     return (
-      <div className="container-fluid h-100">
+      <div className="container-fluid h-100 px-3 pl-lg-0 pr-lg-3">
         <Head>
           <meta charSet="utf-8" />
           <meta
@@ -42,10 +42,10 @@ class Notifications extends React.Component {
           />
         </Head>
         <div className="row h-100">
-          <div className="col-lg-2 col-md-2 px-0 pr-lg-0 pl-lg-3 order-second bg-default">
+          <div className="col-lg-2 col-md-12 px-0 pr-lg-0 pl-lg-3 order-second">
             <SideNav />
           </div>
-          <div className="col-lg-10 col-md-10 col-sm-12 col-12 common-mr-pd">
+          <div className="col-lg-10 col-md-12 col-sm-12 col-12 common-mr-pd">
             <div className="row">
               <div className="col-lg-12">
                 <div className="search-box support-searchbox">

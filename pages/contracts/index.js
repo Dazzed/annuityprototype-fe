@@ -88,7 +88,7 @@ class ContractsPage extends React.Component {
           />
         </Head>
         <div className="row h-100">
-          <div className="col-lg-2 col-md-12 px-0 pr-lg-0 pl-lg-3 order-second bg-default">
+          <div className="col-lg-2 col-md-12 px-0 pr-lg-0 pl-lg-3 order-second">
             <SideNav />
           </div>
           <div className="col-lg-10 col-md-12 col-sm-12 col-12 common-mr-pd">

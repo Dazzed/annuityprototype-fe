@@ -287,9 +287,10 @@ button:hover {
 
 .sidebar {
   background-color: #053661;
-  width: 100%;
-  max-width: 214px;
+  width: 214px;
   height: 100%;
+  position: relative;
+  left: -1px;
 }
 
 .col-30 {
@@ -930,6 +931,9 @@ a:hover {
     -ms-flex: 0 0 30%;
     flex: 0 0 30%;
   }
+  .sidebar {
+    width: 100%;
+  }
   .fliter-issue button:first-child {
     margin-right: 5px;
   }
@@ -969,6 +973,7 @@ a:hover {
   }
   .sidebar {
     max-width: 100%;
+    width: 100%;
   }
   .logo-section {
     display: none;
