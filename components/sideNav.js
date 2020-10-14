@@ -1,6 +1,12 @@
+import { useEffect, useState } from "react";
 import Link from "next/link";
 
 export default function Criteria() {
+  let [activePath, setActivePath] = useState("");
+  useEffect(() => {
+    setActivePath(window.location.pathname);
+  }, []);
+
   return (
     <div className="sidebar">
       <div className="logo-section text-center">
@@ -8,11 +14,7 @@ export default function Criteria() {
       </div>
       <div className="nav-list">
         <ul>
-          <li
-            className={
-              window.location.pathname === "/" ? "active-nav-item" : ""
-            }
-          >
+          <li className={activePath === "/" ? "active-nav-item" : ""}>
             <Link href="/">
               <a href="#">
                 <img src="/imgs/svgs/dashboard-icon.svg" />
@@ -20,11 +22,7 @@ export default function Criteria() {
               </a>
             </Link>
           </li>
-          <li
-            className={
-              window.location.pathname === "/contracts" ? "active-nav-item" : ""
-            }
-          >
+          <li className={activePath === "/contracts" ? "active-nav-item" : ""}>
             <Link href="/contracts">
               <a href="#">
                 <img src="/imgs/svgs/contract-icon.svg" />
@@ -33,11 +31,7 @@ export default function Criteria() {
             </Link>
           </li>
           <li
-            className={
-              window.location.pathname === "/notifications"
-                ? "active-nav-item"
-                : ""
-            }
+            className={activePath === "/notifications" ? "active-nav-item" : ""}
           >
             <Link href="/notifications">
               <a href="#">
