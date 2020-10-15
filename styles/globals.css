@@ -286,8 +286,8 @@ button:hover {
 }
 
 .sidebar {
-  background-color: #053661;
-  width: 214px;
+  background-color: #F2F2F2;
+  width: 300px;
   height: 100%;
   position: relative;
   left: -1px;
@@ -308,13 +308,18 @@ button:hover {
 }
 
 .common-mr-pd {
-  padding-left: 36px;
+  padding-left: 15px;
   padding-top: 45px;
+  padding-right: 42px;
 }
 
 .logo-section {
   padding-top: 26px;
   padding-bottom: 65px;
+}
+
+.logo-section {
+  margin-right: 45px;
 }
 
 .nav-list ul {
@@ -327,7 +332,7 @@ button:hover {
   position: relative;
   margin-left: 0;
   text-align: left;
-  height: 63px;
+  height: 55px;
 }
 
 .nav-list li a {
@@ -336,8 +341,8 @@ button:hover {
   font-weight: bold;
   font-size: 18.06px;
   line-height: 28px;
-  color: #FBFBFB;
-  padding-left: 36px;
+  color: #ADADAD;
+  padding-left: 52px;
 }
 
 .nav-list li a img {
@@ -357,21 +362,21 @@ button:hover {
   color: #8DC6F7;
 } */
 
-.nav-list li a:hover {
-  color: #8DC6F7;
-}
+/* .nav-list li a:hover {
+  color: #0D65B3;
+} */
 
 .nav-list .active-nav-item a {
-  color: #8DC6F7;
+  color: #0D65B3;
 }
 
 .active-nav-item {
-  color: #8DC6F7;
-  border-left: 5px solid #8DC6F7;
+  color: #0D65B3;
+  /* border-left: 5px solid #8DC6F7; */
   height: 63px;
 }
 
-.contract-title-name h2 {
+.contract-title-name h2, .contract-modal-h2 {
   font-family: Montserrat-Bold;
   font-style: normal;
   font-weight: bold;
@@ -405,7 +410,7 @@ button:hover {
   width: 396px;
   border: none;
   position: relative;
-  height: 45px;
+  height: 48px;
   background: #fff;
   font-family: OpenSans-Regular;
   border-radius: 20px;
@@ -482,22 +487,25 @@ button:hover {
 }
 
 .fliter-issue {
-  text-align: right;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 5px;
+  margin-left: 26px;
 }
 
 .fliter-issue button {
-  font-family: OpenSans-Regular;
+  font-family: OpenSans-Bold;
   font-style: normal;
-  font-weight: normal;
+  font-weight: Bold;
   font-size: 16px;
   line-height: 24px;
   color: #0D65B3;
   background: #FFF;
-  border: 1px solid #0D65B3;
+  border: 2px solid #0D65B3;
   box-sizing: border-box;
-  border-radius: 20px;
-  padding: 10px 24px;
-  height: 45px;
+  border-radius: 4px;
+  padding: 6px 24px;
+  height: 40px;
 }
 
 .fliter-issue button:first-child {
@@ -513,18 +521,37 @@ button:hover {
   margin-right: 12px;
 }
 
+/* new filter */
+
+.newdesignfilter-btn {}
+
+.table-responsive {
+  /* white-space: nowrap;  */
+}
+
 .table {
   border-collapse: separate;
   border-spacing: 0 18px;
+  width: 100%;
+  max-width: 100%;
 }
+
+/* .table tr th:first-child {
+  text-align: center;
+  width: 150px;
+}
+.table tr td:first-child {
+  text-align: center;
+  width: 150px;
+} */
 
 .table tr th {
   font-family: Montserrat-Bold;
   font-style: normal;
   font-weight: bold;
-  font-size: 16.5px;
-  line-height: 28px;
-  color: #0D65B3;
+  font-size: 16px;
+  line-height: 125%;
+  color: #000;
 }
 
 .table tr th img {
@@ -544,15 +571,17 @@ button:hover {
 
 .table tr {
   background: #FBFBFB;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   padding: 10px;
 }
 
 .table thead th {
   border-bottom: none;
-  width: 300px;
-  padding: 10px 12px;
+  /* width: 300px; */
+  padding: 10px 5px;
+  padding-left: 15px;
+  height: 56px;
 }
 
 .table tr td {
@@ -562,7 +591,19 @@ button:hover {
   font-size: 16px;
   line-height: 24px;
   color: #091A29;
-  padding: 10px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  height: 56px;
+  padding-left: 15px;
+  background-color: transparent;
+}
+
+.table tr th:first-child {
+  padding-left: 13px;
+}
+
+.table tr td:first-child {
+  padding-left: 15px;
 }
 
 .add-btn {
@@ -581,8 +622,16 @@ button:hover {
   width: 20%;
 }
 
+.w-11 {
+  width: 11%;
+}
+
 .w-22 {
   width: 22%;
+}
+
+.w-5 {
+  width: 5%;
 }
 
 .w-20 {
@@ -715,8 +764,8 @@ button:hover {
   font-family: OpenSans-Regular;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 20px;
+  line-height: 32px;
   background-color: transparent !important;
 }
 
@@ -725,8 +774,8 @@ a:hover {
 }
 
 .nav-link-custom {
-  margin-left: 33px;
-  margin-right: 33px;
+  margin-left: 52px;
+  margin-right: 52px;
   padding-bottom: 6px;
   color: #0D65B3 !important;
 }
@@ -746,11 +795,11 @@ a:hover {
   content: "";
   position: absolute;
   left: 0;
-  top: 6px;
+  top: 10px;
   height: 1px;
   width: 70%;
   /* percentage of the element width*/
-  border-bottom: 4px solid #0D65B3;
+  border-bottom: 5px solid #2282D6;
   margin-top: 1.2em;
   /*move the border below the text*/
 }
@@ -820,6 +869,11 @@ a:hover {
   border-spacing: 0 9px;
 }
 
+.no-boxshadow tr td {
+  padding: 0;
+  height: 33px;
+}
+
 .no-boxshadow tr {
   box-shadow: none;
   background-color: none;
@@ -827,7 +881,7 @@ a:hover {
 }
 
 .table-contractvalue .table th, .table-contractvalue .table td {
-  padding: 0 10px;
+  padding: 15px 0;
 }
 
 /* Notfication css */
@@ -847,6 +901,11 @@ a:hover {
 
 .support-searchbox input {
   padding-left: 15px;
+}
+
+.nav-link-custom {
+  font-size: 20px;
+  line-height: 32px;
 }
 
 .nav-pills-support .nav-link-custom.active {
@@ -922,6 +981,66 @@ a:hover {
 
 .seemore-section h6 img {
   margin-left: 9.5px;
+}
+
+/* newdesgin */
+
+.grid-section {
+  text-align: right;
+}
+
+.grid-section img:first-child {
+  width: 18px;
+  margin-right: 15px;
+}
+
+.grid-section img:last-child {
+  width: 24px;
+}
+
+.userProSection {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  left: 0;
+}
+
+.profile-pic {
+  width: 30px !important;
+  height: 30px !important;
+  border-radius: 50%;
+}
+
+.bold-text {
+  font-weight: bold !important;
+  font-family: OpenSans-Bold !important;
+  font-style: normal !important;
+}
+
+/* active row */
+
+.active-row {
+  border: 2px solid #0D65B3;
+  border-radius: 1px;
+}
+
+.modal-striped-table tr th {
+  padding: 10px 0;
+}
+
+.modal-striped-table tr td {
+  padding: 10px 0;
+}
+
+@media screen and (min-width: 1441px) {
+  .sidebar {
+    width: 100%;
+  }
+  .common-mr-pd {
+    padding-left: 42px;
+    padding-top: 45px;
+    padding-right: 42px;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -1160,4 +1279,29 @@ a:hover {
     line-height: 13px;
     height: 38px;
   }
+}
+
+/* jqury */
+
+.myButton {
+  padding: .2em 1em;
+  font-size: 1em;
+}
+
+.mySelect {
+  padding: .2em 0;
+  font-size: 1em;
+}
+
+#myDiv {
+  color: Green;
+  background-color: #eee;
+  border: 2px solid #333;
+  display: none;
+  text-align: justify;
+}
+
+#myDiv p {
+  margin: 15px;
+  font-size: 0.917em;
 }

@@ -65,7 +65,7 @@ class FilterCriteria extends React.Component {
 
     return (
       <>
-        <div className="row">
+        {/* <div className="row">
           <div className="col-lg-9 col-md-9 col-sm-8 col-8">
             <div className="contract-title-name">
               <h2>
@@ -84,10 +84,10 @@ class FilterCriteria extends React.Component {
               </button>
             </div>
           </div>
-        </div>
-        <div className="row common-pd">
-          <div className="col-lg-6 col-md-4 col-sm-12 col-12">
-            <div className="search-box">
+        </div> */}
+        <div className="row common-pd pt-lg-3">
+          <div className="col-lg-12 col-md-4 col-sm-12 col-12">
+            <div className="search-box support-searchbox d-inline-block">
               <input
                 type="text"
                 placeholder="Search"
@@ -95,15 +95,15 @@ class FilterCriteria extends React.Component {
                 onChange={this.handleSearchQuery}
               />
               <img
-                src="/imgs/svgs/search-icon.svg"
+                src="/imgs/svgs/support-searchicon.svg"
                 id="icon"
-                className="search"
+                className="search searchicon-support"
               />
             </div>
-          </div>
-          <div className="col-lg-6 col-md-8 col-sm-12 col-12">
             <div className="fliter-issue">
-              <button>
+
+              {/* old design  */}
+              {/* <button>
                 <img
                   src="/imgs/svgs/filter-icon.svg"
                   className="fliter-icon-1"
@@ -116,8 +116,10 @@ class FilterCriteria extends React.Component {
                   alt="Fliter Icon"
                   className="fliter-icon-2"
                 />
-              </button>
-              <div className="dropdown d-inline-block">
+              </button> */}
+
+              {/* old design  */}
+              {/* <div className="dropdown d-inline-block">
                 <button
                   className=""
                   type="button"
@@ -158,7 +160,9 @@ class FilterCriteria extends React.Component {
                     <option value="DESC">DESC</option>
                   </select>
                 </div>
-              </div>
+              </div> */}
+              <button className="newdesignfilter-btn">Filter</button>
+              <button className="newdesignfilter-btn">Saved Filter</button>
             </div>
           </div>
         </div>

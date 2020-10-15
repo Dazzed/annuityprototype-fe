@@ -112,7 +112,7 @@ export default function DetailedModal(props) {
                 role="tabpanel"
                 aria-labelledby="pills-information-tab"
               >
-                <h2>Contract Values</h2>
+                <h2 className="contract-modal-h2">Contract Values</h2>
                 <div className="row">
                   <div className="col-lg-6 col-md-6 co-sm-12 col-12">
                     <table className="table no-boxshadow">

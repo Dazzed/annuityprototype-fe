@@ -9,7 +9,7 @@ const ColumnFilterDrop = () => (
       aria-haspopup="true"
       aria-expanded="false"
     >
-      <img src="/imgs/svgs/dropdown-blue.svg" alt="dropdown Icon" />
+      <img src="/imgs/svgs/dropdown-block.svg" alt="dropdown Icon" />
     </a>
     <div className="dropdown-menu" aria-labelledby="dropdownMenuLink2">
       <ul className="px-1 m-0">

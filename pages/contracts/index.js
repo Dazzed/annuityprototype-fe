@@ -88,14 +88,16 @@ class ContractsPage extends React.Component {
           />
         </Head>
         <div className="row h-100">
-          <div className="col-lg-2 col-md-12 px-0 pr-lg-0 pl-lg-3 order-second">
+          <div className="col-lg-3 col-md-12 px-0 pr-lg-0 pl-lg-3 order-second">
             <SideNav />
           </div>
-          <div className="col-lg-10 col-md-12 col-sm-12 col-12 common-mr-pd">
+          <div className="col-lg-9 col-md-12 col-sm-12 col-12 common-mr-pd pt-lg-0">
             <FilterCriteria loadRecords={this.loadRecords} />
             <div className="row common-pd">
               <div className="col-md-12">
-                <Table contracts={contracts} />
+                <div className="row">
+                  <Table contracts={contracts} />
+                </div>
                 <div className="row mb-5 mb-lg-2">
                   <div className="col-lg-12 text-right">
                     <Pagination

@@ -42,10 +42,10 @@ class Notifications extends React.Component {
           />
         </Head>
         <div className="row h-100">
-          <div className="col-lg-2 col-md-12 px-0 pr-lg-0 pl-lg-3 order-second">
+          <div className="col-lg-3 col-md-12 px-0 pr-lg-0 pl-lg-3 order-second">
             <SideNav />
           </div>
-          <div className="col-lg-10 col-md-12 col-sm-12 col-12 common-mr-pd">
+          <div className="col-lg-9 col-md-12 col-sm-12 col-12 common-mr-pd">
             <div className="row">
               <div className="col-lg-12">
                 <div className="search-box support-searchbox">

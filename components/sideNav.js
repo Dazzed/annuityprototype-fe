@@ -17,15 +17,23 @@ export default function Criteria() {
           <li className={activePath === "/" ? "active-nav-item" : ""}>
             <Link href="/">
               <a href="#">
-                <img src="/imgs/svgs/dashboard-icon.svg" />
+                <img src="/imgs/svgs/navlist-icons-unactive.svg" />
                 <span className="p-0 d-none-view">Dashboard</span>
+              </a>
+            </Link>
+          </li>
+          <li className={activePath === "/" ? "active-nav-item" : ""}>
+            <Link href="/">
+              <a href="#">
+                <img src="/imgs/svgs/navlist-icons-unactive.svg" />
+                <span className="p-0 d-none-view">My Clients</span>
               </a>
             </Link>
           </li>
           <li className={activePath === "/contracts" ? "active-nav-item" : ""}>
             <Link href="/contracts">
               <a href="#">
-                <img src="/imgs/svgs/contract-icon.svg" />
+                <img src="/imgs/svgs/navlist-icons-active.svg" />
                 <span className="p-0 d-none-view">Contracts</span>
               </a>
             </Link>
@@ -35,8 +43,28 @@ export default function Criteria() {
           >
             <Link href="/notifications">
               <a href="#">
-                <img src="/imgs/svgs/dashboard-icon.svg" />
+                <img src="/imgs/svgs/navlist-icons-unactive.svg" />
                 <span className="p-0 d-none-view">Notifications</span>
+              </a>
+            </Link>
+          </li>
+        </ul>
+      </div>
+      <div className="nav-list userProSection ">
+        <ul>
+          <li>
+            <Link href="/notifications">
+              <a href="#">
+                <img src="/imgs/svgs/navlist-icons-unactive.svg" />
+                <span className="p-0 d-none-view">Support</span>
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/notifications">
+              <a href="#">
+                <img src="/imgs/user-profile-sidebar.png" className="profile-pic" />
+                <span className="p-0 d-none-view ">My Profile</span>
               </a>
             </Link>
           </li>
