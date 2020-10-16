@@ -385,6 +385,15 @@ button:hover {
   color: #0D65B3;
 }
 
+.contract-title-name h2 {
+  font-family: OpenSans-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 32px;
+  color: #000;
+}
+
 .btn-setting {
   text-align: right;
 }
@@ -1032,6 +1041,457 @@ a:hover {
   padding: 10px 0;
 }
 
+.customized-section {
+  text-align: right;
+}
+
+.customized-section button {
+  font-family: OpenSans-Bold;
+  font-style: normal;
+  font-weight: bold;
+  background-color: transparent;
+  font-size: 16px;
+  line-height: 24px;
+  color: #0D65B3;
+  border: 2px solid #0D65B3;
+  box-sizing: border-box;
+  padding: 4px 24px;
+  border-radius: 4px;
+  height: 40px;
+}
+
+.card-header-section {
+  padding: 38px 43px;
+  background: #FFFFFF;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+  min-height: 357px;
+}
+
+.card-header-title h5 {
+  font-family: OpenSans-Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 125%;
+  margin-bottom: 33px;
+  color: #000;
+}
+
+.card-header-value h3 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 31.248px;
+  line-height: 150%;
+  font-family: OpenSans-Bold;
+  color: #0D65B3;
+}
+
+.card-header-value p {
+  font-family: OpenSans-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 125%;
+  color: #8F8F8F;
+}
+
+.recent-notification-section {
+  padding: 26px 43px;
+  background: #FFFFFF;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+}
+
+.recent-notification-title h3 {
+  font-family: OpenSans-Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 125%;
+  color: #000;
+}
+
+.view-btnsection {
+  text-align: right;
+}
+
+.view-btnsection button {
+  background: #0D65B3;
+  border-radius: 4px;
+  height: 40px;
+  padding-left: 24px;
+  border: none;
+  padding-right: 24px;
+  font-family: OpenSans-Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FBFBFB;
+}
+
+.anniversary-section-dashboard {
+  padding: 25px 34px 20px;
+  background: #FFFFFF;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+  min-height: 357px;
+}
+
+.anniversary-section-dashboard h3 {
+  font-family: OpenSans-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 32px;
+  margin-bottom: 27px;
+  color: #0D65B3;
+}
+
+.anniversary-section-value h3 {
+  font-family: OpenSans-Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 125%;
+  color: #000;
+  margin-bottom: 8px;
+}
+
+.anniversary-section-value p {
+  font-family: OpenSans-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 125%;
+  color: #8F8F8F;
+  margin-bottom: 24px;
+}
+
+.date-section h5 {
+  font-family: OpenSans-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 125%;
+  color: #000;
+}
+
+.seemoresection-dashboard {
+  text-align: right;
+}
+
+.seemoresection-dashboard h6 {
+  font-family: OpenSans-Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+  color: #0D65B3;
+  padding-top: 5px;
+}
+
+.seemoresection-dashboard h6 img {
+  margin-left: 9px;
+}
+
+.task-section {
+  padding: 30px 26px;
+  background: #FFFFFF;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+  min-height: 337px;
+}
+
+.assign-section {
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.assign-section h4 {
+  font-family: OpenSans-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 125%;
+  color: #000000;
+  margin-bottom: 3px;
+}
+
+.assign-section p {
+  font-family: OpenSans-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 125%;
+  color: #8F8F8F;
+}
+
+.rightarrow-task {
+  position: absolute;
+  right: -2px;
+  top: 18px;
+}
+
+.chat-dashboard-section {
+  padding: 25px 40px 20px;
+  background: #FFFFFF;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+  min-height: 295px;
+  text-align: center;
+}
+
+.chat-dashboard-section h5 {
+  margin-top: 28px;
+  font-family: OpenSans-Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 125%;
+  margin-bottom: 11px;
+  color: #000;
+}
+
+.chat-dashboard-section img {}
+
+.chat-dashboard-section p {
+  font-family: OpenSans-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 125%;
+  color: #000;
+  margin-bottom: 51px;
+}
+
+.chat-dashboard-section button {
+  background: #0D65B3;
+  border-radius: 4px;
+  height: 40px;
+  padding-left: 24px;
+  border: none;
+  padding-right: 24px;
+  font-family: OpenSans-Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FBFBFB;
+}
+
+.notes-dashboard-section {
+  padding: 25px 40px 20px;
+  background: #FFFFFF;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+  min-height: 295px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.notes-section {
+  position: relative;
+}
+
+.notes-section img {
+  margin-right: 5px;
+  position: absolute;
+  left: 0;
+  top: 6px;
+}
+
+.notes-section li {
+  font-family: OpenSans-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 125%;
+  color: #000;
+  padding-left: 15px;
+}
+
+.calendar-dashboard-section {
+  padding: 25px 40px 20px;
+  background: #FFFFFF;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+  min-height: 295px;
+}
+
+.month-secion {
+  text-align: center;
+  padding-bottom: 18px;
+}
+
+.month-secion a {
+  font-family: OpenSans-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 125%;
+  color: #8F8F8F;
+  margin-right: 6px;
+  margin-left: 6px;
+}
+
+.active-section {
+  color: #000 !important;
+}
+
+.date-value {
+  background: #F2F2F2;
+  border-radius: 10px;
+  height: 88px;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.date-value h4 {
+  font-family: OpenSans-Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 31.248px;
+  line-height: 150%;
+  color: #8F8F8F;
+  margin: 0;
+}
+
+.date-value p {
+  font-family: OpenSans-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 125%;
+  color: #8F8F8F;
+}
+
+.meeting-section {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 34px;
+  padding: 0 25px;
+}
+
+.meeting-section ul {
+  padding: 0;
+  margin: 0;
+}
+
+.meeting-section .conten-section {
+  font-family: OpenSans-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 125%;
+  color: #000;
+}
+
+.bg-radius {
+  width: 30px;
+}
+
+.meeting-section .round-clour {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  margin-right: 17px;
+  position: relative;
+  top: 5px;
+}
+
+.meeting-section .orange-color {
+  background-color: #FF8F1F;
+}
+
+.meeting-section .blue-color {
+  background-color: #2282D6;
+}
+
+.meeting-section .green-color {
+  background-color: #03850B;
+}
+
+.meeting-section .time-section {
+  margin-right: 17px;
+  font-family: OpenSans-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 125%;
+  color: #000;
+}
+
+.meeting-section ul li span {
+  margin-right: 13px;
+}
+
+.br-rigth {
+  border-right: 1px solid #DEDEDE;
+}
+
+.rightarrow {
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+
+.calendar-section-seemore h6 {
+  font-size: 16px;
+  line-height: 125%;
+}
+
+.progress-dashboard-section {
+  background: #FFFFFF;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+  min-height: 295px;
+  padding: 25px 45px 20px;
+}
+
+.progress-detail {}
+
+.progress-detail h4 {
+  font-family: OpenSans-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 125%;
+  margin-bottom: 0;
+  color: #000000;
+}
+
+.progress-detail p {
+  font-family: OpenSans-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 125%;
+  color: #8F8F8F;
+}
+
+.progress-process .progress {
+  height: 12px;
+}
+
+.progress-value {
+  position: absolute;
+  right: -32px;
+  top: 19px;
+  font-family: OpenSans-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10.24px;
+  line-height: 125%;
+  color: #8F8F8F;
+}
+.progress-process h6 {
+  font-family: OpenSans-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10.24px;
+  line-height: 125%;
+  color: #000;
+}
+
 @media screen and (min-width: 1441px) {
   .sidebar {
     width: 100%;
@@ -1282,26 +1742,3 @@ a:hover {
 }
 
 /* jqury */
-
-.myButton {
-  padding: .2em 1em;
-  font-size: 1em;
-}
-
-.mySelect {
-  padding: .2em 0;
-  font-size: 1em;
-}
-
-#myDiv {
-  color: Green;
-  background-color: #eee;
-  border: 2px solid #333;
-  display: none;
-  text-align: justify;
-}
-
-#myDiv p {
-  margin: 15px;
-  font-size: 0.917em;
-}

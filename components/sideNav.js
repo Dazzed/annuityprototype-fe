@@ -14,8 +14,8 @@ export default function Criteria() {
       </div>
       <div className="nav-list">
         <ul>
-          <li className={activePath === "/" ? "active-nav-item" : ""}>
-            <Link href="/">
+          <li className={activePath === "/dashboard" ? "active-nav-item" : ""}>
+            <Link href="/dashboard">
               <a href="#">
                 <img src="/imgs/svgs/navlist-icons-unactive.svg" />
                 <span className="p-0 d-none-view">Dashboard</span>
