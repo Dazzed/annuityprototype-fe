@@ -309,6 +309,7 @@ button:hover {
   border-radius: 0px 4px 4px 0px;
   z-index: 1;
 }
+
 .btn-arrow-icon-right {
   border: none;
   background-color: #C4C4C4;
@@ -319,24 +320,39 @@ button:hover {
   border-radius: 4px 0px 0px 4px;
   z-index: 1;
 }
+
 .btn-arrow-icon-right {
   background-color: #C4C4C4;
   position: absolute;
   top: 71px;
   right: 0;
 }
+
 .btn-arrow-icon img {
   background-color: #C4C4C4;
   transform: rotate(180deg);
   position: relative;
   top: -2px;
 }
+
 .btn-arrow-icon-1 {
   position: absolute;
   right: 22px;
   top: 28px;
   border: none;
 }
+
+.btn-arrow-icon-2 {
+  position: absolute;
+  left: 22px;
+  top: 28px;
+  border: none;
+}
+
+.btn-arrow-icon-2 img {
+  transform: rotate(180deg);
+}
+
 .sidebar-left {
   background-color: #f2f2f2;
   width: 300px;
@@ -352,9 +368,14 @@ button:hover {
   /* Opera */
   -ms-transition: all 0.5s;
 }
+
+.pt-info-noti {
+  padding: 0 57px;
+}
+
 .sidebar-right {
   background-color: #f2f2f2;
-  width: 300px;
+  width: 421px;
   height: 100%;
   position: fixed;
   right: 0;
@@ -368,6 +389,7 @@ button:hover {
   /* Opera */
   -ms-transition: all 0.5s;
 }
+
 .col-30 {
   max-width: 229px !important;
   -webkit-box-flex: 0;
@@ -1570,6 +1592,72 @@ li {
   font-size: 10.24px;
   line-height: 125%;
   color: #000;
+}
+
+.client-information-section-info {
+  margin-bottom: 33px;
+}
+
+.client-information-section-info h6 {
+  font-family: Montserrat-Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18.06px;
+  line-height: 28px;
+  color: #000;
+  margin: 0;
+}
+
+.client-information-section-info p, .date-section-info p {
+  font-family: OpenSans-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 125%;
+  color: #000;
+  margin: 0;
+}
+
+.date-section-info p {
+  margin-top: -10px;
+}
+
+.userPicSection-info img {
+  width: 53px;
+  border-radius: 50%;
+  height: 53px;
+  margin-bottom: 33px;
+}
+
+.recent-activity-info p {
+  font-family: OpenSans-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 125%;
+  color: #000;
+}
+
+.chat-support-info {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  left: 0;
+  text-align: center;
+}
+
+.chat-support-info button {
+  padding: 4px 24px;
+  height: 40px;
+  background: #004785;
+  border-radius: 4px;
+  font-family: OpenSans-Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FBFBFB;
+  border: none;
 }
 
 @media screen and (min-width: 1441px) {
