@@ -101,7 +101,6 @@ class FilterCriteria extends React.Component {
               />
             </div>
             <div className="fliter-issue">
-
               {/* old design  */}
               {/* <button>
                 <img

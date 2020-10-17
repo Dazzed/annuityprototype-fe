@@ -312,9 +312,9 @@ class Dashboard extends React.Component {
                         <div className="col-lg-6 co-md-12 col-sm-12 col-12">
                           <div className="progress-process position-relative">
                             <h6>PL Processing</h6>
-                            <div class="progress">
+                            <div className="progress">
                               <div
-                                class="progress-bar"
+                                className="progress-bar"
                                 role="progressbar"
                                 style={{ width: "70%" }}
                                 aria-valuenow="25"
@@ -338,9 +338,9 @@ class Dashboard extends React.Component {
                         <div className="col-lg-6 co-md-12 col-sm-12 col-12">
                           <div className="progress-process position-relative">
                             <h6>Submitted</h6>
-                            <div class="progress">
+                            <div className="progress">
                               <div
-                                class="progress-bar"
+                                className="progress-bar"
                                 role="progressbar"
                                 style={{ width: "30%" }}
                                 aria-valuenow="25"

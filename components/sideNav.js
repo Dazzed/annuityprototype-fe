@@ -12,7 +12,12 @@ export default function SideNav(props) {
   if (!isNavOpen) {
     return (
       <div>
-        <button className="btn-arrow-icon"  onClick={() => props.toggleSideNav()}><img src="/imgs/svgs/rightarrow-icon-white.svg " /></button>
+        <button
+          className="btn-arrow-icon"
+          onClick={() => props.toggleSideNav()}
+        >
+          <img src="/imgs/svgs/rightarrow-icon-white.svg " />
+        </button>
       </div>
     );
   }
@@ -22,7 +27,12 @@ export default function SideNav(props) {
       <div className="sidebar-left">
         <div className="logo-section text-center">
           <img src="/imgs/svgs/logo-white.svg" alt="Logo" />
-          <button className="btn-arrow-icon-1"   onClick={() => props.toggleSideNav()}><img src="/imgs/svgs/rightarrow-icon1.svg" /></button>
+          <button
+            className="btn-arrow-icon-1"
+            onClick={() => props.toggleSideNav()}
+          >
+            <img src="/imgs/svgs/rightarrow-icon1.svg" />
+          </button>
         </div>
         <div className="nav-list">
           <ul>
@@ -31,7 +41,13 @@ export default function SideNav(props) {
             >
               <Link href="/dashboard">
                 <a href="#">
-                  <img src="/imgs/svgs/navlist-icons-unactive.svg" />
+                  <img
+                    src={
+                      activePath === "/dashboard"
+                        ? "/imgs/svgs/navlist-icons-active.svg"
+                        : "/imgs/svgs/navlist-icons-unactive.svg"
+                    }
+                  />
                   <span className="p-0 d-none-view">Dashboard</span>
                 </a>
               </Link>
@@ -39,7 +55,13 @@ export default function SideNav(props) {
             <li className={activePath === "/" ? "active-nav-item" : ""}>
               <Link href="/">
                 <a href="#">
-                  <img src="/imgs/svgs/navlist-icons-unactive.svg" />
+                  <img
+                    src={
+                      activePath === "/"
+                        ? "/imgs/svgs/navlist-icons-active.svg"
+                        : "/imgs/svgs/navlist-icons-unactive.svg"
+                    }
+                  />
                   <span className="p-0 d-none-view">My Clients</span>
                 </a>
               </Link>
@@ -49,7 +71,13 @@ export default function SideNav(props) {
             >
               <Link href="/contracts">
                 <a href="#">
-                  <img src="/imgs/svgs/navlist-icons-active.svg" />
+                  <img
+                    src={
+                      activePath === "/contracts"
+                        ? "/imgs/svgs/navlist-icons-active.svg"
+                        : "/imgs/svgs/navlist-icons-unactive.svg"
+                    }
+                  />
                   <span className="p-0 d-none-view">Contracts</span>
                 </a>
               </Link>
@@ -61,7 +89,13 @@ export default function SideNav(props) {
             >
               <Link href="/notifications">
                 <a href="#">
-                  <img src="/imgs/svgs/navlist-icons-unactive.svg" />
+                  <img
+                    src={
+                      activePath === "/notifications"
+                        ? "/imgs/svgs/navlist-icons-active.svg"
+                        : "/imgs/svgs/navlist-icons-unactive.svg"
+                    }
+                  />
                   <span className="p-0 d-none-view">Notifications</span>
                 </a>
               </Link>
@@ -73,7 +107,13 @@ export default function SideNav(props) {
             <li>
               <Link href="/notifications">
                 <a href="#">
-                  <img src="/imgs/svgs/navlist-icons-unactive.svg" />
+                  <img
+                    src={
+                      activePath === "/notifications"
+                        ? "/imgs/svgs/navlist-icons-active.svg"
+                        : "/imgs/svgs/navlist-icons-unactive.svg"
+                    }
+                  />
                   <span className="p-0 d-none-view">Support</span>
                 </a>
               </Link>

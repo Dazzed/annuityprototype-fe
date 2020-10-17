@@ -55,7 +55,7 @@ class Table extends Component {
                 aria-selected="true"
               >
                 Contracts
-                    </a>
+              </a>
             </li>
             <li className="nav-item">
               <a
@@ -68,7 +68,7 @@ class Table extends Component {
                 aria-selected="false"
               >
                 Anniversaries
-                    </a>
+              </a>
             </li>
             <li className="nav-item">
               <a
@@ -81,17 +81,14 @@ class Table extends Component {
                 aria-selected="false"
               >
                 Groups
-                    </a>
+              </a>
             </li>
           </ul>
           <div className="grid-section">
             <img src="/imgs/column-icon.png" alt="Column Icon" />
             <img src="/imgs/list-icon.png" alt="List Icon" />
           </div>
-          <div
-            className="tab-content"
-            id="pills-tabContent"
-          >
+          <div className="tab-content" id="pills-tabContent">
             <div
               className="tab-pane fade show active "
               id="pills-contracts"
@@ -105,7 +102,11 @@ class Table extends Component {
                       <th scope="col">
                         <label className="checkbox">
                           <input className="checkbox__input" type="checkbox" />
-                          <svg className="checkbox__check" width="20" height="20">
+                          <svg
+                            className="checkbox__check"
+                            width="20"
+                            height="20"
+                          >
                             <polyline points="15 6 10 14 5 11"></polyline>
                           </svg>
                         </label>
@@ -117,28 +118,28 @@ class Table extends Component {
                       </th>
                       <th scope="col">
                         Contract
-                <ColumnFilterDrop />
+                        <ColumnFilterDrop />
                       </th>
                       <th scope="col">
                         Owner Name
-                <ColumnFilterDrop />
+                        <ColumnFilterDrop />
                       </th>
                       <th scope="col" className="text-center">
                         Age
-                <ColumnFilterDrop />
+                        <ColumnFilterDrop />
                       </th>
                       <th scope="col" className="text-center">
                         Value
-                <ColumnFilterDrop />
+                        <ColumnFilterDrop />
                         {/* <button className="add-btn">+</button> */}
                       </th>
                       <th scope="col">
                         Product Type
-                <ColumnFilterDrop />
+                        <ColumnFilterDrop />
                       </th>
                       <th scope="col" className="text-center">
                         Issue Date
-                <ColumnFilterDrop />
+                        <ColumnFilterDrop />
                       </th>
                     </tr>
                   </thead>
@@ -151,8 +152,15 @@ class Table extends Component {
                       >
                         <td scope="row" className="">
                           <label className="checkbox">
-                            <input className="checkbox__input" type="checkbox" />
-                            <svg className="checkbox__check" width="20" height="20">
+                            <input
+                              className="checkbox__input"
+                              type="checkbox"
+                            />
+                            <svg
+                              className="checkbox__check"
+                              width="20"
+                              height="20"
+                            >
                               <polyline points="15 6 10 14 5 11"></polyline>
                             </svg>
                           </label>
@@ -164,9 +172,7 @@ class Table extends Component {
                           {numeral(contract.value).format("$0,0.00")}
                         </td>
                         <td className="w-17">{contract.product}</td>
-                        <td className="text-right">
-                          1/19/1996
-                      </td>
+                        <td className="text-right">1/19/1996</td>
                       </tr>
                     ))}
                   </tbody>
@@ -179,8 +185,15 @@ class Table extends Component {
                       <div className="row">
                         <div className="col-lg-3 col-md-3 col-sm-3 col-3">
                           <label className="checkbox">
-                            <input className="checkbox__input" type="checkbox" />
-                            <svg className="checkbox__check" width="20" height="20">
+                            <input
+                              className="checkbox__input"
+                              type="checkbox"
+                            />
+                            <svg
+                              className="checkbox__check"
+                              width="20"
+                              height="20"
+                            >
                               <polyline points="15 6 10 14 5 11"></polyline>
                             </svg>
                           </label>
@@ -195,7 +208,10 @@ class Table extends Component {
                     </div>
                     <div className="col-lg-6 col-md-6 col-sm-6 col-5 text-right">
                       <div className="arrow-dwonsection">
-                        <img src="/imgs/svgs/dropdown-blue.svg" alt="dropdown Icon" />
+                        <img
+                          src="/imgs/svgs/dropdown-blue.svg"
+                          alt="dropdown Icon"
+                        />
                       </div>
                       <div className="value-section">
                         <h4>{numeral(contract.value).format("$0,0.00")}</h4>
@@ -230,7 +246,6 @@ class Table extends Component {
           </div>
         </div>
         {/* table old design */}
-
       </>
     );
   }
