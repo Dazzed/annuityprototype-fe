@@ -111,6 +111,7 @@ class ContractsPage extends React.Component {
               </div>
             </div>
           </div>
+          <button className="position-absolute" style={{ left: '5px'}}>SlideOpen</button>
         </div>
       </div>
     );
