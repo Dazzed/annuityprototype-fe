@@ -9,6 +9,14 @@ export default function Criteria() {
     setActivePath(window.location.pathname);
   }, []);
 
+  if (!isNavOpen) {
+    return (
+      <div>
+        <button onClick={() => setIsNavOpen(!isNavOpen)}>X</button>
+      </div>
+    );
+  }
+
   return (
     <div className="sidebar" style={!isNavOpen ? { display: "none" } : {}}>
       <div className="logo-section text-center">
