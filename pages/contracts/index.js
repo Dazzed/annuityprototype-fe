@@ -102,7 +102,6 @@ class ContractsPage extends React.Component {
         </Head>
         <div className="row h-100">
           <SideNav isNavOpen={isNavOpen} toggleSideNav={this.toggleSideNav} />
-          <RightSideNav isNavOpen={isNavOpen} toggleRightSideNav={this.toggleRightSideNav} />
           <div
             className={`col-lg-${
               isNavOpen ? "9" : "12"
@@ -127,6 +126,7 @@ class ContractsPage extends React.Component {
               </div>
             </div>
           </div>
+          <RightSideNav isNavOpen={isNavOpen} toggleRightSideNav={this.toggleRightSideNav} />
           {/* <button className="position-absolute" style={{ left: '5px'}}>SlideOpen</button> */}
         </div>
       </div>
