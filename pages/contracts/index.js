@@ -26,6 +26,7 @@ class ContractsPage extends React.Component {
 
     this.state = {
       isNavOpen: true,
+      isRightNavOpen: true,
       contracts: [],
       params: {},
       currentPage: 1,
@@ -72,7 +73,7 @@ class ContractsPage extends React.Component {
     this.setState((state) => ({ isNavOpen: !state.isNavOpen }));
   }
   toggleRightSideNav() {
-    this.setState((state) => ({ isNavOpen: !state.isNavOpen }));
+    this.setState((state) => ({ isRightNavOpen: !state.isRightNavOpen }));
   }
 
   render() {
@@ -83,6 +84,7 @@ class ContractsPage extends React.Component {
       totalCount,
       pageSize,
       isNavOpen,
+      isRightNavOpen,
     } = this.state;
 
     const range = getPageRange({
@@ -126,8 +128,10 @@ class ContractsPage extends React.Component {
               </div>
             </div>
           </div>
-          <RightSideNav isNavOpen={isNavOpen} toggleRightSideNav={this.toggleRightSideNav} />
-          {/* <button className="position-absolute" style={{ left: '5px'}}>SlideOpen</button> */}
+          <RightSideNav
+            isRightNavOpen={isRightNavOpen}
+            toggleRightSideNav={this.toggleRightSideNav}
+          />
         </div>
       </div>
     );
