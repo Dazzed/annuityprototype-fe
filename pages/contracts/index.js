@@ -4,7 +4,7 @@ import axios from "axios";
 
 import Table from "./components/table";
 import SideNav from "../../components/sideNav";
-import RightSideNav from "../../components/RightSideNav";
+import RightSideNav from "../../components/rightSideNav";
 import FilterCriteria from "./components/filterCriteria";
 import Pagination from "./components/pagination";
 
