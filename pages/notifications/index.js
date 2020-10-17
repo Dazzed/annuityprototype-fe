@@ -10,7 +10,10 @@ class Notifications extends React.Component {
 
     this.state = {
       notifications: [],
+      isNavOpen: true,
     };
+
+    this.toggleSideNav = this.toggleSideNav.bind(this);
   }
 
   componentDidMount() {
@@ -29,11 +32,18 @@ class Notifications extends React.Component {
     }
   }
 
+  toggleSideNav() {
+    this.setState((state) => ({ isNavOpen: !state.isNavOpen }));
+  }
+
   render() {
-    const { notifications } = this.state;
+    const { notifications, isNavOpen } = this.state;
 
     return (
-      <div className="container-fluid h-100 px-3 pl-lg-0 pr-lg-3">
+      <div
+        className="container-fluid h-100 px-3 pl-lg-0 pr-lg-3"
+        style={!isNavOpen ? { marginLeft: "0px" } : {}}
+      >
         <Head>
           <meta charSet="utf-8" />
           <meta
@@ -42,10 +52,12 @@ class Notifications extends React.Component {
           />
         </Head>
         <div className="row h-100">
-          <div className="col-lg-3 col-md-12 px-0 pr-lg-0 pl-lg-3 order-second">
-            <SideNav />
-          </div>
-          <div className="col-lg-9 col-md-12 col-sm-12 col-12 common-mr-pd">
+          <SideNav isNavOpen={isNavOpen} toggleSideNav={this.toggleSideNav} />
+          <div
+            className={`col-lg-${
+              isNavOpen ? "9" : "12"
+            } col-md-12 col-sm-12 col-12 common-mr-pd`}
+          >
             <div className="row">
               <div className="col-lg-12">
                 <div className="search-box support-searchbox">

@@ -1,7 +1,6 @@
 import React from "react";
 import Head from "next/head";
 import axios from "axios";
-import format from "date-fns/format";
 import SideNav from "../../components/sideNav";
 
 class Dashboard extends React.Component {
@@ -9,8 +8,10 @@ class Dashboard extends React.Component {
     super(props);
 
     this.state = {
-      notifications: [],
+      isNavOpen: true,
     };
+
+    this.toggleSideNav = this.toggleSideNav.bind(this);
   }
 
   componentDidMount() {
@@ -29,8 +30,12 @@ class Dashboard extends React.Component {
     }
   }
 
+  toggleSideNav() {
+    this.setState((state) => ({ isNavOpen: !state.isNavOpen }));
+  }
+
   render() {
-    const { notifications } = this.state;
+    const { isNavOpen } = this.state;
 
     return (
       <div className="container-fluid h-100 px-3 pl-lg-0 pr-lg-3">
@@ -42,10 +47,12 @@ class Dashboard extends React.Component {
           />
         </Head>
         <div className="row h-100">
-          <div className="col-lg-3 col-md-12 px-0 pr-lg-0 pl-lg-3 order-second">
-            <SideNav />
-          </div>
-          <div className="col-lg-9 col-md-12 col-sm-12 col-12 common-mr-pd mb-5">
+          <SideNav isNavOpen={isNavOpen} toggleSideNav={this.toggleSideNav} />
+          <div
+            className={`col-lg-${
+              isNavOpen ? "9" : "12"
+            } col-md-12 col-sm-12 col-12 common-mr-pd mb-5`}
+          >
             <div className="row">
               <div className="col-lg-8 col-md-12 col-sm-12 col-12">
                 <div className="contract-title-name">
@@ -117,7 +124,10 @@ class Dashboard extends React.Component {
                           </div>
                           <div className="msg-contentsection">
                             {/* <p>{notification.message}</p> */}
-                            <p><b>John</b> Doe initiatied a withdrawal for $1,500 from contract <b>XX123456789</b> via form</p>
+                            <p>
+                              <b>John</b> Doe initiatied a withdrawal for $1,500
+                              from contract <b>XX123456789</b> via form
+                            </p>
                           </div>
                         </div>
                         <div className="col-lg-3 col-md-3 col-sm-5 col-12 align-self-center">
@@ -145,7 +155,10 @@ class Dashboard extends React.Component {
                           </div>
                           <div className="msg-contentsection">
                             {/* <p>{notification.message}</p> */}
-                            <p><b>John</b> Doe initiatied a withdrawal for $1,500 from contract <b>XX123456789</b> via form</p>
+                            <p>
+                              <b>John</b> Doe initiatied a withdrawal for $1,500
+                              from contract <b>XX123456789</b> via form
+                            </p>
                           </div>
                         </div>
                         <div className="col-lg-3 col-md-3 col-sm-5 col-12 align-self-center">
@@ -173,7 +186,10 @@ class Dashboard extends React.Component {
                           </div>
                           <div className="msg-contentsection">
                             {/* <p>{notification.message}</p> */}
-                            <p><b>John</b> Doe initiatied a withdrawal for $1,500 from contract <b>XX123456789</b> via form</p>
+                            <p>
+                              <b>John</b> Doe initiatied a withdrawal for $1,500
+                              from contract <b>XX123456789</b> via form
+                            </p>
                           </div>
                         </div>
                         <div className="col-lg-3 col-md-3 col-sm-5 col-12 align-self-center">
@@ -203,7 +219,9 @@ class Dashboard extends React.Component {
                         <div className="col-lg-6 col-md-12 col-sm-12 col-12">
                           <div className="month-secion">
                             <a href="#">Month</a>
-                            <a href="#" className="active-section">Week</a>
+                            <a href="#" className="active-section">
+                              Week
+                            </a>
                             <a href="#">Day</a>
                           </div>
                         </div>
@@ -295,10 +313,17 @@ class Dashboard extends React.Component {
                           <div className="progress-process position-relative">
                             <h6>PL Processing</h6>
                             <div class="progress">
-                              <div class="progress-bar" role="progressbar" style={{ width: '70%' }}  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                              <div
+                                class="progress-bar"
+                                role="progressbar"
+                                style={{ width: "70%" }}
+                                aria-valuenow="25"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                              ></div>
                             </div>
                             <div className="progress-value">
-                            <span>70%</span>
+                              <span>70%</span>
                             </div>
                           </div>
                         </div>
@@ -314,10 +339,17 @@ class Dashboard extends React.Component {
                           <div className="progress-process position-relative">
                             <h6>Submitted</h6>
                             <div class="progress">
-                              <div class="progress-bar" role="progressbar" style={{ width: '30%' }} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                              <div
+                                class="progress-bar"
+                                role="progressbar"
+                                style={{ width: "30%" }}
+                                aria-valuenow="25"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                              ></div>
                             </div>
                             <div className="progress-value">
-                            <span>30%</span>
+                              <span>30%</span>
                             </div>
                           </div>
                         </div>
@@ -335,7 +367,6 @@ class Dashboard extends React.Component {
                       </div>
                     </div>
                   </div>
-
                 </div>
               </div>
               {/* right side column */}
@@ -404,27 +435,36 @@ class Dashboard extends React.Component {
                         <h5>Tasks</h5>
                       </div>
                       <div className="assign-section">
-                        <h4>Funds Transfer <b>XX123456789</b></h4>
+                        <h4>
+                          Funds Transfer <b>XX123456789</b>
+                        </h4>
                         <p>Assigned to Lilly</p>
                         <img
                           src="/imgs/svgs/rightarrow-blue.svg"
-                          alt="Rightarrow Icon " className="rightarrow-task"
+                          alt="Rightarrow Icon "
+                          className="rightarrow-task"
                         />
                       </div>
                       <div className="assign-section">
-                        <h4>Funds Transfer <b>XX123456789</b></h4>
+                        <h4>
+                          Funds Transfer <b>XX123456789</b>
+                        </h4>
                         <p>Assigned to Lilly</p>
                         <img
                           src="/imgs/svgs/rightarrow-blue.svg"
-                          alt="Rightarrow Icon " className="rightarrow-task"
+                          alt="Rightarrow Icon "
+                          className="rightarrow-task"
                         />
                       </div>
                       <div className="assign-section">
-                        <h4>Funds Transfer <b>XX123456789</b></h4>
+                        <h4>
+                          Funds Transfer <b>XX123456789</b>
+                        </h4>
                         <p>Assigned to Lilly</p>
                         <img
                           src="/imgs/svgs/rightarrow-blue.svg"
-                          alt="Rightarrow Icon " className="rightarrow-task"
+                          alt="Rightarrow Icon "
+                          className="rightarrow-task"
                         />
                       </div>
                       <div className="seemoresection-dashboard">
@@ -445,7 +485,10 @@ class Dashboard extends React.Component {
                     <div className="chat-dashboard-section">
                       <img src="/imgs/svgs/chat-icon.svg" />
                       <h5>Chat with Support</h5>
-                      <p>Need help in completing a transaction? Chat live with a support team member</p>
+                      <p>
+                        Need help in completing a transaction? Chat live with a
+                        support team member
+                      </p>
                       <button>Chat Now</button>
                     </div>
                   </div>
@@ -458,7 +501,8 @@ class Dashboard extends React.Component {
                         <h5>Notes</h5>
                       </div>
                       <ul className="p-0 notes-section">
-                        <img src="/imgs/svgs/round-bold.svg" /><li>Remember to complete Susan B.’s address change</li>
+                        <img src="/imgs/svgs/round-bold.svg" />
+                        <li>Remember to complete Susan B.’s address change</li>
                       </ul>
                     </div>
                   </div>

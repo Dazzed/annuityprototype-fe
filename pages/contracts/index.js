@@ -24,6 +24,7 @@ class ContractsPage extends React.Component {
     super(props);
 
     this.state = {
+      isNavOpen: true,
       contracts: [],
       params: {},
       currentPage: 1,
@@ -33,6 +34,7 @@ class ContractsPage extends React.Component {
     };
 
     this.loadRecords = this.loadRecords.bind(this);
+    this.toggleSideNav = this.toggleSideNav.bind(this);
   }
 
   componentDidMount() {
@@ -64,6 +66,10 @@ class ContractsPage extends React.Component {
     }
   }
 
+  toggleSideNav() {
+    this.setState((state) => ({ isNavOpen: !state.isNavOpen }));
+  }
+
   render() {
     const {
       contracts,
@@ -71,7 +77,9 @@ class ContractsPage extends React.Component {
       totalPages,
       totalCount,
       pageSize,
+      isNavOpen,
     } = this.state;
+
     const range = getPageRange({
       currentPage,
       pageSize,
@@ -88,10 +96,12 @@ class ContractsPage extends React.Component {
           />
         </Head>
         <div className="row h-100">
-          <div className="col-lg-3 col-md-12 px-0 pr-lg-0 pl-lg-3 order-second">
-            <SideNav />
-          </div>
-          <div className="col-lg-9 col-md-12 col-sm-12 col-12 common-mr-pd pt-lg-0">
+          <SideNav isNavOpen={isNavOpen} toggleSideNav={this.toggleSideNav} />
+          <div
+            className={`col-lg-${
+              isNavOpen ? "9" : "12"
+            } col-md-12 col-sm-12 col-12 common-mr-pd pt-lg-0`}
+          >
             <FilterCriteria loadRecords={this.loadRecords} />
             <div className="row common-pd">
               <div className="col-md-12">
