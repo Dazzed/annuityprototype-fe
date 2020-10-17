@@ -12,17 +12,17 @@ export default function SideNav(props) {
   if (!isNavOpen) {
     return (
       <div>
-        <button onClick={() => props.toggleSideNav()}>X</button>
+        <button className="btn-arrow-icon"  onClick={() => props.toggleSideNav()}><img src="/imgs/svgs/rightarrow-icon-white.svg " /></button>
       </div>
     );
   }
 
   return (
-    <div className="col-lg-3 col-md-12 px-0 pr-lg-0 pl-lg-3 order-second">
+    <div className="col-lg-3 col-md-12 px-0 order-second">
       <div className="sidebar">
         <div className="logo-section text-center">
           <img src="/imgs/svgs/logo-white.svg" alt="Logo" />
-          <button onClick={() => props.toggleSideNav()}>X</button>
+          <button className="btn-arrow-icon-1"   onClick={() => props.toggleSideNav()}><img src="/imgs/svgs/rightarrow-icon1.svg" /></button>
         </div>
         <div className="nav-list">
           <ul>

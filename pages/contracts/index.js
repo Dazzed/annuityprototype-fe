@@ -87,7 +87,7 @@ class ContractsPage extends React.Component {
     });
 
     return (
-      <div className="container-fluid h-100 px-3 pl-lg-0 pr-lg-3">
+      <div className="container-fluid h-100">
         <Head>
           <meta charSet="utf-8" />
           <meta
@@ -100,7 +100,7 @@ class ContractsPage extends React.Component {
           <div
             className={`col-lg-${
               isNavOpen ? "9" : "12"
-            } col-md-12 col-sm-12 col-12 common-mr-pd pt-lg-0`}
+            } col-md-12 col-sm-12 col-12 `}
           >
             <FilterCriteria loadRecords={this.loadRecords} />
             <div className="row common-pd">

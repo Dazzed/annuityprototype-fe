@@ -38,7 +38,7 @@ class Dashboard extends React.Component {
     const { isNavOpen } = this.state;
 
     return (
-      <div className="container-fluid h-100 px-3 pl-lg-0 pr-lg-3">
+      <div className="container-fluid h-100 ">
         <Head>
           <meta charSet="utf-8" />
           <meta
@@ -51,9 +51,9 @@ class Dashboard extends React.Component {
           <div
             className={`col-lg-${
               isNavOpen ? "9" : "12"
-            } col-md-12 col-sm-12 col-12 common-mr-pd mb-5`}
+            } col-md-12 col-sm-12 col-12 mb-5`}
           >
-            <div className="row">
+            <div className="row common-pd">
               <div className="col-lg-8 col-md-12 col-sm-12 col-12">
                 <div className="contract-title-name">
                   <h2>

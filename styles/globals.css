@@ -1,5 +1,4 @@
-html,
-body {
+html, body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -105,8 +104,7 @@ button:focus {
   border: 1px solid #d2e1ea;
 }
 
-.table-kl td,
-.table-kl th {
+.table-kl td, .table-kl th {
   padding: 0.75rem;
   vertical-align: top;
   border-top: 1px solid #dee2e6;
@@ -127,9 +125,18 @@ button:focus {
   left: 0;
   background-color: #053661;
   overflow-x: hidden;
-  transition: 0.5s;
+  transition: 1s;
   padding-top: 0;
+  padding-right: 362px !important;
   border-right: 1px solid #ccc;
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  /* Firefox 4 */
+  -webkit-transition: all 0.5s;
+  /* Safari and Chrome */
+  -o-transition: all 0.5s;
+  /* Opera */
+  -ms-transition: all 0.5s;
 }
 
 .sidenav li {
@@ -141,14 +148,18 @@ button:focus {
   margin-bottom: 10px;
   margin-left: 15px;
   margin-right: 15px;
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
 }
 
 .cardcustomheader {
   background-image: linear-gradient(180deg, #fff, #d2e1ea);
 }
 
-.cardcustomheader button:hover,
-.cardcustomheader button:focus {
+.cardcustomheader button:hover, .cardcustomheader button:focus {
   text-decoration: none;
   color: #8e9294;
   box-shadow: none;
@@ -179,8 +190,7 @@ button:focus {
   border: 1px solid #8e9294;
 }
 
-.dropdown-toggle-menu:focus,
-.dropdown-toggle-menu:hover {
+.dropdown-toggle-menu:focus, .dropdown-toggle-menu:hover {
   color: #000 !important;
   background-color: transparent !important;
   outline: none;
@@ -289,11 +299,29 @@ button:hover {
   cursor: pointer;
 }
 
-.btn-close-sidebar {
+.btn-arrow-icon {
+  border: none;
+  background-color: #C4C4C4;
+  height: 41px;
+  width: 38px;
   position: absolute;
-  top: 10px;
+  top: 71px;
+  border-radius: 0px 4px 4px 0px;
+  z-index: 1;
 }
 
+.btn-arrow-icon img {
+  background-color: #C4C4C4;
+  transform: rotate(180deg);
+  position: relative;
+  top: -2px;
+}
+.btn-arrow-icon-1 {
+  position: absolute;
+  right: 22px;
+  top: 28px;
+  border: none;
+}
 .sidebar {
   background-color: #f2f2f2;
   width: 300px;
@@ -323,7 +351,7 @@ button:hover {
 }
 
 .logo-section {
-  padding-top: 26px;
+  padding-top: 15px;
   padding-bottom: 65px;
 }
 
@@ -385,8 +413,7 @@ button:hover {
   height: 63px;
 }
 
-.contract-title-name h2,
-.contract-modal-h2 {
+.contract-title-name h2, .contract-modal-h2 {
   font-family: Montserrat-Bold;
   font-style: normal;
   font-weight: bold;
@@ -462,7 +489,7 @@ button:hover {
   outline: none;
 }
 
-.search-box input:focus + .search {
+.search-box input:focus+.search {
   transform: perspective(400px) rotateY(89deg);
   padding: 3px 0;
   opacity: 0;
@@ -542,8 +569,7 @@ button:hover {
 
 /* new filter */
 
-.newdesignfilter-btn {
-}
+.newdesignfilter-btn {}
 
 .table-responsive {
   /* white-space: nowrap;  */
@@ -579,8 +605,7 @@ button:hover {
   vertical-align: middle;
 }
 
-.table th,
-table td {
+.table th, table td {
   border: none !important;
 }
 
@@ -700,7 +725,7 @@ table td {
   opacity: 0;
 }
 
-.checkbox__input:checked + .checkbox__check {
+.checkbox__input:checked+.checkbox__check {
   background: #fff;
   stroke-dashoffset: 0;
 }
@@ -780,8 +805,7 @@ table td {
   margin-top: 61px;
 }
 
-.nav-pills .nav-link-custom.active,
-.nav-pills .show > .nav-link-custom {
+.nav-pills .nav-link-custom.active, .nav-pills .show>.nav-link-custom {
   color: #0d65b3;
   font-family: OpenSans-Regular;
   font-style: normal;
@@ -842,8 +866,7 @@ a:hover {
 
 /* search */
 
-.dropdown-item.active,
-.dropdown-item:active {
+.dropdown-item.active, .dropdown-item:active {
   background-color: transparent !important;
 }
 
@@ -903,8 +926,7 @@ a:hover {
   background-color: transparent;
 }
 
-.table-contractvalue .table th,
-.table-contractvalue .table td {
+.table-contractvalue .table th, .table-contractvalue .table td {
   padding: 15px 0;
 }
 
@@ -1268,8 +1290,7 @@ a:hover {
   color: #000;
 }
 
-.chat-dashboard-section img {
-}
+.chat-dashboard-section img {}
 
 .chat-dashboard-section p {
   font-family: OpenSans-Regular;
@@ -1467,8 +1488,7 @@ li {
   padding: 25px 45px 20px;
 }
 
-.progress-detail {
-}
+.progress-detail {}
 
 .progress-detail h4 {
   font-family: OpenSans-Regular;
@@ -1678,8 +1698,7 @@ li {
 }
 
 @media screen and (max-width: 767px) {
-  .col-82,
-  .col-30 {
+  .col-82, .col-30 {
     max-width: 100% !important;
     flex: 0 0 100%;
   }

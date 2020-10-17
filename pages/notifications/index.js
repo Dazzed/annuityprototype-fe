@@ -41,7 +41,7 @@ class Notifications extends React.Component {
 
     return (
       <div
-        className="container-fluid h-100 px-3 pl-lg-0 pr-lg-3"
+        className="container-fluid h-100"
         style={!isNavOpen ? { marginLeft: "0px" } : {}}
       >
         <Head>
@@ -56,9 +56,9 @@ class Notifications extends React.Component {
           <div
             className={`col-lg-${
               isNavOpen ? "9" : "12"
-            } col-md-12 col-sm-12 col-12 common-mr-pd`}
+            } col-md-12 col-sm-12 col-12`}
           >
-            <div className="row">
+            <div className="row common-pd pt-lg-3">
               <div className="col-lg-12">
                 <div className="search-box support-searchbox">
                   <input type="text" placeholder="Search" />
