@@ -4,6 +4,7 @@ import axios from "axios";
 
 import Table from "./components/table";
 import SideNav from "../../components/sideNav";
+import RightSideNav from "../../components/RightSideNav";
 import FilterCriteria from "./components/filterCriteria";
 import Pagination from "./components/pagination";
 
@@ -35,6 +36,7 @@ class ContractsPage extends React.Component {
 
     this.loadRecords = this.loadRecords.bind(this);
     this.toggleSideNav = this.toggleSideNav.bind(this);
+    this.toggleRightSideNav = this.toggleRightSideNav.bind(this);
   }
 
   componentDidMount() {
@@ -69,6 +71,9 @@ class ContractsPage extends React.Component {
   toggleSideNav() {
     this.setState((state) => ({ isNavOpen: !state.isNavOpen }));
   }
+  toggleRightSideNav() {
+    this.setState((state) => ({ isNavOpen: !state.isNavOpen }));
+  }
 
   render() {
     const {
@@ -97,6 +102,7 @@ class ContractsPage extends React.Component {
         </Head>
         <div className="row h-100">
           <SideNav isNavOpen={isNavOpen} toggleSideNav={this.toggleSideNav} />
+          <RightSideNav isNavOpen={isNavOpen} toggleRightSideNav={this.toggleRightSideNav} />
           <div
             className={`col-lg-${
               isNavOpen ? "9" : "12"

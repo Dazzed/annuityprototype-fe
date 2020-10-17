@@ -19,7 +19,7 @@ export default function SideNav(props) {
 
   return (
     <div className="col-lg-3 col-md-12 px-0 order-second">
-      <div className="sidebar">
+      <div className="sidebar-left">
         <div className="logo-section text-center">
           <img src="/imgs/svgs/logo-white.svg" alt="Logo" />
           <button className="btn-arrow-icon-1"   onClick={() => props.toggleSideNav()}><img src="/imgs/svgs/rightarrow-icon1.svg" /></button>
