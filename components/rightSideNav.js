@@ -1,27 +1,19 @@
-import { useEffect, useState } from "react";
-import Link from "next/link";
-
 export default function RightSideNav(props) {
     const { isNavOpen } = props;
-    //   let [activePath, setActivePath] = useState("");
-
-    //   useEffect(() => {
-    //     setActivePath(window.location.pathname);
-    //   }, []);
-
-    if (!isNavOpen) {
-        return (
-            <div>
-                <button className="btn-arrow-icon-right" onClick={() => props.toggleRightSideNav()}><img src="/imgs/svgs/rightarrow-icon-white.svg " /></button>
-            </div>
-        );
-    }
 
     return (
-        <div className="col-lg-3 col-md-12 px-0 order-second">
+        <div
+            className="col-lg-3 col-md-12 px-0 order-second"
+            style={!isNavOpen ? { display: "none" } : {}}
+        >
             <div className="sidebar-right">
                 <div className="logo-section text-center">
-                    <button className="btn-arrow-icon-2" onClick={() => props.toggleRightSideNav()}><img src="/imgs/svgs/rightarrow-icon1.svg" /></button>
+                    <button
+                        className="btn-arrow-icon-2"
+                        onClick={() => props.toggleRightSideNav()}
+                    >
+                        <img src="/imgs/svgs/rightarrow-icon1.svg" />
+                    </button>
                 </div>
                 <div className="row h-100">
                     <div className="col-lg-12 col-md-12 col-sm-12 col-12 mt-pils pt-info-noti">
@@ -39,7 +31,7 @@ export default function RightSideNav(props) {
                                     aria-controls="pills-infos"
                                     aria-selected="true">
                                     Info
-                                </a>
+                        </a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link-custom"
@@ -50,7 +42,7 @@ export default function RightSideNav(props) {
                                     aria-controls="pills-forms"
                                     aria-selected="false">
                                     Forms
-                                </a>
+                        </a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link-custom"
@@ -61,7 +53,7 @@ export default function RightSideNav(props) {
                                     aria-controls="pills-tab3"
                                     aria-selected="false">
                                     Tabs
-                                </a>
+                        </a>
                             </li>
                         </ul>
                         <div
@@ -132,7 +124,6 @@ export default function RightSideNav(props) {
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     );
