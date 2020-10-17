@@ -892,7 +892,9 @@ a:hover {
 .table-contractvalue .table th, .table-contractvalue .table td {
   padding: 15px 0;
 }
-
+.table-contractvalue .table{
+  padding: 0 15px;
+}
 /* Notfication css */
 
 .support-searchbox {
