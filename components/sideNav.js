@@ -3,14 +3,17 @@ import Link from "next/link";
 
 export default function Criteria() {
   let [activePath, setActivePath] = useState("");
+  let [isNavOpen, setIsNavOpen] = useState(true);
+
   useEffect(() => {
     setActivePath(window.location.pathname);
   }, []);
 
   return (
-    <div className="sidebar">
+    <div className="sidebar" style={!isNavOpen ? { display: "none" } : {}}>
       <div className="logo-section text-center">
         <img src="/imgs/svgs/logo-white.svg" alt="Logo" />
+        <button onClick={() => setIsNavOpen(!isNavOpen)}>X</button>
       </div>
       <div className="nav-list">
         <ul>
@@ -63,7 +66,10 @@ export default function Criteria() {
           <li>
             <Link href="/notifications">
               <a href="#">
-                <img src="/imgs/user-profile-sidebar.png" className="profile-pic" />
+                <img
+                  src="/imgs/user-profile-sidebar.png"
+                  className="profile-pic"
+                />
                 <span className="p-0 d-none-view ">My Profile</span>
               </a>
             </Link>
