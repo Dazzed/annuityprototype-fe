@@ -391,7 +391,10 @@ button:hover {
 .sidebar-right-zero {
   right: 0;
 }
-
+.notifcation-section {
+  display: flex;
+  flex-direction: row;
+}
 .btn-arrow-icon-2 .sidebar-right {
   transition: all 0.2s ease-in-out;
 }
@@ -1638,7 +1641,9 @@ li {
 .date-section-info p {
   margin-top: -10px;
 }
-
+.userPicSection-info {
+  width: 75px;
+}
 .userPicSection-info img {
   width: 53px;
   border-radius: 50%;
