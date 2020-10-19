@@ -10,13 +10,16 @@ export default function RightSideNav(props) {
    * 2. In expanded state
    */
   return (
+    // <div
+    //   style={navState ? {} : { display: "none" }}
+    //   className={`col-lg-3 col-md-12 px-0 order-second ${
+    //     navState === 1 ? "sidebar-right" : "expandsidebar-right"
+    //   }`}
+    // >
     <div
       style={navState ? {} : { display: "none" }}
-      className={`col-lg-3 col-md-12 px-0 order-second ${
-        navState === 1 ? "sidebar-right" : "expandsidebar-right"
-      }`}
-    >
-      <div className="sidebar-right">
+      className="col-lg-3 col-md-12 px-0 order-second">
+      <div className={` ${navState === 1 ? "sidebar-right" : "expandsidebar-right"}` }>
         <div className="logo-section text-center">
           {expandable && (
             <button
