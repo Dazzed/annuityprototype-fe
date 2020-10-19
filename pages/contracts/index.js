@@ -169,7 +169,7 @@ class ContractsPage extends React.Component {
             shrinkNav={this.shrinkRightNav}
           >
             <RightNavContent
-              contract={contracts.find((e) => (e.id = selectedContractId))}
+              contract={contracts.find((e) => e.id === selectedContractId)}
             />
           </RightNav>
         </div>

@@ -6,6 +6,7 @@ import SideNav from "../../components/sideNav";
 import RightNav from "../../components/rightNav";
 import RightNavContent from "./components/rightNavContent";
 import NotificationItem from "./components/notificationItem";
+import { ConsoleView } from "react-device-detect";
 
 class Notifications extends React.Component {
   constructor(props) {
@@ -64,6 +65,7 @@ class Notifications extends React.Component {
   }
 
   selectNotification(id) {
+    console.log("notification.id", id);
     this.setState({ selectedNotificationId: id }, () =>
       this.expandRightNav(true)
     );
@@ -166,6 +168,7 @@ class Notifications extends React.Component {
                     {notifications.map((notification) => (
                       <NotificationItem
                         key={notification.id}
+                        notification={notification}
                         selectNotification={this.selectNotification}
                       />
                     ))}
@@ -194,7 +197,7 @@ class Notifications extends React.Component {
           >
             <RightNavContent
               notification={notifications.find(
-                (e) => (e.id = selectedNotificationId)
+                (e) => e.id === selectedNotificationId
               )}
             />
           </RightNav>

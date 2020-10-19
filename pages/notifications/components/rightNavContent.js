@@ -1,4 +1,13 @@
+import format from "date-fns/format";
+import numeral from "numeral";
+
 export default function RightNavContent(props) {
+  const { notification } = props;
+
+  if (!notification) return null;
+
+  const { contract } = notification;
+
   return (
     <div className="row h-100">
       <div className="col-lg-12 col-md-12 col-sm-12 col-12 mt-pils pt-info-noti">
@@ -65,7 +74,7 @@ export default function RightNavContent(props) {
               </div>
               <div className="col-lg-8 col-md-8 col-sm-7 col-12 align-self-center">
                 <div className="client-information-section-info">
-                  <h6>Jane Doe</h6>
+                  <h6>{contract.ownerName}</h6>
                   <p>Client Information</p>
                 </div>
                 <div className="msg-contentsection">
@@ -76,19 +85,19 @@ export default function RightNavContent(props) {
             <div className="row h-100">
               <div className="col-lg-5 col-md-5 col-sm-12 col-12 align-self-center">
                 <div className="client-information-section-info">
-                  <h6>$1,500</h6>
+                  <h6>{numeral(contract.value).format("$0,0.00")}</h6>
                   <p>Withdrawal</p>
                 </div>
               </div>
               <div className="col-lg-7 col-md-7 col-sm-12 col-12 align-self-center">
                 <div className="client-information-section-info">
-                  <h6>XX123456789</h6>
+                  <h6>{contract.contract}</h6>
                   <p>Contract Number</p>
                 </div>
               </div>
             </div>
             <div className="date-section-info">
-              <p>October 12 12:55pm</p>
+              <p>{format(new Date(), "MMMM d h:mm aaaa")}</p>
             </div>
             <br />
             <br />
