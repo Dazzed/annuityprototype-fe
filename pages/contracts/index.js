@@ -124,7 +124,11 @@ class ContractsPage extends React.Component {
     });
 
     return (
-      <div className={`container-fluid h-100 ${isNavOpen ? "table-padding-container" : "pl-3"}`}>
+      <div
+        className={`container-fluid h-100 ${
+          isNavOpen ? "table-padding-container" : "pl-3"
+        }`}
+      >
         <Head>
           <meta charSet="utf-8" />
           <meta
