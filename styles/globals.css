@@ -288,14 +288,14 @@ button:hover {
   position: relative;
   left: 0;
   top: 0;
-  transition: all 0.75s;
-  -moz-transition: all 0.75s;
+  /* transition: all 0.75s; */
+  /* -moz-transition: all 0.75s; */
   /* Firefox 4 */
-  -webkit-transition: all 0.75s;
+  /* -webkit-transition: all 0.75s; */
   /* Safari and Chrome */
-  -o-transition: all 0.75s;
+  /* -o-transition: all 0.75s; */
   /* Opera */
-  -ms-transition: all 0.75s;
+  /* -ms-transition: all 0.75s; */
   z-index: 1;
   margin-left: 0;
   opacity: 0;
