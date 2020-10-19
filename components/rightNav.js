@@ -20,14 +20,14 @@ export default function RightSideNav(props) {
       }`}
     >
       <div className="logo-section text-center">
-        {expandable && (
+        {expandable && navState !== 2 ? (
           <button
             className="btn-arrow-icon-1-1"
             onClick={() => props.expandNav()}
           >
             <img src="/imgs/svgs/rightarrow-icon1.svg" />
           </button>
-        )}
+        ) : null}
 
         <button className="btn-arrow-icon-2" onClick={() => props.shrinkNav()}>
           <img src="/imgs/svgs/rightarrow-icon1.svg" />
