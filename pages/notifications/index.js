@@ -80,10 +80,11 @@ class Notifications extends React.Component {
     } = this.state;
 
     return (
-      <div
-        className="container-fluid h-100"
-        style={!isNavOpen ? { marginLeft: "0px" } : {}}
-      >
+      // <div
+      //   className="container-fluid h-100"
+      //   style={!isNavOpen ? { marginLeft: "0px" } : {}}
+      // >
+      <div className={`container-fluid h-100 ${isNavOpen ? "table-padding-container" : "pl-3"}`}>
         <Head>
           <meta charSet="utf-8" />
           <meta
@@ -93,11 +94,13 @@ class Notifications extends React.Component {
         </Head>
         <div className="row h-100">
           <SideNav isNavOpen={isNavOpen} toggleSideNav={this.toggleSideNav} />
-          <div
+          {/* <div
             className={`col-lg-${
               isNavOpen ? "9" : "12"
             } col-md-12 col-sm-12 col-12`}
-          >
+          > */}
+            <div
+            className="col-lg-12 col-md-12 col-sm-12 col-12">
             <div className="row common-pd pt-lg-3">
               <div className="col-lg-12">
                 <div className="search-box support-searchbox">

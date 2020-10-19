@@ -16,10 +16,8 @@ export default function RightSideNav(props) {
     //     navState === 1 ? "sidebar-right" : "expandsidebar-right"
     //   }`}
     // >
-    <div
-      style={navState ? {} : { display: "none" }}
-      className="col-lg-3 col-md-12 px-0 order-second">
-      <div className={` ${navState === 1 ? "sidebar-right" : "expandsidebar-right"}` }>
+      // style={navState ? {} : { width: "0" }}
+      <div className={` ${navState === 1 ? "sidebar-right" : navState === 2 ? "expandsidebar-right" : "width-none"}` }>
         <div className="logo-section text-center">
           {expandable && (
             <button
@@ -39,6 +37,5 @@ export default function RightSideNav(props) {
         </div>
         <Fragment>{props.children}</Fragment>
       </div>
-    </div>
   );
 }
