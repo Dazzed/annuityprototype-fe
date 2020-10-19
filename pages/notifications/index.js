@@ -1,8 +1,11 @@
 import React from "react";
 import Head from "next/head";
 import axios from "axios";
-import format from "date-fns/format";
+
 import SideNav from "../../components/sideNav";
+import RightNav from "../../components/rightNav";
+import RightNavContent from "./components/rightNavContent";
+import NotificationItem from "./components/notificationItem";
 
 class Notifications extends React.Component {
   constructor(props) {
@@ -10,10 +13,15 @@ class Notifications extends React.Component {
 
     this.state = {
       notifications: [],
+      selectedNotificationId: null,
       isNavOpen: true,
+      rightNavState: 0,
     };
 
     this.toggleSideNav = this.toggleSideNav.bind(this);
+    this.expandRightNav = this.expandRightNav.bind(this);
+    this.shrinkRightNav = this.shrinkRightNav.bind(this);
+    this.selectNotification = this.selectNotification.bind(this);
   }
 
   componentDidMount() {
@@ -36,8 +44,38 @@ class Notifications extends React.Component {
     this.setState((state) => ({ isNavOpen: !state.isNavOpen }));
   }
 
+  expandRightNav(justOpen = false) {
+    if (justOpen) {
+      return this.setState({
+        rightNavState: 1,
+      });
+    }
+
+    this.setState((state) => ({
+      rightNavState:
+        state.rightNavState < 2 ? state.rightNavState + 1 : state.rightNavState,
+    }));
+  }
+
+  shrinkRightNav() {
+    this.setState((state) => ({
+      rightNavState: state.rightNavState > 0 ? state.rightNavState - 1 : 0,
+    }));
+  }
+
+  selectNotification(id) {
+    this.setState({ selectedNotificationId: id }, () =>
+      this.expandRightNav(true)
+    );
+  }
+
   render() {
-    const { notifications, isNavOpen } = this.state;
+    const {
+      notifications,
+      isNavOpen,
+      selectedNotificationId,
+      rightNavState,
+    } = this.state;
 
     return (
       <div
@@ -126,43 +164,10 @@ class Notifications extends React.Component {
                     aria-labelledby="pills-notifications-tab"
                   >
                     {notifications.map((notification) => (
-                      <div
-                        className="row row-height-supportsection"
+                      <NotificationItem
                         key={notification.id}
-                      >
-                        <div className="col-lg-2 col-md-2 col-sm-2 col-12 align-self-center">
-                          <div className="userPicSection">
-                            <img
-                              src="/imgs/profile-pic.png"
-                              alt="user picture"
-                            />
-                          </div>
-                        </div>
-                        <div className="col-lg-8 col-md-8 col-sm-7 col-12 align-self-center">
-                          <div className="date-section">
-                            <h6>
-                              {format(
-                                new Date(notification.timestamp),
-                                "MMMM d h:mm a"
-                              )}
-                            </h6>
-                          </div>
-                          <div className="msg-contentsection">
-                            <p>{notification.message}</p>
-                          </div>
-                        </div>
-                        <div className="col-lg-2 col-md-2 col-sm-3 col-12 align-self-center">
-                          <div className="seemore-section">
-                            <h6>
-                              See More{" "}
-                              <img
-                                src="/imgs/svgs/rightarrow-icon.svg"
-                                alt="Rightarrow Icon "
-                              />{" "}
-                            </h6>
-                          </div>
-                        </div>
-                      </div>
+                        selectNotification={this.selectNotification}
+                      />
                     ))}
                   </div>
                   <div
@@ -181,6 +186,18 @@ class Notifications extends React.Component {
               </div>
             </div>
           </div>
+          <RightNav
+            navState={rightNavState}
+            expandable={false}
+            expandNav={this.expandRightNav}
+            shrinkNav={this.shrinkRightNav}
+          >
+            <RightNavContent
+              notification={notifications.find(
+                (e) => (e.id = selectedNotificationId)
+              )}
+            />
+          </RightNav>
         </div>
       </div>
     );

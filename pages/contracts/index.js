@@ -4,9 +4,10 @@ import axios from "axios";
 
 import Table from "./components/table";
 import SideNav from "../../components/sideNav";
-import RightSideNav from "../../components/rightSideNav";
+import RightNav from "../../components/rightNav";
 import FilterCriteria from "./components/filterCriteria";
-import Pagination from "./components/pagination";
+import Pagination from "../../components/pagination";
+import RightNavContent from "./components/rightNavContent";
 
 const getPageRange = ({ currentPage, pageSize, totalCount }) => {
   if (totalCount === 0) return "None";
@@ -25,19 +26,22 @@ class ContractsPage extends React.Component {
     super(props);
 
     this.state = {
-      isNavOpen: true,
-      isRightNavOpen: true,
       contracts: [],
       params: {},
       currentPage: 1,
       totalPages: 0,
       totalCount: 0,
       pageSize: 10,
+      selectedContractId: null,
+      isNavOpen: true,
+      rightNavState: 0,
     };
 
     this.loadRecords = this.loadRecords.bind(this);
     this.toggleSideNav = this.toggleSideNav.bind(this);
-    this.toggleRightSideNav = this.toggleRightSideNav.bind(this);
+    this.expandRightNav = this.expandRightNav.bind(this);
+    this.shrinkRightNav = this.shrinkRightNav.bind(this);
+    this.selectContract = this.selectContract.bind(this);
   }
 
   componentDidMount() {
@@ -69,11 +73,36 @@ class ContractsPage extends React.Component {
     }
   }
 
+  selectContract(id) {
+    this.setState(
+      {
+        selectedContractId: id,
+      },
+      () => this.expandRightNav(true)
+    );
+  }
+
   toggleSideNav() {
     this.setState((state) => ({ isNavOpen: !state.isNavOpen }));
   }
-  toggleRightSideNav() {
-    this.setState((state) => ({ isRightNavOpen: !state.isRightNavOpen }));
+
+  expandRightNav(justOpen = false) {
+    if (justOpen) {
+      return this.setState({
+        rightNavState: 1,
+      });
+    }
+
+    this.setState((state) => ({
+      rightNavState:
+        state.rightNavState < 2 ? state.rightNavState + 1 : state.rightNavState,
+    }));
+  }
+
+  shrinkRightNav() {
+    this.setState((state) => ({
+      rightNavState: state.rightNavState > 0 ? state.rightNavState - 1 : 0,
+    }));
   }
 
   render() {
@@ -84,7 +113,8 @@ class ContractsPage extends React.Component {
       totalCount,
       pageSize,
       isNavOpen,
-      isRightNavOpen,
+      rightNavState,
+      selectedContractId,
     } = this.state;
 
     const range = getPageRange({
@@ -113,7 +143,11 @@ class ContractsPage extends React.Component {
             <div className="row common-pd">
               <div className="col-md-12">
                 <div className="row">
-                  <Table contracts={contracts} />
+                  <Table
+                    contracts={contracts}
+                    selectedContractId={selectedContractId}
+                    selectContract={this.selectContract}
+                  />
                 </div>
                 <div className="row mb-5 mb-lg-2">
                   <div className="col-lg-12 text-right">
@@ -128,10 +162,16 @@ class ContractsPage extends React.Component {
               </div>
             </div>
           </div>
-          <RightSideNav
-            isRightNavOpen={isRightNavOpen}
-            toggleRightSideNav={this.toggleRightSideNav}
-          />
+          <RightNav
+            expandable={true}
+            navState={rightNavState}
+            expandNav={this.expandRightNav}
+            shrinkNav={this.shrinkRightNav}
+          >
+            <RightNavContent
+              contract={contracts.find((e) => (e.id = selectedContractId))}
+            />
+          </RightNav>
         </div>
       </div>
     );

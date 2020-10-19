@@ -1,43 +1,14 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import numeral from "numeral";
 
-import DetailedContractModal from "./detailedModal";
 import ColumnFilterDrop from "./columnFilterDrop";
 
 class Table extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      showDetailedContractModal: false,
-      currentSelectedContract: {},
-    };
-
-    this.selectContract = this.selectContract.bind(this);
-    this.toggleDetailedModal = this.toggleDetailedModal.bind(this);
-  }
-
-  toggleDetailedModal() {
-    this.setState((state) => ({
-      showDetailedContractModal: !state.showDetailedContractModal,
-    }));
-  }
-
-  selectContract(contract) {
-    this.setState(
-      {
-        currentSelectedContract: contract,
-      },
-      () => this.toggleDetailedModal()
-    );
-  }
-
   render() {
-    const { contracts } = this.props;
-    const { showDetailedContractModal, currentSelectedContract } = this.state;
+    const { contracts, selectedContractId } = this.props;
 
     return (
-      <>
+      <Fragment>
         <div className="col-lg-12 col-md-12 col-sm-12 col-12 mt-pils m-0">
           <ul
             className="nav nav-pills nav-custom-pills nav-pills-support mb-3"
@@ -131,7 +102,6 @@ class Table extends Component {
                       <th scope="col" className="text-center">
                         Value
                         <ColumnFilterDrop />
-                        {/* <button className="add-btn">+</button> */}
                       </th>
                       <th scope="col">
                         Product Type
@@ -147,7 +117,7 @@ class Table extends Component {
                     {contracts.map((contract) => (
                       <tr
                         key={contract.id}
-                        onClick={() => this.selectContract(contract)}
+                        onClick={() => this.props.selectContract(contract.id)}
                         className="btn-hover"
                       >
                         <td scope="row" className="">
@@ -225,11 +195,6 @@ class Table extends Component {
                   <p>No results found</p>
                 </div>
               ) : null}
-              <DetailedContractModal
-                show={showDetailedContractModal}
-                contractDetails={currentSelectedContract}
-                handleClose={this.toggleDetailedModal}
-              />
             </div>
             <div
               className="tab-pane fade column-width-pills "
@@ -245,8 +210,7 @@ class Table extends Component {
             ></div>
           </div>
         </div>
-        {/* table old design */}
-      </>
+      </Fragment>
     );
   }
 }
