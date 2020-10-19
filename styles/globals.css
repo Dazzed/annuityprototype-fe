@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -83,7 +84,8 @@ button:focus {
   margin-right: 19px;
 }
 
-.cardcustomheader button:hover, .cardcustomheader button:focus {
+.cardcustomheader button:hover,
+.cardcustomheader button:focus {
   text-decoration: none;
   color: #8e9294;
   box-shadow: none;
@@ -114,7 +116,8 @@ button:focus {
   border: 1px solid #8e9294;
 }
 
-.dropdown-toggle-menu:focus, .dropdown-toggle-menu:hover {
+.dropdown-toggle-menu:focus,
+.dropdown-toggle-menu:hover {
   color: #000 !important;
   background-color: transparent !important;
   outline: none;
@@ -348,7 +351,8 @@ button:hover {
   -ms-transition: all 0.5s;
 }
 
-.btn-arrow-icon-1 .sidebar-left, .btn-arrow-icon-2 .sidebar-right {
+.btn-arrow-icon-1 .sidebar-left,
+.btn-arrow-icon-2 .sidebar-right {
   transition: all 0.2s ease-in-out;
 }
 
@@ -375,14 +379,14 @@ button:hover {
   position: fixed;
   right: -421px;
   top: 0;
-  transition: right 0.5s;
-  -moz-transition: right 0.5s;
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
   /* Firefox 4 */
-  -webkit-transition: right 0.5s;
+  -webkit-transition: all 0.5s;
   /* Safari and Chrome */
-  -o-transition: right 0.5s;
+  -o-transition: all 0.5s;
   /* Opera */
-  -ms-transition: right 0.5s;
+  -ms-transition: all 0.5s;
   z-index: 1;
   overflow-y: auto;
   overflow-x: hidden;
@@ -479,7 +483,8 @@ button:hover {
   height: 63px;
 }
 
-.contract-title-name h2, .contract-modal-h2 {
+.contract-title-name h2,
+.contract-modal-h2 {
   font-family: Montserrat-Bold;
   font-style: normal;
   font-weight: bold;
@@ -555,7 +560,7 @@ button:hover {
   outline: none;
 }
 
-.search-box input:focus+.search {
+.search-box input:focus + .search {
   transform: perspective(400px) rotateY(89deg);
   padding: 3px 0;
   opacity: 0;
@@ -665,7 +670,8 @@ button:hover {
   vertical-align: middle;
 }
 
-.table th, table td {
+.table th,
+table td {
   border: none !important;
 }
 
@@ -785,7 +791,7 @@ button:hover {
   opacity: 0;
 }
 
-.checkbox__input:checked+.checkbox__check {
+.checkbox__input:checked + .checkbox__check {
   background: #fff;
   stroke-dashoffset: 0;
 }
@@ -865,7 +871,8 @@ button:hover {
   margin-top: 61px;
 }
 
-.nav-pills .nav-link-custom.active, .nav-pills .show>.nav-link-custom {
+.nav-pills .nav-link-custom.active,
+.nav-pills .show > .nav-link-custom {
   color: #0d65b3;
   font-family: OpenSans-Regular;
   font-style: normal;
@@ -926,7 +933,8 @@ a:hover {
 
 /* search */
 
-.dropdown-item.active, .dropdown-item:active {
+.dropdown-item.active,
+.dropdown-item:active {
   background-color: transparent !important;
 }
 
@@ -986,7 +994,8 @@ a:hover {
   background-color: transparent;
 }
 
-.table-contractvalue .table th, .table-contractvalue .table td {
+.table-contractvalue .table th,
+.table-contractvalue .table td {
   padding: 15px 0;
 }
 
@@ -1364,7 +1373,8 @@ a:hover {
   color: #000;
 }
 
-.chat-dashboard-section img {}
+.chat-dashboard-section img {
+}
 
 .chat-dashboard-section p {
   font-family: OpenSans-Regular;
@@ -1628,7 +1638,8 @@ li {
   -ms-transition: all 0.75s;
 }
 
-.client-information-section-info p, .date-section-info p {
+.client-information-section-info p,
+.date-section-info p {
   font-family: OpenSans-Regular;
   font-style: normal;
   font-weight: normal;
@@ -1848,7 +1859,8 @@ li {
 }
 
 @media screen and (max-width: 767px) {
-  .col-82, .col-30 {
+  .col-82,
+  .col-30 {
     max-width: 100% !important;
     flex: 0 0 100%;
   }
