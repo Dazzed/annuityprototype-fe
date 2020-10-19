@@ -239,12 +239,6 @@ button:focus {
   font-size: 25px;
   margin-left: 0;
 }
-
-#main {
-  transition: margin-left 0.5s;
-  margin-left: 280px;
-}
-
 /* fliter section */
 
 .apply-section {
@@ -371,6 +365,17 @@ button:hover {
   position: relative;
   left: 0;
   top: 0;
+  transition: all 0.75s;
+  -moz-transition: all 0.75s;
+  /* Firefox 4 */
+  -webkit-transition: all 0.75s;
+  /* Safari and Chrome */
+  -o-transition: all 0.75s;
+  /* Opera */
+  -ms-transition: all 0.75s;
+  z-index: 1;
+}
+.btn-arrow-icon  {
   transition: all 0.5s;
   -moz-transition: all 0.5s;
   /* Firefox 4 */
@@ -381,9 +386,27 @@ button:hover {
   -ms-transition: all 0.5s;
   z-index: 1;
 }
-.btn-arrow-icon-1 .sidebar-left {
-  transition: all 0.2s ease-in-out;
+.btn-arrow-icon .sidebar-left {
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  /* Firefox 4 */
+  -webkit-transition: all 0.5s;
+  /* Safari and Chrome */
+  -o-transition: all 0.5s;
+  /* Opera */
+  -ms-transition: all 0.5s;
 }
+.btn-arrow-icon-1 .sidebar-left {
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  /* Firefox 4 */
+  -webkit-transition: all 0.5s;
+  /* Safari and Chrome */
+  -o-transition: all 0.5s;
+  /* Opera */
+  -ms-transition: all 0.5s;
+}
+
 .sidebar-left ul li {
   transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -394,6 +417,7 @@ button:hover {
   /* Opera */
   -ms-transition: all 0.5s;
 }
+
 .pt-info-noti {
   padding: 0 57px;
 }
@@ -690,6 +714,16 @@ button:hover {
   text-align: center;
   width: 150px;
 } */
+.table tr {
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  /* Firefox 4 */
+  -webkit-transition: all 0.5s;
+  /* Safari and Chrome */
+  -o-transition: all 0.5s;
+  /* Opera */
+  -ms-transition: all 0.5s;
+}
 
 .table tr th {
   font-family: Montserrat-Bold;
@@ -1964,3 +1998,78 @@ li {
 }
 
 /* jqury */
+@keyframes fadeInLeft {
+  from {
+      opacity:0;
+      -webkit-transform: translatex(-100px);
+      -moz-transform: translatex(-100px);
+      -o-transform: translatex(-100px);
+      transform: translatex(-100px);
+  }
+  to {
+      opacity:1;
+      -webkit-transform: translatex(0);
+      -moz-transform: translatex(0);
+      -o-transform: translatex(0);
+      transform: translatex(0);
+  }
+}
+.in-left {
+  -webkit-animation-name: fadeInLeft;
+  -moz-animation-name: fadeInLeft;
+  -o-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -o-animation-duration:1s;
+  animation-delay: 1s;
+}
+@keyframes fadeInRight {
+  from {
+      opacity:0;
+      -webkit-transform: translateX(100px);
+      -moz-transform: translateX(100px);
+      -o-transform: translateX(100px);
+      transform: translateX(100px);
+  }
+  to {
+      opacity:1;
+      -webkit-transform: translateX(0);
+      -moz-transform: translateX(0);
+      -o-transform: translateX(0);
+      transform: translateX(0);
+  }
+}
+.in-Right {
+  -webkit-animation-name: fadeInRight;
+  -moz-animation-name: fadeInRight;
+  -o-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -o-animation-duration:1s;
+  animation-delay: 1s;
+}
+.common-transition {
+  transition: 1s all;
+  -moz-transition:  1s all;
+  -webkit-transition:  1s all;
+  -o-transition:  1s all;
+  -ms-transition:  1s all;
+}
