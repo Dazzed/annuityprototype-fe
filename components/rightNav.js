@@ -11,9 +11,9 @@ export default function RightSideNav(props) {
    */
   return (
     <div
-      className={` ${
+      className={`sidebar-right  ${
         navState === 1
-          ? "sidebar-right"
+          ? "sidebar-right-zero "
           : navState === 2
           ? "expandsidebar-right"
           : "width-none"
