@@ -348,11 +348,16 @@ button:hover {
 
 .btn-arrow-icon-2 {
   position: absolute;
-  left: 22px;
+  left: 45px;
   top: 28px;
   border: none;
 }
-
+.btn-arrow-icon-1-1 {
+  position: absolute;
+  left: 16px;
+  top: 28px;
+  border: none;
+}
 .btn-arrow-icon-2 img {
   transform: rotate(180deg);
 }
@@ -363,6 +368,21 @@ button:hover {
   height: 100%;
   position: relative;
   left: 0;
+  top: 0;
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  /* Firefox 4 */
+  -webkit-transition: all 0.5s;
+  /* Safari and Chrome */
+  -o-transition: all 0.5s;
+  /* Opera */
+  -ms-transition: all 0.5s;
+  z-index: 1;
+}
+.btn-arrow-icon-1 .sidebar-left {
+  transition: all 0.2s ease-in-out;
+}
+.sidebar-left ul li {
   transition: all 0.5s;
   -moz-transition: all 0.5s;
   /* Firefox 4 */
@@ -372,7 +392,6 @@ button:hover {
   /* Opera */
   -ms-transition: all 0.5s;
 }
-
 .pt-info-noti {
   padding: 0 57px;
 }
@@ -392,22 +411,34 @@ button:hover {
   -o-transition: all 0.5s;
   /* Opera */
   -ms-transition: all 0.5s;
+  z-index: 1;
 }
-
-.col-30 {
-  max-width: 229px !important;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 30%;
-  flex: 0 0 30%;
+.btn-arrow-icon-2 .sidebar-right {
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  /* Firefox 4 */
+  -webkit-transition: all 0.5s;
+  /* Safari and Chrome */
+  -o-transition: all 0.5s;
+  /* Opera */
+  -ms-transition: all 0.5s;
 }
-
-.col-82 {
-  max-width: 82%;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 82%;
-  flex: 0 0 82%;
+.expandsidebar-right {
+  background-color: #fff;
+  width: 1028px;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  /* Firefox 4 */
+  -webkit-transition: all 0.5s;
+  /* Safari and Chrome */
+  -o-transition: all 0.5s;
+  /* Opera */
+  -ms-transition: all 0.5s;
 }
-
 .common-mr-pd {
   padding-left: 15px;
   padding-top: 45px;
@@ -1102,6 +1133,9 @@ a:hover {
 .seemore-section h6 img {
   margin-left: 9.5px;
 }
+.seemore-section h6:hover{
+  cursor: pointer;
+}
 
 /* newdesgin */
 
@@ -1672,7 +1706,10 @@ li {
   color: #fbfbfb;
   border: none;
 }
-
+.rightarrow-icon {
+  transform: rotate(0deg) !important;
+  margin-right: 13px;
+}
 @media screen and (min-width: 1441px) {
   .sidebar-left {
     width: 100%;

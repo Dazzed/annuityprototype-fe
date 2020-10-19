@@ -13,14 +13,14 @@ export default function RightSideNav(props) {
     <div
       style={navState ? {} : { display: "none" }}
       className={`col-lg-3 col-md-12 px-0 order-second ${
-        navState === 1 ? "" : ""
+        navState === 1 ? "sidebar-right" : "expandsidebar-right"
       }`}
     >
       <div className="sidebar-right">
         <div className="logo-section text-center">
           {expandable && (
             <button
-              className="btn-arrow-icon-1"
+              className="btn-arrow-icon-1-1"
               onClick={() => props.expandNav()}
             >
               <img src="/imgs/svgs/rightarrow-icon1.svg" />
