@@ -1702,9 +1702,6 @@ li {
     -ms-flex: 0 0 30%;
     flex: 0 0 30%;
   }
-  .sidebar-left {
-    width: 100%;
-  }
   .fliter-issue button:first-child {
     margin-right: 5px;
   }
@@ -1730,6 +1727,13 @@ li {
   .table thead th {
     width: 10%;
   }
+  .expandsidebar-right {
+    width: 600px;
+  }
+  .seemore-section h6 {
+    font-size: 14px;
+    line-height: 125%;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -1743,8 +1747,7 @@ li {
     left: 0;
   }
   .sidebar-left {
-    max-width: 100%;
-    width: 100%;
+  
   }
   .logo-section {
     display: none;

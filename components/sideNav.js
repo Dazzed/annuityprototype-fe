@@ -81,20 +81,17 @@ export default function SideNav(props) {
               </Link>
             </li>
             <li
-              className={
-                activePath === "/notifications" ? "active-nav-item" : ""
-              }
-            >
-              <Link href="/notifications">
+              className="">
+              <Link href="/#">
                 <a href="#">
                   <img
                     src={
-                      activePath === "/notifications"
+                      activePath === "/#"
                         ? "/imgs/svgs/navlist-icons-active.svg"
                         : "/imgs/svgs/navlist-icons-unactive.svg"
                     }
                   />
-                  <span className="p-0 d-none-view">Notifications</span>
+                  <span className="p-0 d-none-view">Settings</span>
                 </a>
               </Link>
             </li>
@@ -102,7 +99,9 @@ export default function SideNav(props) {
         </div>
         <div className="nav-list userProSection ">
           <ul>
-            <li>
+            <li className={
+                activePath === "/notifications" ? "active-nav-item" : ""
+              }>
               <Link href="/notifications">
                 <a href="#">
                   <img
