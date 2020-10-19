@@ -340,14 +340,7 @@ button:hover {
 }
 
 .btn-arrow-icon-1 .sidebar-left, .btn-arrow-icon-2 .sidebar-right {
-  transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  /* Firefox 4 */
-  -webkit-transition: all 0.5s;
-  /* Safari and Chrome */
-  -o-transition: all 0.5s;
-  /* Opera */
-  -ms-transition: all 0.5s;
+  transition: all 0.2s ease-in-out;
 }
 
 .sidebar-left ul li {
@@ -377,17 +370,12 @@ button:hover {
   /* Opera */
   -ms-transition: all 0.5s;
   z-index: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .btn-arrow-icon-2 .sidebar-right {
-  transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  /* Firefox 4 */
-  -webkit-transition: all 0.5s;
-  /* Safari and Chrome */
-  -o-transition: all 0.5s;
-  /* Opera */
-  -ms-transition: all 0.5s;
+  transition: all 0.2s ease-in-out;
 }
 
 .expandsidebar-right {
@@ -1836,7 +1824,10 @@ li {
 }
 
 @media screen and (max-width: 767px) {
-
+  .col-82, .col-30 {
+    max-width: 100% !important;
+    flex: 0 0 100%;
+  }
   .fliter-issue {
     margin-top: 20px;
     text-align: left;
