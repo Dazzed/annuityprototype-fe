@@ -1,5 +1,4 @@
-html,
-body {
+html, body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -84,8 +83,7 @@ button:focus {
   margin-right: 19px;
 }
 
-.cardcustomheader button:hover,
-.cardcustomheader button:focus {
+.cardcustomheader button:hover, .cardcustomheader button:focus {
   text-decoration: none;
   color: #8e9294;
   box-shadow: none;
@@ -116,8 +114,7 @@ button:focus {
   border: 1px solid #8e9294;
 }
 
-.dropdown-toggle-menu:focus,
-.dropdown-toggle-menu:hover {
+.dropdown-toggle-menu:focus, .dropdown-toggle-menu:hover {
   color: #000 !important;
   background-color: transparent !important;
   outline: none;
@@ -351,8 +348,7 @@ button:hover {
   -ms-transition: all 0.5s;
 }
 
-.btn-arrow-icon-1 .sidebar-left,
-.btn-arrow-icon-2 .sidebar-right {
+.btn-arrow-icon-1 .sidebar-left, .btn-arrow-icon-2 .sidebar-right {
   transition: all 0.2s ease-in-out;
 }
 
@@ -395,10 +391,12 @@ button:hover {
 .sidebar-right-zero {
   right: 0;
 }
+
 .notifcation-section {
   display: flex;
   flex-direction: row;
 }
+
 .btn-arrow-icon-2 .sidebar-right {
   transition: all 0.2s ease-in-out;
 }
@@ -483,8 +481,7 @@ button:hover {
   height: 63px;
 }
 
-.contract-title-name h2,
-.contract-modal-h2 {
+.contract-title-name h2, .contract-modal-h2 {
   font-family: Montserrat-Bold;
   font-style: normal;
   font-weight: bold;
@@ -560,7 +557,7 @@ button:hover {
   outline: none;
 }
 
-.search-box input:focus + .search {
+.search-box input:focus+.search {
   transform: perspective(400px) rotateY(89deg);
   padding: 3px 0;
   opacity: 0;
@@ -670,8 +667,7 @@ button:hover {
   vertical-align: middle;
 }
 
-.table th,
-table td {
+.table th, table td {
   border: none !important;
 }
 
@@ -791,7 +787,7 @@ table td {
   opacity: 0;
 }
 
-.checkbox__input:checked + .checkbox__check {
+.checkbox__input:checked+.checkbox__check {
   background: #fff;
   stroke-dashoffset: 0;
 }
@@ -871,8 +867,7 @@ table td {
   margin-top: 61px;
 }
 
-.nav-pills .nav-link-custom.active,
-.nav-pills .show > .nav-link-custom {
+.nav-pills .nav-link-custom.active, .nav-pills .show>.nav-link-custom {
   color: #0d65b3;
   font-family: OpenSans-Regular;
   font-style: normal;
@@ -933,8 +928,7 @@ a:hover {
 
 /* search */
 
-.dropdown-item.active,
-.dropdown-item:active {
+.dropdown-item.active, .dropdown-item:active {
   background-color: transparent !important;
 }
 
@@ -994,8 +988,7 @@ a:hover {
   background-color: transparent;
 }
 
-.table-contractvalue .table th,
-.table-contractvalue .table td {
+.table-contractvalue .table th, .table-contractvalue .table td {
   padding: 15px 0;
 }
 
@@ -1373,8 +1366,7 @@ a:hover {
   color: #000;
 }
 
-.chat-dashboard-section img {
-}
+.chat-dashboard-section img {}
 
 .chat-dashboard-section p {
   font-family: OpenSans-Regular;
@@ -1638,8 +1630,7 @@ li {
   -ms-transition: all 0.75s;
 }
 
-.client-information-section-info p,
-.date-section-info p {
+.client-information-section-info p, .date-section-info p {
   font-family: OpenSans-Regular;
   font-style: normal;
   font-weight: normal;
@@ -1652,9 +1643,11 @@ li {
 .date-section-info p {
   margin-top: -10px;
 }
+
 .userPicSection-info {
   width: 75px;
 }
+
 .userPicSection-info img {
   width: 53px;
   border-radius: 50%;
@@ -1696,6 +1689,86 @@ li {
 .rightarrow-icon {
   transform: rotate(0deg) !important;
   margin-right: 13px;
+}
+
+.hl-100 {
+  min-height: 87%;
+}
+
+/* clients  */
+
+.clients-column-section {
+  text-align: center;
+  background: #FFFFFF;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
+  padding: 28px 26px;
+  min-height: 272px;
+  margin-bottom: 33px;
+}
+
+.clients-img-section {
+  margin-bottom: 27px;
+}
+
+.clients-img-section img {
+  border-radius: 50%;
+  width: 53px;
+  height: 53px;
+  margin-bottom: 18px;
+}
+
+.clients-img-section h4 {
+  font-family: OpenSans-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 32px;
+  color: #000;
+  margin-bottom: 0;
+}
+
+.clients-img-section h6 {
+  font-family: OpenSans-Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 32px;
+  color: #000;
+}
+
+.client-value-section {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}
+
+.client-contract-section {
+  margin-left: 32px;
+}
+
+.client-contract-section:first-child {
+  margin-left: 0;
+}
+
+.client-contract-section p {
+  font-family: OpenSans-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 125%;
+  color: #363636;
+  margin-bottom: 8px;
+}
+
+.client-contract-section h5 {
+  font-family: OpenSans-Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 125%;
+  color: #000;
+  margin-bottom: 0;
 }
 
 @media screen and (min-width: 1441px) {
@@ -1757,9 +1830,7 @@ li {
     right: 0;
     left: 0;
   }
-  .sidebar-left {
-  
-  }
+  .sidebar-left {}
   .logo-section {
     display: none;
   }
@@ -1862,8 +1933,7 @@ li {
 }
 
 @media screen and (max-width: 767px) {
-  .col-82,
-  .col-30 {
+  .col-82, .col-30 {
     max-width: 100% !important;
     flex: 0 0 100%;
   }

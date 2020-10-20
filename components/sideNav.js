@@ -50,12 +50,12 @@ export default function SideNav(props) {
                 </a>
               </Link>
             </li>
-            <li className={activePath === "/" ? "active-nav-item" : ""}>
-              <Link href="/">
+            <li className={activePath === "/clients" ? "active-nav-item" : ""}>
+              <Link href="/clients">
                 <a href="#">
                   <img
                     src={
-                      activePath === "/"
+                      activePath === "/clients"
                         ? "/imgs/svgs/navlist-icons-active.svg"
                         : "/imgs/svgs/navlist-icons-unactive.svg"
                     }

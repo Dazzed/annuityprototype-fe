@@ -9,7 +9,7 @@ export default function RightNavContent(props) {
   const { contract } = notification;
 
   return (
-    <div className="row h-100">
+    <div className="row hl-100">
       <div className="col-lg-12 col-md-12 col-sm-12 col-12 mt-pils pt-info-noti">
         <ul
           className="nav nav-pills nav-custom-pills nav-pills-support  mb-3"
@@ -66,7 +66,7 @@ export default function RightNavContent(props) {
             role="tabpanel"
             aria-labelledby="pills-info-tab"
           >
-            <div className="row h-100">
+            <div className="row">
               <div className="col-lg-4 col-md-4 col-sm-2 col-12 align-self-center">
                 <div className="userPicSection-info">
                   <img src="/imgs/profile-pic.png" alt="user picture" />
@@ -82,7 +82,7 @@ export default function RightNavContent(props) {
                 </div>
               </div>
             </div>
-            <div className="row h-100">
+            <div className="row">
               <div className="col-lg-5 col-md-5 col-sm-12 col-12 align-self-center">
                 <div className="client-information-section-info">
                   <h6>{numeral(contract.value).format("$0,0.00")}</h6>
