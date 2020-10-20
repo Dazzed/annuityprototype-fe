@@ -6,9 +6,8 @@ import SideNav from "../../components/sideNav";
 import RightNav from "../../components/rightNav";
 import RightNavContent from "./components/rightNavContent";
 import NotificationItem from "./components/notificationItem";
-import { ConsoleView } from "react-device-detect";
 
-class Notifications extends React.Component {
+class SupportPage extends React.Component {
   constructor(props) {
     super(props);
 
@@ -205,4 +204,4 @@ class Notifications extends React.Component {
   }
 }
 
-export default Notifications;
+export default SupportPage;

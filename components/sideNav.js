@@ -80,8 +80,7 @@ export default function SideNav(props) {
                 </a>
               </Link>
             </li>
-            <li
-              className="">
+            <li className="">
               <Link href="/#">
                 <a href="#">
                   <img
@@ -99,14 +98,12 @@ export default function SideNav(props) {
         </div>
         <div className="nav-list userProSection ">
           <ul>
-            <li className={
-                activePath === "/notifications" ? "active-nav-item" : ""
-              }>
-              <Link href="/notifications">
+            <li className={activePath === "/support" ? "active-nav-item" : ""}>
+              <Link href="/support">
                 <a href="#">
                   <img
                     src={
-                      activePath === "/notifications"
+                      activePath === "/support"
                         ? "/imgs/svgs/navlist-icons-active.svg"
                         : "/imgs/svgs/navlist-icons-unactive.svg"
                     }
