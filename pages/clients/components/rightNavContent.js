@@ -105,7 +105,7 @@ export default function RightNavContent(props) {
               </div>
             </div>
             <div className="row mx-0 position-relative">
-              <div className="address-section-client mb-3">
+              <div className="address-section-client mb-3 w-100">
                 <h4>Contracts</h4>
               </div>
               <div className="col-lg-6 col-nd-6 col-sm-6 col-12">
