@@ -59,7 +59,102 @@ export default function RightNavContent(props) {
             id="pills-infos"
             role="tabpanel"
             aria-labelledby="pills-info-tab"
-          ></div>
+          >
+            {/* client page navright */}
+            <div className="row mx-0">
+              <div className="col-lg-12 px-0">
+                <div className="usersection-clients">
+                  <div className="userPicSection-info">
+                    <img src="/imgs/profile-pic.png" alt="user picture" />
+                  </div>
+                  <div className="clients-title-name">
+                    <h3>Jane Doe</h3>
+                    <h6>$1,345,889</h6>
+                    <p>Total Value</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="row mx-0">
+              <div className="clients-rightNav-value">
+                <div className="client-value-section">
+                  <div className="client-contract-section">
+                    <p>Contracts</p>
+                    <h5>3</h5>
+                  </div>
+                  <div className="client-contract-section">
+                    <p>Age</p>
+                    <h5>81</h5>
+                  </div>
+                  <div className="client-contract-section">
+                    <p>Beneficiaries</p>
+                    <h5>2</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="border-height">
+            </div>
+            <div className="row mx-0 position-relative">
+              <div className="address-section-client">
+                <h4>Address</h4>
+                <p>1234 S. Main St New York, NY 12345</p>
+              </div>
+              <div className="address-edit">
+                <img src="/imgs/svgs/edit-icon.svg" />
+              </div>
+            </div>
+            <div className="row mx-0 position-relative">
+              <div className="address-section-client mb-3">
+                <h4>Contracts</h4>
+              </div>
+              <div className="col-lg-6 col-nd-6 col-sm-6 col-12">
+                <div className="title-contract-name">
+                  <h3>Pacific Select</h3>
+                  <p>XX12345678</p>
+                </div>
+              </div>
+              <div className="col-lg-6 col-nd-6 col-sm-6 col-12 position-relative">
+                <div className="title-contract-name-value">
+                  <h3>$23,004</h3>
+                </div>
+                <div className="arrow-right">
+                  <img src="/imgs/svgs/rightarrow-large.svg" />
+                </div>
+              </div>
+              <div className="col-lg-6 col-nd-6 col-sm-6 col-12">
+                <div className="title-contract-name">
+                  <h3>Pacific Select</h3>
+                  <p>XX12345678</p>
+                </div>
+              </div>
+              <div className="col-lg-6 col-nd-6 col-sm-6 col-12 position-relative">
+                <div className="title-contract-name-value">
+                  <h3>$23,004</h3>
+                </div>
+                <div className="arrow-right">
+                  <img src="/imgs/svgs/rightarrow-large.svg" />
+                </div>
+              </div>
+              <div className="col-lg-6 col-nd-6 col-sm-6 col-12">
+                <div className="title-contract-name">
+                  <h3>Pacific Select</h3>
+                  <p>XX12345678</p>
+                </div>
+              </div>
+              <div className="col-lg-6 col-nd-6 col-sm-6 col-12 position-relative">
+                <div className="title-contract-name-value">
+                  <h3>$23,004</h3>
+                </div>
+                <div className="arrow-right">
+                  <img src="/imgs/svgs/rightarrow-large.svg" />
+                </div>
+              </div>
+              <br/>
+              <br/>
+              <br/>
+            </div>
+          </div>
           <div
             className="tab-pane fade column-width-pills col-width-suportsection"
             id="pills-forms"

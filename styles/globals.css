@@ -1696,7 +1696,9 @@ li {
 }
 
 /* clients  */
-
+.clients-column-section:hover {
+  cursor: pointer;
+}
 .clients-column-section {
   text-align: center;
   background: #FFFFFF;
@@ -1822,7 +1824,120 @@ li {
   padding: 4px 24px;
   margin-left: 25px;
 }
+/* clients */
 
+.usersection-clients {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 23px;
+}
+
+.usersection-clients .userPicSection-info img{
+  margin: 0;
+}
+.usersection-clients .userPicSection-info {
+  margin-right: 24px;
+}
+
+.clients-title-name h3 {
+  font-family: Montserrat-bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18.06px;
+  line-height: 28px;
+  color: #000;
+  margin-bottom: 9px;
+}
+
+.clients-title-name h6 {
+  font-family: OpenSans-Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 32px;
+  color: #000;
+  margin: 0;
+}
+
+.clients-title-name p {
+  font-family: OpenSans-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 125%;
+  color: #000000;
+  margin-bottom: 0;
+}
+.clients-rightNav-value {
+  display: flex;
+  text-align: center;
+}
+.border-height {
+  height: 1px;
+  width: 302px;
+  margin-top: 44px;
+  margin-bottom: 38px;
+  background-color: #ADADAD;
+}
+.address-section-client {
+  width: 151px;
+}
+.address-section-client h4 {
+  font-family: OpenSans-Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 125%;
+  color: #000;
+  margin-top: 13px;
+}
+.address-section-client p {
+  font-family: OpenSans-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 125%;
+  color: #000;
+}
+.address-edit {
+  position: absolute;
+  right: 15px;
+  top: 0;
+}
+.arrow-right {
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+.title-contract-name {
+  margin-bottom: 28px;
+}
+.title-contract-name h3{
+  font-family: OpenSans-Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 125%;
+  color: #000;
+  margin-bottom: 5px;
+}
+.title-contract-name p{
+  font-family: OpenSans-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 125%;
+  color: #000;
+}
+.title-contract-name-value h3{
+  font-family: OpenSans-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 32px;
+  color: #000;
+}
 @media screen and (min-width: 1441px) {
   .common-mr-pd {
     padding-left: 42px;
