@@ -62,7 +62,7 @@ export default function RightNavContent(props) {
             role="tabpanel"
             aria-labelledby="pills-info-tab"
           >
-            <div className="row">
+            {/* <div className="row">
               <div className="col-lg-12 col-md-12 col-sm-12 col-12 align-self-center">
                 <div className="notifcation-section">
                   <div className="userPicSection-info">
@@ -73,38 +73,34 @@ export default function RightNavContent(props) {
                     <p>Client Information</p>
                   </div>
                   <div className="msg-contentsection">
-                    {/* <p>{notification.message}</p> */}
+                    {/* <p>{notification.message}</p>
                     <p></p>
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
             <div className="row">
-              <div className="col-lg-5 col-md-5 col-sm-12 col-12 align-self-center">
+              <div className="col-lg-12 col-md-12 col-sm-12 col-12 align-self-center px-0">
                 <div className="client-information-section-info">
                   <h6>{numeral(contract.value).format("$0,0.00")}</h6>
                   <p>Withdrawal</p>
                 </div>
-              </div>
-              <div className="col-lg-7 col-md-7 col-sm-12 col-12 align-self-center">
                 <div className="client-information-section-info">
                   <h6>{contract.contract}</h6>
                   <p>Contract Number</p>
                 </div>
               </div>
             </div>
-            <div className="date-section-info">
-              <p>{format(new Date(), "MMMM d h:mm aaaa")}</p>
-            </div>
-            <br />
-            <br />
-            <br />
-            <br />
-            <div className="recent-activity-info">
-              <p>Recent Activity</p>
-            </div>
-            <div className="chat-support-info">
-              <button>Chat with Support</button>
+            <div className="performtask-section">
+              <div class="form-group form-custom-rightnav">
+                <label for="exampleFormControlSelect1">Perform a Task</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                  <option>Withdrawal</option>
+                  <option>Withdrawal</option>
+                  <option>Withdrawal</option>
+                </select>
+                <button>Next</button>
+              </div>
             </div>
           </div>
           <div
