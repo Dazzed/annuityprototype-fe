@@ -1773,11 +1773,13 @@ li {
 
 .performtask-section {
   position: absolute;
-  bottom: 10px;
-  left: 55px;
+  bottom: 64px;
+  right: 75px;
 }
 
-.form-custom-rightnav {}
+.form-custom-rightnav {
+  margin: 0;
+}
 
 .form-custom-rightnav label {
   display: block;

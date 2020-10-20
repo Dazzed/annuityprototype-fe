@@ -62,23 +62,6 @@ export default function RightNavContent(props) {
             role="tabpanel"
             aria-labelledby="pills-info-tab"
           >
-            {/* <div className="row">
-              <div className="col-lg-12 col-md-12 col-sm-12 col-12 align-self-center">
-                <div className="notifcation-section">
-                  <div className="userPicSection-info">
-                    <img src="/imgs/profile-pic.png" alt="user picture" />
-                  </div>
-                  <div className="client-information-section-info">
-                    <h6>{contract.ownerName}</h6>
-                    <p>Client Information</p>
-                  </div>
-                  <div className="msg-contentsection">
-                    {/* <p>{notification.message}</p>
-                    <p></p>
-                  </div>
-                </div>
-              </div>
-            </div> */}
             <div className="row">
               <div className="col-lg-12 col-md-12 col-sm-12 col-12 align-self-center px-0">
                 <div className="client-information-section-info">
