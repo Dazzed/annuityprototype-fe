@@ -304,7 +304,7 @@ button:hover {
 .table-padding-sideNavLeft {
   padding-left: 330px;
   background-color: #fbfbfb;
-  transition: all 0.5s;
+   transition: all 0.5s;
   -moz-transition: all 0.5s;
   /* Firefox 4 */
   -webkit-transition: all 0.5s;
@@ -555,7 +555,7 @@ button:hover {
 
 .search-box {
   display: flex;
-  width: 396px;
+  width: 360px;
   border: none;
   position: relative;
   height: 48px;
@@ -573,7 +573,7 @@ button:hover {
   position: absolute;
   font-family: OpenSans-Regular;
   z-index: 0;
-  width: 390px;
+  width: 340px;
   height: 40px;
   border-radius: 20px;
   border: none;

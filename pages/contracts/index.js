@@ -128,7 +128,7 @@ class ContractsPage extends React.Component {
       <div
         className={`container-fluid h-100 ${
           isNavOpen ? "table-padding-sideNavLeft" : "pl-3"
-        }`}
+        } ${rightNavState !== 0 ? "table-container-rightNav" : ""} `}
       >
         <Head>
           <meta charSet="utf-8" />
