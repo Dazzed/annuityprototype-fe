@@ -1,8 +1,20 @@
 import numeral from "numeral";
-import format from "date-fns/format";
+import axios from "axios";
+
+import { API_URL } from "../../../config/constants";
 
 export default function RightNavContent(props) {
   const { contract = {} } = props;
+
+  const sendSignatureRequest = async (contractId) => {
+    try {
+      const result = await axios.post(
+        `${API_URL}/contracts/send-signature-request/${contractId}`
+      );
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <div className="row hl-100">
@@ -82,7 +94,9 @@ export default function RightNavContent(props) {
                   <option>Withdrawal</option>
                   <option>Withdrawal</option>
                 </select>
-                <button>Next</button>
+                <button onClick={() => sendSignatureRequest(contract.id)}>
+                  Next
+                </button>
               </div>
             </div>
           </div>
