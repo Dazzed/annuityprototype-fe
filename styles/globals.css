@@ -285,24 +285,27 @@ button:hover {
 .sidebar-left-zero {
   width: 0;
   height: 100%;
-  position: relative;
-  left: 0;
+  position: fixed;
+  left: -300px;
   top: 0;
-  /* transition: all 0.75s; */
-  /* -moz-transition: all 0.75s; */
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
   /* Firefox 4 */
-  /* -webkit-transition: all 0.75s; */
+  -webkit-transition: all 0.5s;
   /* Safari and Chrome */
-  /* -o-transition: all 0.75s; */
+  -o-transition: all 0.5s;
   /* Opera */
-  /* -ms-transition: all 0.75s; */
+  -ms-transition: all 0.5s;
   z-index: 1;
   margin-left: 0;
-  opacity: 0;
 }
 
 .table-padding-container {
   padding-left: 330px;
+  background-color: #fbfbfb;
+}
+.bg-white {
+  background-color: #fff;
 }
 
 /* transition */
@@ -314,14 +317,14 @@ button:hover {
   position: fixed;
   left: 0;
   top: 0;
-  transition: all 0.75s;
-  -moz-transition: all 0.75s;
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
   /* Firefox 4 */
-  -webkit-transition: all 0.75s;
+  -webkit-transition: all 0.5s;
   /* Safari and Chrome */
-  -o-transition: all 0.75s;
+  -o-transition: all 0.5s;
   /* Opera */
-  -ms-transition: all 0.75s;
+  -ms-transition: all 0.5s;
   z-index: 10000;
 }
 
@@ -347,6 +350,17 @@ button:hover {
   /* Opera */
   -ms-transition: all 0.5s;
 }
+.btn-arrow-icon-1 .sidebar-left {
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  /* Firefox 4 */
+  -webkit-transition: all 0.5s;
+  /* Safari and Chrome */
+  -o-transition: all 0.5s;
+  /* Opera */
+  -ms-transition: all 0.5s;
+}
+
 
 .btn-arrow-icon-1 .sidebar-left, .btn-arrow-icon-2 .sidebar-right {
   transition: all 0.2s ease-in-out;
@@ -638,19 +652,6 @@ button:hover {
   border-spacing: 0 18px;
   width: 100%;
   max-width: 100%;
-}
-
-/* transition */
-
-.table tr {
-  transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  /* Firefox 4 */
-  -webkit-transition: all 0.5s;
-  /* Safari and Chrome */
-  -o-transition: all 0.5s;
-  /* Opera */
-  -ms-transition: all 0.5s;
 }
 
 .table tr th {

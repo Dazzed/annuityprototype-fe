@@ -11,7 +11,7 @@ export default function RightSideNav(props) {
    */
   return (
     <div
-      className={`sidebar-right  ${
+      className={`sidebar-right  bg-white ${
         navState === 1
           ? "sidebar-right-zero "
           : navState === 2
