@@ -304,9 +304,28 @@ button:hover {
 .table-padding-sideNavLeft {
   padding-left: 330px;
   background-color: #fbfbfb;
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  /* Firefox 4 */
+  -webkit-transition: all 0.5s;
+  /* Safari and Chrome */
+  -o-transition: all 0.5s;
+  /* Opera */
+  -ms-transition: all 0.5s;
 }
 .bg-white {
   background-color: #fff;
+}
+.table-container-rightNav {
+  padding-right: 440px;
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  /* Firefox 4 */
+  -webkit-transition: all 0.5s;
+  /* Safari and Chrome */
+  -o-transition: all 0.5s;
+  /* Opera */
+  -ms-transition: all 0.5s;
 }
 
 /* transition */
@@ -1178,9 +1197,6 @@ a:hover {
   padding: 4px 24px;
   border-radius: 4px;
   height: 40px;
-}
-.table-container-rightNav {
-  padding-right: 440px;
 }
 .card-header-section {
   padding: 38px 43px;
