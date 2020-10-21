@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import axios from "axios";
 import SideNav from "../../components/sideNav";
+import { API_URL } from "../../config/constants";
 
 class Dashboard extends React.Component {
   constructor(props) {
@@ -20,7 +21,7 @@ class Dashboard extends React.Component {
 
   async loadRecords() {
     try {
-      const result = await axios.get(`http://localhost:3000/notifications`, {});
+      const result = await axios.get(`${API_URL}/notifications`, {});
 
       this.setState({
         notifications: result.data,
