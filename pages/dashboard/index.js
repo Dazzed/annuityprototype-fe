@@ -40,7 +40,7 @@ class Dashboard extends React.Component {
     return (
       <div
         className={`container-fluid h-100 ${
-          isNavOpen ? "table-padding-container" : "pl-3"
+          isNavOpen ? "table-padding-sideNavLeft" : "pl-3"
         }`}
       >
         <Head>

@@ -73,6 +73,7 @@ button:focus {
 .notificaion-board {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .cardcustomheader {
@@ -300,7 +301,7 @@ button:hover {
   margin-left: 0;
 }
 
-.table-padding-container {
+.table-padding-sideNavLeft {
   padding-left: 330px;
   background-color: #fbfbfb;
 }
@@ -1081,6 +1082,7 @@ a:hover {
   font-size: 16px;
   line-height: 125%;
   color: #363636;
+  margin-bottom: 0;
 }
 
 /* transition */
@@ -1177,7 +1179,9 @@ a:hover {
   border-radius: 4px;
   height: 40px;
 }
-
+.table-container-rightNav {
+  padding-right: 440px;
+}
 .card-header-section {
   padding: 38px 43px;
   background: #ffffff;

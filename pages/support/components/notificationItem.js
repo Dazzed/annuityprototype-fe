@@ -5,7 +5,7 @@ export default function NotificationItem(props) {
 
   return (
     <div className="row row-height-supportsection">
-      <div className="col-lg-10 col-md-10 col-sm-9 col-12 align-self-center">
+      <div className="col-lg-9 col-md-9 col-sm-9 col-12 align-self-center">
         <div className="notificaion-board">
           <div className="userPicSection">
             <img src="/imgs/profile-pic.png" alt="user picture" />
@@ -26,7 +26,7 @@ export default function NotificationItem(props) {
         </div>
       </div>
       <div
-        className="col-lg-2 col-md-2 col-sm-3 col-12 align-self-center"
+        className="col-lg-3 col-md-3 col-sm-3 col-12 align-self-center"
         onClick={() => props.selectNotification(notification.id)}
       >
         <div className="seemore-section">
