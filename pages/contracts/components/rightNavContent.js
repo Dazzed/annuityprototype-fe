@@ -78,7 +78,7 @@ export default function RightNavContent(props) {
               <div class="form-group form-custom-rightnav">
                 <label for="exampleFormControlSelect1">Perform a Task</label>
                 <select class="form-control" id="exampleFormControlSelect1">
-                  <option>Withdrawal</option>
+                  <option value="form">Form</option>
                   <option>Withdrawal</option>
                   <option>Withdrawal</option>
                 </select>

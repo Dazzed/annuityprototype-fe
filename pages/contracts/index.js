@@ -8,6 +8,7 @@ import RightNav from "../../components/rightNav";
 import FilterCriteria from "./components/filterCriteria";
 import Pagination from "../../components/pagination";
 import RightNavContent from "./components/rightNavContent";
+import { API_URL } from "../../config/constants";
 
 const getPageRange = ({ currentPage, pageSize, totalCount }) => {
   if (totalCount === 0) return "None";
@@ -56,7 +57,7 @@ class ContractsPage extends React.Component {
         pageSize: this.state.pageSize,
       };
 
-      const result = await axios.get(`http://localhost:3000/contracts`, {
+      const result = await axios.get(`${API_URL}/contracts`, {
         params: queryParams,
       });
 

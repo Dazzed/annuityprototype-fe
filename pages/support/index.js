@@ -6,6 +6,7 @@ import SideNav from "../../components/sideNav";
 import RightNav from "../../components/rightNav";
 import RightNavContent from "./components/rightNavContent";
 import NotificationItem from "./components/notificationItem";
+import { API_URL } from "../../config/constants";
 
 class SupportPage extends React.Component {
   constructor(props) {
@@ -30,7 +31,7 @@ class SupportPage extends React.Component {
 
   async loadRecords() {
     try {
-      const result = await axios.get(`http://localhost:3000/notifications`, {});
+      const result = await axios.get(`${API_URL}/notifications`, {});
 
       this.setState({
         notifications: result.data,
