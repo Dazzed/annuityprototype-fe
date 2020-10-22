@@ -1,16 +1,25 @@
 import numeral from "numeral";
 import axios from "axios";
+import _ from "lodash";
 
 import { API_URL } from "../../../config/constants";
 
 export default function RightNavContent(props) {
   const { contract = {} } = props;
+  const form = contract && contract.form;
+  const formStatus = _.startCase(form ? form.status : "Not Requested");
 
   const sendSignatureRequest = async (contractId) => {
     try {
+      if (form) {
+        // request already sent
+        return;
+      }
+
       const result = await axios.post(
         `${API_URL}/contracts/send-signature-request/${contractId}`
       );
+      props.loadRecords();
     } catch (error) {
       console.log(error);
     }
@@ -84,17 +93,26 @@ export default function RightNavContent(props) {
                   <h6>{contract.contract}</h6>
                   <p>Contract Number</p>
                 </div>
+                <div className="client-information-section-info">
+                  <h6>Form Status</h6>
+                  <p>{formStatus}</p>
+                </div>
               </div>
             </div>
             <div className="performtask-section">
-              <div class="form-group form-custom-rightnav">
-                <label for="exampleFormControlSelect1">Perform a Task</label>
-                <select class="form-control" id="exampleFormControlSelect1">
+              <div className="form-group form-custom-rightnav">
+                <label htmlFor="exampleFormControlSelect1">
+                  Perform a Task
+                </label>
+                <select className="form-control" id="exampleFormControlSelect1">
                   <option value="form">Form</option>
                   <option>Withdrawal</option>
                   <option>Withdrawal</option>
                 </select>
-                <button onClick={() => sendSignatureRequest(contract.id)}>
+                <button
+                  onClick={() => sendSignatureRequest(contract.id)}
+                  disabled={Boolean(form)} // form exist if request is already sent
+                >
                   Next
                 </button>
               </div>

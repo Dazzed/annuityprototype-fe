@@ -176,6 +176,7 @@ class ContractsPage extends React.Component {
           >
             <RightNavContent
               contract={contracts.find((e) => e.id === selectedContractId)}
+              loadRecords={this.loadRecords}
             />
           </RightNav>
         </div>
