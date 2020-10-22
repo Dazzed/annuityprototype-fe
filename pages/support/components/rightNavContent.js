@@ -18,7 +18,7 @@ export default function RightNavContent(props) {
         >
           <li className="nav-item">
             <a
-              className="nav-link-custom active"
+              className="nav-link-custom nav-link-rc active"
               id="pills-info-tab"
               data-toggle="pill"
               href="#pills-infos"
@@ -31,7 +31,7 @@ export default function RightNavContent(props) {
           </li>
           <li className="nav-item">
             <a
-              className="nav-link-custom"
+              className="nav-link-custom nav-link-rc"
               id="pills-forms-tab"
               data-toggle="pill"
               href="#pills-forms"
@@ -44,7 +44,7 @@ export default function RightNavContent(props) {
           </li>
           <li className="nav-item">
             <a
-              className="nav-link-custom"
+              className="nav-link-custom nav-link-rc"
               id="pills-tab3-tab"
               data-toggle="pill"
               href="#pills-tab3"

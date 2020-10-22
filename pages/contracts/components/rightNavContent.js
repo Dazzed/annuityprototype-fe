@@ -27,15 +27,15 @@ export default function RightNavContent(props) {
 
   return (
     <div className="row hl-100">
-      <div className="col-lg-12 col-md-12 col-sm-12 col-12 mt-pils pt-info-noti">
+      <div className="col-lg-12 col-md-12 col-sm-12 col-12 mt-pils">
         <ul
-          className="nav nav-pills nav-custom-pills nav-pills-support  mb-3"
+          className="nav nav-pills nav-custom-pills nav-pills-support  mb-3 pt-info-noti pr-0"
           id="pills-tab"
           role="tablist"
         >
           <li className="nav-item">
             <a
-              className="nav-link-custom active"
+              className="nav-link-custom nav-link-rc active"
               id="pills-info-tab"
               data-toggle="pill"
               href="#pills-infos"
@@ -48,7 +48,7 @@ export default function RightNavContent(props) {
           </li>
           <li className="nav-item">
             <a
-              className="nav-link-custom"
+              className="nav-link-custom nav-link-rc"
               id="pills-forms-tab"
               data-toggle="pill"
               href="#pills-forms"
@@ -61,7 +61,7 @@ export default function RightNavContent(props) {
           </li>
           <li className="nav-item">
             <a
-              className="nav-link-custom"
+              className="nav-link-custom nav-link-rc"
               id="pills-tab3-tab"
               data-toggle="pill"
               href="#pills-tab3"
@@ -84,7 +84,7 @@ export default function RightNavContent(props) {
             aria-labelledby="pills-info-tab"
           >
             <div className="row">
-              <div className="col-lg-12 col-md-12 col-sm-12 col-12 align-self-center px-0">
+              {/* <div className="col-lg-12 col-md-12 col-sm-12 col-12 align-self-center px-0">
                 <div className="client-information-section-info">
                   <h6>{numeral(contract.value).format("$0,0.00")}</h6>
                   <p>Withdrawal</p>
@@ -97,8 +97,64 @@ export default function RightNavContent(props) {
                   <h6>Form Status</h6>
                   <p>{formStatus}</p>
                 </div>
+              </div> */}
+              <div className="col-lg-12">
+                <div className="user-Crightsidebar-profile">
+                  <div className="user-Crightsidebar-pic">
+                    <img src="/imgs/profile-pic.png" />
+                  </div>
+                  <div className="user-Cinformation">
+                    <h3>{contract.ownerName}</h3>
+                    <p>{contract.contract}</p>
+                  </div>
+                  <div className="user-Cinformation border-none user-Cage">
+                    <h3>Age</h3>
+                    <p>{contract.ageO}</p>
+                  </div>
+                </div>
               </div>
             </div>
+            <div className="row valueCContainer">
+              <div className="col-lg-6 pd-Cr">
+                <div className="contractValueRightC">
+                  <p>Contract Value</p>
+                  <h3>{numeral(contract.value).format("$0,0.00")}</h3>
+                </div>
+              </div>
+              <div className="col-lg-6 pd-Cl">
+                <div className="contractValueRightC ml-C">
+                  <p>Product</p>
+                  <h3>{contract.product}</h3>
+                </div>
+              </div>
+            </div>
+            <div className="row valueCContainer mt-3">
+              <div className="col-lg-6 pd-Cr">
+                <div className="contractValueRightC">
+                  <p>Issued 11/1/2000</p>
+                  <h3>20 Years</h3>
+                </div>
+              </div>
+              <div className="col-lg-6 pd-Cl">
+                <div className="contractValueRightC borderCyellow ml-C">
+                  <p>Anniversary</p>
+                  <h3>&#x0003C;1 month</h3>
+                  <img src="/imgs/svgs/fe_warning-icon.svg" />
+                </div>
+              </div>
+            </div>
+            <div className="row valueCContainer mt-4">
+              <div className="col-lg-12">
+                <div className="steppedC-section">
+                  <h5>Stepped up Death Benefit Rider</h5>
+                  <p>Details</p>
+                  <img src="/imgs/svgs/rightarrow-large-black.svg" />
+                </div>
+              </div>
+            </div>
+            <br />
+            <br />
+            <br />
             <div className="performtask-section">
               <div className="form-group form-custom-rightnav">
                 <label htmlFor="exampleFormControlSelect1">

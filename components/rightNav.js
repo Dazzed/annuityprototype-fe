@@ -11,13 +11,12 @@ export default function RightSideNav(props) {
    */
   return (
     <div
-      className={`sidebar-right  bg-white ${
-        navState === 1
-          ? "sidebar-right-zero "
-          : navState === 2
+      className={`sidebar-right  bg-white ${navState === 1
+        ? "sidebar-right-zero "
+        : navState === 2
           ? "expandsidebar-right"
           : "width-none"
-      }`}
+        }`}
     >
       <div className="logo-section text-center">
         {expandable && navState !== 2 ? (
@@ -27,10 +26,14 @@ export default function RightSideNav(props) {
           >
             <img src="/imgs/svgs/rightarrow-icon1.svg" />
           </button>
-        ) : null}
+        )
+          : null}
 
         <button className="btn-arrow-icon-2" onClick={() => props.shrinkNav()}>
           <img src="/imgs/svgs/rightarrow-icon1.svg" />
+        </button>
+        <button className="close-btn-icon">
+          <img src="/imgs/svgs/close-btn-icon.svg" />
         </button>
       </div>
       <Fragment>{props.children}</Fragment>

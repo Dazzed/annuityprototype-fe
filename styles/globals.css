@@ -304,7 +304,7 @@ button:hover {
 .table-padding-sideNavLeft {
   padding-left: 330px;
   background-color: #fbfbfb;
-   transition: all 0.5s;
+  transition: all 0.5s;
   -moz-transition: all 0.5s;
   /* Firefox 4 */
   -webkit-transition: all 0.5s;
@@ -313,9 +313,11 @@ button:hover {
   /* Opera */
   -ms-transition: all 0.5s;
 }
+
 .bg-white {
   background-color: #fff;
 }
+
 .table-container-rightNav {
   padding-right: 440px;
   transition: all 0.5s;
@@ -370,6 +372,7 @@ button:hover {
   /* Opera */
   -ms-transition: all 0.5s;
 }
+
 .btn-arrow-icon-1 .sidebar-left {
   transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -380,7 +383,6 @@ button:hover {
   /* Opera */
   -ms-transition: all 0.5s;
 }
-
 
 .btn-arrow-icon-1 .sidebar-left, .btn-arrow-icon-2 .sidebar-right {
   transition: all 0.2s ease-in-out;
@@ -1198,6 +1200,7 @@ a:hover {
   border-radius: 4px;
   height: 40px;
 }
+
 .card-header-section {
   padding: 38px 43px;
   background: #ffffff;
@@ -1717,9 +1720,11 @@ li {
 }
 
 /* clients  */
+
 .clients-column-section:hover {
   cursor: pointer;
 }
+
 .clients-column-section {
   text-align: center;
   background: #FFFFFF;
@@ -1795,13 +1800,17 @@ li {
 }
 
 .performtask-section {
-  position: absolute;
-  bottom: 64px;
-  right: 75px;
+  
+  margin-bottom: 64px;
+  margin-top: 10rem;
+  margin-left: 20px;
 }
 
 .form-custom-rightnav {
   margin: 0;
+  position: absolute;
+  bottom: 64px;
+  right: 65px;
 }
 
 .form-custom-rightnav label {
@@ -1845,6 +1854,154 @@ li {
   padding: 4px 24px;
   margin-left: 25px;
 }
+
+.user-Crightsidebar-profile {
+  background: #fff;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-height: 93px;
+  padding: 17px 16px 23px;
+  margin: 0 21px;
+}
+.user-Crightsidebar-pic {
+  margin-right: 17px;
+}
+.border-none {
+  border: none !important;
+}
+.user-Crightsidebar-pic img{
+  width: 53px;
+  height: 53px;
+  border-radius: 50%;
+}
+.nav-pills-support .nav-link-rc {
+  font-family: OpenSans-Regular;
+  font-weight: normal;
+}
+.user-Cinformation {
+  padding-right: 46px;
+  border-right: 1px solid #DEDEDE;
+}
+.user-Cinformation h3, .user-Cage h3{
+  font-family: OpenSans-Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 125%;
+  color: #000;
+  margin-bottom: 9px;
+}
+.close-btn-icon {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  border: none;
+  background-color: transparent;
+}
+.user-Cinformation {
+  width: 80%;
+}
+.user-Cinformation p, .user-Cage p{
+  font-family: OpenSans-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 125%;
+  color: #000;
+  margin: 0;
+}
+.user-Cage {
+  text-align: center;
+  margin-left: 24px;
+  padding: 0;
+}
+.contractValueRightC {
+  background: #fff;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  padding: 21px 0;
+  min-height: 93px;
+  text-align: center;
+  position: relative;
+}
+.contractValueRightC p {
+  font-family: OpenSans-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 125%;
+  color: #000000;
+  margin-bottom: 12px;
+}
+.contractValueRightC h3 {
+  font-family: OpenSans-Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 125%;
+  color: #000;
+}
+.valueCContainer {
+  max-width: 100%;
+  width: 100%;
+  margin: 30px auto 0;
+
+}
+.contractValueRightC img{
+  position: absolute;
+  right: 6px;
+  top: 6px;
+}
+.borderCyellow {
+  border: 1px solid #ff8f1f;
+  border-left: 11px solid #FF8F1F;
+}
+.steppedC-section {
+  background: #fff;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  min-height: 90px;
+  border-top: 10px solid #0D65B3;
+  position: relative;
+  width: 100%;
+  padding-left: 33px;
+  padding-top: 19px;
+}
+.steppedC-section h5 {
+  font-family: OpenSans-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 125%;
+  color: #000;
+  margin-bottom: 3px;
+}
+.steppedC-section p {
+  font-family: OpenSans-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 125%;
+  color: #8F8F8F;
+  margin: 0;
+}
+.steppedC-section img {
+  position: absolute;
+  top: 23px;
+  right: 19px;
+} 
+.ml-C {
+  
+}
+.pd-Cr {
+  padding-right: 11px;
+}
+.pd-Cl {
+  padding-left: 11px;
+}
 /* clients */
 
 .usersection-clients {
@@ -1854,9 +2011,10 @@ li {
   margin-bottom: 23px;
 }
 
-.usersection-clients .userPicSection-info img{
+.usersection-clients .userPicSection-info img {
   margin: 0;
 }
+
 .usersection-clients .userPicSection-info {
   margin-right: 24px;
 }
@@ -1890,10 +2048,12 @@ li {
   color: #000000;
   margin-bottom: 0;
 }
+
 .clients-rightNav-value {
   display: flex;
   text-align: center;
 }
+
 .border-height {
   height: 1px;
   width: 302px;
@@ -1901,9 +2061,11 @@ li {
   margin-bottom: 38px;
   background-color: #ADADAD;
 }
+
 .address-section-client {
   width: 151px;
 }
+
 .address-section-client h4 {
   font-family: OpenSans-Bold;
   font-style: normal;
@@ -1913,6 +2075,7 @@ li {
   color: #000;
   margin-top: 13px;
 }
+
 .address-section-client p {
   font-family: OpenSans-Regular;
   font-style: normal;
@@ -1921,20 +2084,24 @@ li {
   line-height: 125%;
   color: #000;
 }
+
 .address-edit {
   position: absolute;
   right: 15px;
   top: 0;
 }
+
 .arrow-right {
   position: absolute;
   top: 10px;
   right: 0;
 }
+
 .title-contract-name {
   margin-bottom: 28px;
 }
-.title-contract-name h3{
+
+.title-contract-name h3 {
   font-family: OpenSans-Bold;
   font-style: normal;
   font-weight: bold;
@@ -1943,7 +2110,8 @@ li {
   color: #000;
   margin-bottom: 5px;
 }
-.title-contract-name p{
+
+.title-contract-name p {
   font-family: OpenSans-Regular;
   font-style: normal;
   font-weight: normal;
@@ -1951,7 +2119,8 @@ li {
   line-height: 125%;
   color: #000;
 }
-.title-contract-name-value h3{
+
+.title-contract-name-value h3 {
   font-family: OpenSans-Regular;
   font-style: normal;
   font-weight: normal;
@@ -1959,11 +2128,31 @@ li {
   line-height: 32px;
   color: #000;
 }
+
+.dl-block {
+  display: table-cell;
+}
+
+.age-th, .product-th, .issue-th {
+  display: none;
+}
+
 @media screen and (min-width: 1441px) {
   .common-mr-pd {
     padding-left: 42px;
     padding-top: 45px;
     padding-right: 42px;
+  }
+}
+
+@media screen and (min-height: 600px) {}
+
+@media screen and (min-height: 700px) {
+  .issue-th {
+    display: none;
+  }
+  .age-th, .product-th {
+    display: inline-table;
   }
 }
 
