@@ -5,7 +5,7 @@ export default function Page() {
   const router = useRouter();
 
   useEffect(() => {
-    router.push("/contracts");
+    router.push("/dashboard");
   }, []);
 
   return <p>Redirecting...</p>;

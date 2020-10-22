@@ -15,22 +15,6 @@ class Dashboard extends React.Component {
     this.toggleSideNav = this.toggleSideNav.bind(this);
   }
 
-  componentDidMount() {
-    this.loadRecords();
-  }
-
-  async loadRecords() {
-    try {
-      const result = await axios.get(`${API_URL}/notifications`, {});
-
-      this.setState({
-        notifications: result.data,
-      });
-    } catch (error) {
-      console.error(error);
-    }
-  }
-
   toggleSideNav() {
     this.setState((state) => ({ isNavOpen: !state.isNavOpen }));
   }
@@ -115,16 +99,9 @@ class Dashboard extends React.Component {
                       <div className="row mb-3">
                         <div className="col-lg-9 col-md-9 col-sm-7 col-12 align-self-center">
                           <div className="date-section">
-                            {/* <h6>
-                              {format(
-                                new Date(notification.timestamp),
-                                "MMMM d h:mm a"
-                              )}
-                            </h6> */}
                             <h6>October 12 12:55pm</h6>
                           </div>
                           <div className="msg-contentsection">
-                            {/* <p>{notification.message}</p> */}
                             <p>
                               <b>John</b> Doe initiatied a withdrawal for $1,500
                               from contract <b>XX123456789</b> via form
@@ -146,16 +123,9 @@ class Dashboard extends React.Component {
                       <div className="row mb-3">
                         <div className="col-lg-9 col-md-9 col-sm-7 col-12 align-self-center">
                           <div className="date-section">
-                            {/* <h6>
-                              {format(
-                                new Date(notification.timestamp),
-                                "MMMM d h:mm a"
-                              )}
-                            </h6> */}
                             <h6>October 12 12:55pm</h6>
                           </div>
                           <div className="msg-contentsection">
-                            {/* <p>{notification.message}</p> */}
                             <p>
                               <b>John</b> Doe initiatied a withdrawal for $1,500
                               from contract <b>XX123456789</b> via form
@@ -177,16 +147,9 @@ class Dashboard extends React.Component {
                       <div className="row mb-3">
                         <div className="col-lg-9 col-md-9 col-sm-7 col-12 align-self-center">
                           <div className="date-section">
-                            {/* <h6>
-                              {format(
-                                new Date(notification.timestamp),
-                                "MMMM d h:mm a"
-                              )}
-                            </h6> */}
                             <h6>October 12 12:55pm</h6>
                           </div>
                           <div className="msg-contentsection">
-                            {/* <p>{notification.message}</p> */}
                             <p>
                               <b>John</b> Doe initiatied a withdrawal for $1,500
                               from contract <b>XX123456789</b> via form

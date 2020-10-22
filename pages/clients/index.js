@@ -48,8 +48,9 @@ class Clients extends React.Component {
 
     return (
       <div
-        className={`container-fluid h-100 ${isNavOpen ? "table-padding-sideNavLeft" : "pl-3"
-          } ${rightNavState !== 0 ? "table-container-rightNav" : ""} `}
+        className={`container-fluid h-100 ${
+          isNavOpen ? "table-padding-sideNavLeft" : "pl-3"
+        } ${rightNavState !== 0 ? "table-container-rightNav" : ""} `}
       >
         <Head>
           <meta charSet="utf-8" />
@@ -126,7 +127,12 @@ class Clients extends React.Component {
                     aria-labelledby="pills-clients-tab"
                   >
                     <div className="row">
-                      <div className={` ${rightNavState !== 0 ? "col-lg-6 col-md-6 col-sm-6 col-12" : "col-lg-4 col-md-4 col-sm-6 col-12"} `}
+                      <div
+                        className={` ${
+                          rightNavState !== 0
+                            ? "col-lg-6 col-md-6 col-sm-6 col-12"
+                            : "col-lg-4 col-md-4 col-sm-6 col-12"
+                        } `}
                         onClick={() => this.expandRightNav()}
                       >
                         <div className="clients-column-section">
@@ -156,7 +162,12 @@ class Clients extends React.Component {
                           </div>
                         </div>
                       </div>
-                      <div className={` ${rightNavState !== 0 ? "col-lg-6 col-md-6 col-sm-6 col-12" : "col-lg-4 col-md-4 col-sm-6 col-12"} `}
+                      <div
+                        className={` ${
+                          rightNavState !== 0
+                            ? "col-lg-6 col-md-6 col-sm-6 col-12"
+                            : "col-lg-4 col-md-4 col-sm-6 col-12"
+                        } `}
                         onClick={() => this.expandRightNav()}
                       >
                         <div className="clients-column-section">
@@ -186,7 +197,12 @@ class Clients extends React.Component {
                           </div>
                         </div>
                       </div>
-                      <div className={` ${rightNavState !== 0 ? "col-lg-6 col-md-6 col-sm-6 col-12" : "col-lg-4 col-md-4 col-sm-6 col-12"} `}
+                      <div
+                        className={` ${
+                          rightNavState !== 0
+                            ? "col-lg-6 col-md-6 col-sm-6 col-12"
+                            : "col-lg-4 col-md-4 col-sm-6 col-12"
+                        } `}
                         onClick={() => this.expandRightNav()}
                       >
                         <div className="clients-column-section">
@@ -216,7 +232,12 @@ class Clients extends React.Component {
                           </div>
                         </div>
                       </div>
-                      <div className={` ${rightNavState !== 0 ? "col-lg-6 col-md-6 col-sm-6 col-12" : "col-lg-4 col-md-4 col-sm-6 col-12"} `}
+                      <div
+                        className={` ${
+                          rightNavState !== 0
+                            ? "col-lg-6 col-md-6 col-sm-6 col-12"
+                            : "col-lg-4 col-md-4 col-sm-6 col-12"
+                        } `}
                         onClick={() => this.expandRightNav()}
                       >
                         <div className="clients-column-section">
@@ -246,7 +267,12 @@ class Clients extends React.Component {
                           </div>
                         </div>
                       </div>
-                      <div className={` ${rightNavState !== 0 ? "col-lg-6 col-md-6 col-sm-6 col-12" : "col-lg-4 col-md-4 col-sm-6 col-12"} `}
+                      <div
+                        className={` ${
+                          rightNavState !== 0
+                            ? "col-lg-6 col-md-6 col-sm-6 col-12"
+                            : "col-lg-4 col-md-4 col-sm-6 col-12"
+                        } `}
                         onClick={() => this.expandRightNav()}
                       >
                         <div className="clients-column-section">

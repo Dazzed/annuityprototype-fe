@@ -139,11 +139,6 @@ class ContractsPage extends React.Component {
         </Head>
         <div className="row h-100">
           <SideNav isNavOpen={isNavOpen} toggleSideNav={this.toggleSideNav} />
-          {/* <div
-            className={`col-lg-${
-              isNavOpen ? "9" : "12"
-            } col-md-12 col-sm-12 col-12 `}
-          >  */}
           <div className="col-lg-12 col-md-12 col-sm-12 col-12">
             <FilterCriteria loadRecords={this.loadRecords} />
             <div className="row common-pd">

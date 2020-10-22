@@ -60,7 +60,6 @@ export default function RightNavContent(props) {
             role="tabpanel"
             aria-labelledby="pills-info-tab"
           >
-            {/* client page navright */}
             <div className="row mx-0">
               <div className="col-lg-12 px-0">
                 <div className="usersection-clients">
@@ -93,8 +92,7 @@ export default function RightNavContent(props) {
                 </div>
               </div>
             </div>
-            <div className="border-height">
-            </div>
+            <div className="border-height"></div>
             <div className="row mx-0 position-relative">
               <div className="address-section-client">
                 <h4>Address</h4>
@@ -150,9 +148,9 @@ export default function RightNavContent(props) {
                   <img src="/imgs/svgs/rightarrow-large.svg" />
                 </div>
               </div>
-              <br/>
-              <br/>
-              <br/>
+              <br />
+              <br />
+              <br />
             </div>
           </div>
           <div

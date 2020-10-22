@@ -84,16 +84,6 @@ export default function RightNavContent(props) {
             aria-labelledby="pills-info-tab"
           >
             <div className="row">
-              {/* <div className="col-lg-12 col-md-12 col-sm-12 col-12 align-self-center px-0">
-                <div className="client-information-section-info">
-                  <h6>{numeral(contract.value).format("$0,0.00")}</h6>
-                  <p>Withdrawal</p>
-                </div>
-                <div className="client-information-section-info">
-                  <h6>{contract.contract}</h6>
-                  <p>Contract Number</p>
-                </div>
-              </div> */}
               <div className="col-lg-12">
                 <div className="user-Crightsidebar-profile">
                   <div className="user-Crightsidebar-pic">

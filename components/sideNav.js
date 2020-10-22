@@ -6,6 +6,7 @@ export default function SideNav(props) {
   let [activePath, setActivePath] = useState("");
 
   useEffect(() => {
+    // set active nav item
     setActivePath(window.location.pathname);
   }, []);
 

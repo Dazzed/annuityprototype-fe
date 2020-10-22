@@ -1,7 +1,6 @@
 import React from "react";
 import $ from "jquery";
 import debounce from "lodash/debounce";
-import { CONTRACT_COLUMNS } from "../../../config/constants";
 
 class FilterCriteria extends React.Component {
   constructor(props) {
@@ -61,111 +60,30 @@ class FilterCriteria extends React.Component {
   }
 
   render() {
-    const { searchQuery, sort } = this.state;
+    const { searchQuery } = this.state;
 
     return (
-      <>
-        {/* <div className="row">
-          <div className="col-lg-9 col-md-9 col-sm-8 col-8">
-            <div className="contract-title-name">
-              <h2>
-                Welcome, <span>Allen</span>
-              </h2>
-            </div>
+      <div className="row common-pd pt-lg-3">
+        <div className="col-lg-12 col-md-4 col-sm-12 col-12">
+          <div className="search-box support-searchbox d-inline-block">
+            <input
+              type="text"
+              placeholder="Search"
+              value={searchQuery}
+              onChange={this.handleSearchQuery}
+            />
+            <img
+              src="/imgs/svgs/support-searchicon.svg"
+              id="icon"
+              className="search searchicon-support"
+            />
           </div>
-          <div className="col-lg-3 col-md-3 co-sm-4 col-4">
-            <div className="btn-setting">
-              <button className="btn-color-common">
-                <img
-                  src="/imgs/svgs/carbon_settings.svg"
-                  className="setting-icon"
-                />
-                <span>Settings</span>{" "}
-              </button>
-            </div>
-          </div>
-        </div> */}
-        <div className="row common-pd pt-lg-3">
-          <div className="col-lg-12 col-md-4 col-sm-12 col-12">
-            <div className="search-box support-searchbox d-inline-block">
-              <input
-                type="text"
-                placeholder="Search"
-                value={searchQuery}
-                onChange={this.handleSearchQuery}
-              />
-              <img
-                src="/imgs/svgs/support-searchicon.svg"
-                id="icon"
-                className="search searchicon-support"
-              />
-            </div>
-            <div className="fliter-issue">
-              {/* old design  */}
-              {/* <button>
-                <img
-                  src="/imgs/svgs/filter-icon.svg"
-                  className="fliter-icon-1"
-                  alt="Fliter Icon"
-                />
-                <span className="filter-component">Present</span>
-                Filters
-                <img
-                  src="/imgs/svgs/fliter-icon-2.svg"
-                  alt="Fliter Icon"
-                  className="fliter-icon-2"
-                />
-              </button> */}
-
-              {/* old design  */}
-              {/* <div className="dropdown d-inline-block">
-                <button
-                  className=""
-                  type="button"
-                  id="dropdownMenuButton2"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  <img src="/imgs/svgs/sort-icon.svg" alt="Sort Icon" />
-                  Sort by:{" "}
-                  <span>
-                    {CONTRACT_COLUMNS.find((e) => e.data === sort[0]).title}
-                  </span>
-                </button>
-                <div
-                  className="dropdown-menu custom-sorting"
-                  aria-labelledby="dropdownMenuButton2"
-                >
-                  <select
-                    className="form-control"
-                    name="sort_column"
-                    value={sort[0]}
-                    onChange={this.handleSorting}
-                  >
-                    {CONTRACT_COLUMNS.map((col) => (
-                      <option key={col.data} value={col.data}>
-                        {col.title}
-                      </option>
-                    ))}
-                  </select>
-                  <select
-                    className="form-control"
-                    name="sort_direction"
-                    value={sort[1]}
-                    onChange={this.handleSorting}
-                  >
-                    <option value="ASC">ASC</option>
-                    <option value="DESC">DESC</option>
-                  </select>
-                </div>
-              </div> */}
-              <button className="newdesignfilter-btn">Filter</button>
-              <button className="newdesignfilter-btn">Saved Filter</button>
-            </div>
+          <div className="fliter-issue">
+            <button className="newdesignfilter-btn">Filter</button>
+            <button className="newdesignfilter-btn">Saved Filter</button>
           </div>
         </div>
-      </>
+      </div>
     );
   }
 }
