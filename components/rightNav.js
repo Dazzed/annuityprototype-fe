@@ -32,7 +32,7 @@ export default function RightSideNav(props) {
         <button className="btn-arrow-icon-2" onClick={() => props.shrinkNav()}>
           <img src="/imgs/svgs/rightarrow-icon1.svg" />
         </button>
-        <button className="close-btn-icon">
+        <button className="close-btn-icon" onClick={() => props.shrinkNav()}>
           <img src="/imgs/svgs/close-btn-icon.svg" />
         </button>
       </div>

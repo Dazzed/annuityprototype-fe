@@ -93,10 +93,6 @@ export default function RightNavContent(props) {
                   <h6>{contract.contract}</h6>
                   <p>Contract Number</p>
                 </div>
-                <div className="client-information-section-info">
-                  <h6>Form Status</h6>
-                  <p>{formStatus}</p>
-                </div>
               </div> */}
               <div className="col-lg-12">
                 <div className="user-Crightsidebar-profile">
@@ -157,6 +153,10 @@ export default function RightNavContent(props) {
             <br />
             <div className="performtask-section">
               <div className="form-group form-custom-rightnav">
+                <div className="client-information-section-info mb-2 mt-4">
+                  <h6>Form Status</h6>
+                  <p>{formStatus}</p>
+                </div>
                 <label htmlFor="exampleFormControlSelect1">
                   Perform a Task
                 </label>
