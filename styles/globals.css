@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -84,7 +85,8 @@ button:focus {
   margin-right: 19px;
 }
 
-.cardcustomheader button:hover, .cardcustomheader button:focus {
+.cardcustomheader button:hover,
+.cardcustomheader button:focus {
   text-decoration: none;
   color: #8e9294;
   box-shadow: none;
@@ -115,7 +117,8 @@ button:focus {
   border: 1px solid #8e9294;
 }
 
-.dropdown-toggle-menu:focus, .dropdown-toggle-menu:hover {
+.dropdown-toggle-menu:focus,
+.dropdown-toggle-menu:hover {
   color: #000 !important;
   background-color: transparent !important;
   outline: none;
@@ -384,7 +387,8 @@ button:hover {
   -ms-transition: all 0.5s;
 }
 
-.btn-arrow-icon-1 .sidebar-left, .btn-arrow-icon-2 .sidebar-right {
+.btn-arrow-icon-1 .sidebar-left,
+.btn-arrow-icon-2 .sidebar-right {
   transition: all 0.2s ease-in-out;
 }
 
@@ -517,7 +521,8 @@ button:hover {
   height: 63px;
 }
 
-.contract-title-name h2, .contract-modal-h2 {
+.contract-title-name h2,
+.contract-modal-h2 {
   font-family: Montserrat-Bold;
   font-style: normal;
   font-weight: bold;
@@ -593,7 +598,7 @@ button:hover {
   outline: none;
 }
 
-.search-box input:focus+.search {
+.search-box input:focus + .search {
   transform: perspective(400px) rotateY(89deg);
   padding: 3px 0;
   opacity: 0;
@@ -690,7 +695,8 @@ button:hover {
   vertical-align: middle;
 }
 
-.table th, table td {
+.table th,
+table td {
   border: none !important;
 }
 
@@ -810,7 +816,7 @@ button:hover {
   opacity: 0;
 }
 
-.checkbox__input:checked+.checkbox__check {
+.checkbox__input:checked + .checkbox__check {
   background: #fff;
   stroke-dashoffset: 0;
 }
@@ -890,7 +896,8 @@ button:hover {
   margin-top: 61px;
 }
 
-.nav-pills .nav-link-custom.active, .nav-pills .show>.nav-link-custom {
+.nav-pills .nav-link-custom.active,
+.nav-pills .show > .nav-link-custom {
   color: #0d65b3;
   font-family: OpenSans-Regular;
   font-style: normal;
@@ -951,7 +958,8 @@ a:hover {
 
 /* search */
 
-.dropdown-item.active, .dropdown-item:active {
+.dropdown-item.active,
+.dropdown-item:active {
   background-color: transparent !important;
 }
 
@@ -1011,7 +1019,8 @@ a:hover {
   background-color: transparent;
 }
 
-.table-contractvalue .table th, .table-contractvalue .table td {
+.table-contractvalue .table th,
+.table-contractvalue .table td {
   padding: 15px 0;
 }
 
@@ -1390,7 +1399,8 @@ a:hover {
   color: #000;
 }
 
-.chat-dashboard-section img {}
+.chat-dashboard-section img {
+}
 
 .chat-dashboard-section p {
   font-family: OpenSans-Regular;
@@ -1654,7 +1664,8 @@ li {
   -ms-transition: all 0.75s;
 }
 
-.client-information-section-info p, .date-section-info p {
+.client-information-section-info p,
+.date-section-info p {
   font-family: OpenSans-Regular;
   font-style: normal;
   font-weight: normal;
@@ -1727,7 +1738,7 @@ li {
 
 .clients-column-section {
   text-align: center;
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
   padding: 28px 26px;
   min-height: 272px;
@@ -1800,7 +1811,6 @@ li {
 }
 
 .performtask-section {
-  
   margin-bottom: 64px;
   margin-top: 10rem;
   margin-left: 20px;
@@ -1834,8 +1844,8 @@ li {
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
-  color: #091A29;
-  border: 2px solid #DEDEDE;
+  color: #091a29;
+  border: 2px solid #dedede;
   box-sizing: border-box;
   border-radius: 4px;
 }
@@ -1849,10 +1859,14 @@ li {
   font-weight: bold;
   font-size: 16px;
   line-height: 24px;
-  color: #FBFBFB;
+  color: #fbfbfb;
   height: 40px;
   padding: 4px 24px;
   margin-left: 25px;
+}
+
+.form-custom-rightnav button:disabled {
+  opacity: 0.65;
 }
 
 .user-Crightsidebar-profile {
@@ -1872,7 +1886,7 @@ li {
 .border-none {
   border: none !important;
 }
-.user-Crightsidebar-pic img{
+.user-Crightsidebar-pic img {
   width: 53px;
   height: 53px;
   border-radius: 50%;
@@ -1883,9 +1897,10 @@ li {
 }
 .user-Cinformation {
   padding-right: 46px;
-  border-right: 1px solid #DEDEDE;
+  border-right: 1px solid #dedede;
 }
-.user-Cinformation h3, .user-Cage h3{
+.user-Cinformation h3,
+.user-Cage h3 {
   font-family: OpenSans-Bold;
   font-style: normal;
   font-weight: bold;
@@ -1904,7 +1919,8 @@ li {
 .user-Cinformation {
   width: 80%;
 }
-.user-Cinformation p, .user-Cage p{
+.user-Cinformation p,
+.user-Cage p {
   font-family: OpenSans-Regular;
   font-style: normal;
   font-weight: normal;
@@ -1948,23 +1964,22 @@ li {
   max-width: 100%;
   width: 100%;
   margin: 30px auto 0;
-
 }
-.contractValueRightC img{
+.contractValueRightC img {
   position: absolute;
   right: 6px;
   top: 6px;
 }
 .borderCyellow {
   border: 1px solid #ff8f1f;
-  border-left: 11px solid #FF8F1F;
+  border-left: 11px solid #ff8f1f;
 }
 .steppedC-section {
   background: #fff;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   min-height: 90px;
-  border-top: 10px solid #0D65B3;
+  border-top: 10px solid #0d65b3;
   position: relative;
   width: 100%;
   padding-left: 33px;
@@ -1985,16 +2000,15 @@ li {
   font-weight: normal;
   font-size: 16px;
   line-height: 125%;
-  color: #8F8F8F;
+  color: #8f8f8f;
   margin: 0;
 }
 .steppedC-section img {
   position: absolute;
   top: 23px;
   right: 19px;
-} 
+}
 .ml-C {
-  
 }
 .pd-Cr {
   padding-right: 11px;
@@ -2059,7 +2073,7 @@ li {
   width: 302px;
   margin-top: 44px;
   margin-bottom: 38px;
-  background-color: #ADADAD;
+  background-color: #adadad;
 }
 
 .address-section-client {
@@ -2133,7 +2147,9 @@ li {
   display: table-cell;
 }
 
-.age-th, .product-th, .issue-th {
+.age-th,
+.product-th,
+.issue-th {
   display: none;
 }
 
@@ -2145,13 +2161,15 @@ li {
   }
 }
 
-@media screen and (min-height: 600px) {}
+@media screen and (min-height: 600px) {
+}
 
 @media screen and (min-height: 700px) {
   .issue-th {
     display: none;
   }
-  .age-th, .product-th {
+  .age-th,
+  .product-th {
     display: inline-table;
   }
 }
@@ -2207,7 +2225,8 @@ li {
     right: 0;
     left: 0;
   }
-  .sidebar-left {}
+  .sidebar-left {
+  }
   .logo-section {
     display: none;
   }
@@ -2310,7 +2329,8 @@ li {
 }
 
 @media screen and (max-width: 767px) {
-  .col-82, .col-30 {
+  .col-82,
+  .col-30 {
     max-width: 100% !important;
     flex: 0 0 100%;
   }

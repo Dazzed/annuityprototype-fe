@@ -1,3 +1,4 @@
+import { useState } from "react";
 import numeral from "numeral";
 import axios from "axios";
 import _ from "lodash";
@@ -5,6 +6,7 @@ import _ from "lodash";
 import { API_URL } from "../../../config/constants";
 
 export default function RightNavContent(props) {
+  const [isRequesting, setIsRequesting] = useState(false);
   const { contract = {} } = props;
   const form = contract && contract.form;
   const formStatus = _.startCase(form ? form.status : "Not Requested");
@@ -16,11 +18,16 @@ export default function RightNavContent(props) {
         return;
       }
 
-      const result = await axios.post(
+      setIsRequesting(true);
+
+      await axios.post(
         `${API_URL}/contracts/send-signature-request/${contractId}`
       );
+
+      setIsRequesting(false);
       props.loadRecords();
     } catch (error) {
+      setIsRequesting(false);
       console.log(error);
     }
   };
@@ -156,10 +163,11 @@ export default function RightNavContent(props) {
                   <option>Withdrawal</option>
                 </select>
                 <button
+                  className={form && form.isCompleted ? "btn-success" : ""}
                   onClick={() => sendSignatureRequest(contract.id)}
-                  disabled={Boolean(form)} // form exist if request is already sent
+                  disabled={Boolean(form) || isRequesting} // form exist if request is already sent or currently requesting
                 >
-                  Next
+                  {!form ? "Request" : form.isCompleted ? "Success" : "Pending"}
                 </button>
               </div>
             </div>
