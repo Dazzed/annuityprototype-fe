@@ -5,7 +5,7 @@ import ColumnFilterDrop from "./columnFilterDrop";
 
 class Table extends Component {
   render() {
-    const { contracts, selectedContractId } = this.props;
+    const { contracts = [], selectedContractId } = this.props;
 
     return (
       <Fragment>
